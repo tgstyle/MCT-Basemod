@@ -1,0 +1,7 @@
+{
+    "parent": "mctbasemod:item/materials",
+    "textures": { 
+        "layer0": "mctbasemod:items/materials/tin_clump"
+    }
+}
+

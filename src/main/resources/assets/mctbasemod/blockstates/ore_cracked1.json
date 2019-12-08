@@ -1,0 +1,93 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "copper_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/copper_cracked_ore"
+                }
+            },
+			"tin_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/tin_cracked_ore"
+                }
+            },
+            "nickel_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/nickel_cracked_ore"
+                }
+            },
+			"iron_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iron_cracked_ore"
+                }
+            },
+            "gold_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/gold_cracked_ore"
+                }
+			},
+			"redstone_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/redstone_cracked_ore"
+                }
+            },
+			"lapis_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/lapis_cracked_ore"
+                }
+            },
+			"blackquartz_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/blackquartz_cracked_ore"
+                }
+            },
+			"diamond_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/diamond_cracked_ore"
+                }
+            },
+            "emerald_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/emerald_cracked_ore"
+                }
+            },
+			"silver_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/silver_cracked_ore"
+                }
+            },
+			"lead_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/lead_cracked_ore"
+                }
+            },
+			"aluminum_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/aluminum_cracked_ore"
+                }
+            },
+            "uranium_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/uranium_cracked_ore"
+                }
+			},
+			"osmium_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/osmium_cracked_ore"
+                }
+			},
+            "emerald_cracked_ore2": {
+                "textures": {
+                    "all": "mctbasemod:blocks/emerald_cracked_ore2"
+                }
+            }
+        }
+    }
+}

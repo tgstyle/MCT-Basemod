@@ -1,0 +1,93 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "copper_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/copper_sheet_metal"
+                }
+            },
+			"tin_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/tin_sheet_metal"
+                }
+            },
+            "nickel_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/nickel_sheet_metal"
+                }
+            },
+            "invar_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/invar_sheet_metal"
+                }
+            },
+			"bronze_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/bronze_sheet_metal"
+                }
+            },			
+            "steel_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/steel_sheet_metal"
+                }
+            },
+			"constantan_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/constantan_sheet_metal"
+                }
+            },
+            "iron_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iron_sheet_metal"
+                }
+            },
+            "gold_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/gold_sheet_metal"
+                }
+			},
+			"silver_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/silver_sheet_metal"
+                }
+            },
+            "lead_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/lead_sheet_metal"
+                }
+            },
+			"aluminum_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/aluminum_sheet_metal"
+                }
+            },			
+			"electrum_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/electrum_sheet_metal"
+                }
+            },
+			"signalum_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/signalum_sheet_metal"
+                }
+            },
+			"enderium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/enderium_sheet_metal"
+                }
+            },
+			"lumium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/lumium_sheet_metal"
+                }
+            }
+        }
+    }
+}

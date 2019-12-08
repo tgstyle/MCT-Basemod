@@ -1,0 +1,48 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "osmium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/osmium_sheet_metal"
+                }
+            },
+			"wood_sheet_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/wood_sheet_block"
+                }
+            },
+			"stone_sheet_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/stone_sheet_block"
+                }
+            },
+			"diamond_sheet_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/diamond_sheet_block"
+                }
+            },
+			"iridium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iridium_sheet_metal"
+                }
+            },
+			"draconium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/draconium_sheet_metal"
+                }
+            },
+			"awakened_draconium_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/awakened_draconium_sheet_metal"
+                }
+            }
+        }
+    }
+}

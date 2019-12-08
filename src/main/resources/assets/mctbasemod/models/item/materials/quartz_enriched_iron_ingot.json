@@ -1,0 +1,7 @@
+{
+    "parent": "mctbasemod:item/materials",
+    "textures": { 
+        "layer0": "mctbasemod:items/materials/quartz_enriched_iron_ingot"
+    }
+}
+

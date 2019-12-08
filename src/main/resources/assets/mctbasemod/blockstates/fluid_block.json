@@ -1,0 +1,66 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "forge:fluid",
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"draconium": [{
+			"custom": { "fluid": "draconium" }
+		}],
+		"fluxedelectrum": [{
+			"custom": { "fluid": "fluxedelectrum" }
+		}],
+		"quartzenrichediron": [{
+			"custom": { "fluid": "quartzenrichediron" }
+		}],
+		"draconiumawakened": [{
+			"custom": { "fluid": "draconiumawakened" }
+		}],
+		"refinedobsidian": [{
+			"custom": { "fluid": "refinedobsidian" }
+		}],
+		"refinedglowstone": [{
+			"custom": { "fluid": "refinedglowstone" }
+		}],
+		"uranium": [{
+			"custom": { "fluid": "uranium" }
+		}],
+		"constantan": [{
+			"custom": { "fluid": "constantan" }
+		}],
+		"stableunstable": [{
+			"custom": { "fluid": "stableunstable" }
+		}],
+		"electricalsteel": [{
+			"custom": { "fluid": "electricalsteel" }
+		}],
+		"energeticalloy": [{
+			"custom": { "fluid": "energeticalloy" }
+		}],
+		"vibrantalloy": [{
+			"custom": { "fluid": "vibrantalloy" }
+		}],
+		"redstonealloy": [{
+			"custom": { "fluid": "redstonealloy" }
+		}],
+		"conductiveiron": [{
+			"custom": { "fluid": "conductiveiron" }
+		}],
+		"pulsatingiron": [{
+			"custom": { "fluid": "pulsatingiron" }
+		}],
+		"darksteel": [{
+			"custom": { "fluid": "darksteel" }
+		}],
+		"soularium": [{
+			"custom": { "fluid": "soularium" }
+		}],
+		"endsteel": [{
+			"custom": { "fluid": "endsteel" }
+		}],
+		"mixed_redstone": [{
+			"custom": { "fluid": "mixed_redstone" }
+		}]
+	}
+}

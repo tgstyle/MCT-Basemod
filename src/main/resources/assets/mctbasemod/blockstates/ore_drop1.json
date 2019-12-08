@@ -1,0 +1,88 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "copper_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/copper_poor_ore"
+                }
+            },
+            "copper_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/copper_ore"
+                }
+            },
+            "copper_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/copper_dense_ore"
+                }
+            },
+			"tin_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/tin_poor_ore"
+                }
+            },
+            "tin_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/tin_ore"
+                }
+            },
+            "tin_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/tin_dense_ore"
+                }
+            },
+            "nickel_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/nickel_poor_ore"
+                }
+            },
+            "nickel_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/nickel_ore"
+                }
+            },
+            "nickel_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/nickel_dense_ore"
+                }
+            },
+			"iron_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iron_poor_ore"
+                }
+            },
+            "iron_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iron_ore"
+                }
+            },
+            "iron_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iron_dense_ore"
+                }
+            },
+            "gold_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/gold_poor_ore"
+                }
+            },
+            "gold_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/gold_ore"
+                }
+            },
+            "gold_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/gold_dense_ore"
+                }
+            }			
+        }
+    }
+}

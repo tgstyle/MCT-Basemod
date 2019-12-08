@@ -1,0 +1,97 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"transform": "forge:default-block",
+		"model": "cube_all"
+	},
+	"variants": {
+		"inventory": [{}],
+		"normal": [{}],
+		"blocks": {
+			"copper_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/copper_block"
+				}
+			},
+			"tin_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/tin_block"
+				}
+			},
+			"nickel_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/nickel_block"
+				}
+			},
+			"invar_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/invar_block"
+				}
+			},
+			"bronze_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/bronze_block"
+				}
+			},
+			"steel_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/steel_block"
+				}
+			},
+			"constantan_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/constantan_block"
+				}
+			},
+			"silver_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/silver_block"
+				}
+			},
+			"lead_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/lead_block"
+				}
+			},
+			"aluminum_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/aluminum_block"
+				}
+			},
+			"uranium_block": {
+				"model": "cube_column",
+				"textures": {
+					"side": "mctbasemod:blocks/uranium_block_side",
+					"end": "mctbasemod:blocks/uranium_block_top"
+				}
+			},
+			"osmium_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/osmium_block"
+				}
+			},
+			"electrum_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/electrum_block"
+				}
+			},
+			"iridium_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/iridium_block"
+				}
+			},
+			"draconium_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/draconium_block"
+				}
+			},
+			"awakened_draconium_block": {
+                "model": "cube_column",
+				"textures": {
+					"side": "mctbasemod:blocks/awakened_draconium_block_side",
+					"end": "mctbasemod:blocks/awakened_draconium_block_top"
+				}
+			}	
+		}
+	}
+}

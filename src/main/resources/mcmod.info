@@ -1,0 +1,14 @@
+[
+{
+  "modid": "mctbasemod",
+  "name": "MCT Basemod",
+  "description": "***NOT FOR DISTRIBUTION, AUTHORIZATION FROM MOD AUTHOR ONLY!!!*** Base mod for ores and materials.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["TGstyle"],
+  "credits": "FairyMensch for some good textures!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

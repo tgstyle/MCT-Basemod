@@ -1,0 +1,7 @@
+{
+    "parent": "mctbasemod:item/foods",
+    "textures": { 
+        "layer0": "mctbasemod:items/foods/chicken_nugger"
+    }
+}
+

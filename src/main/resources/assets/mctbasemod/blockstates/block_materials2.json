@@ -1,0 +1,35 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+		"blocks": {
+			"coal_coke_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/coal_coke_block"
+                }
+            },			
+			"charcoal_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/charcoal_block"
+                }
+            },
+        	"redstone_heating_element":{  
+                "model": "cube_column",
+				"textures": {
+					"side": "mctbasemod:blocks/redstone_heating_element_side",
+					"end": "mctbasemod:blocks/redstone_heating_element_top"
+				}
+            },
+			"quartz_enriched_iron_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/quartz_enriched_iron_block"
+				}
+			}
+        }
+    }
+}

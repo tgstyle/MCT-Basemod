@@ -1,0 +1,8 @@
+{
+    "parent": "mctbasemod:item/materials",
+    "textures": { 
+        "layer0": "mctbasemod:items/materials/unstable_stable_clump_interior",
+        "layer1": "mctbasemod:items/materials/unstable_stable_clump_outline"
+    }
+}
+

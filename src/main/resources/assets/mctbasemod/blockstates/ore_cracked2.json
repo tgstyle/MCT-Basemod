@@ -1,0 +1,63 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "destabalized_redstone_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/destabalized_redstone_cracked_ore"
+                }
+            },
+            "energized_glowstone_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/energized_glowstone_cracked_ore"
+                }
+            },
+            "quartz_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/quartz_cracked_ore"
+                }
+            },
+            "ardite_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/ardite_cracked_ore"
+                }
+            },
+            "cobalt_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/cobalt_cracked_ore"
+                }
+            },
+            "resonant_end_stone_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/resonant_end_stone_cracked_ore"
+                }
+            },
+            "biotite_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/biotite_cracked_ore"
+                }
+            },
+            "iridium_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/iridium_cracked_ore"
+                }
+            },
+            "end_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/end_cracked_ore"
+                }
+            },
+            "draconium_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/draconium_cracked_ore"
+                }
+            }
+        }
+    }
+}

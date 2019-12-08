@@ -1,0 +1,88 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+			"blackquartz_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/blackquartz_poor_ore"
+                }
+            },
+            "blackquartz_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/blackquartz_ore"
+                }
+            },
+            "blackquartz_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/blackquartz_dense_ore"
+                }
+            },
+            "galena_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/galena_poor_ore"
+                }
+            },
+            "galena_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/galena_ore"
+                }
+            },
+            "galena_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/galena_dense_ore"
+                }
+            },
+			"bauxite_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/bauxite_poor_ore"
+                }
+            },
+            "bauxite_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/bauxite_ore"
+                }
+            },
+            "bauxite_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/bauxite_dense_ore"
+                }
+            },
+			"uranium_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/uranium_poor_ore"
+                }
+            },
+            "uranium_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/uranium_ore"
+                }
+            },
+            "uranium_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/uranium_dense_ore"
+                }
+            },
+			"osmium_poor_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/osmium_poor_ore"
+                }
+            },
+            "osmium_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/osmium_ore"
+                }
+            },
+            "osmium_dense_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/osmium_dense_ore"
+                }
+            }
+        }
+    }
+}
