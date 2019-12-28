@@ -5,17 +5,14 @@ import mctmods.basemod.blocks.BlockFluid;
 import mctmods.basemod.blocks.BlockMoltenFluid;
 import mctmods.basemod.blocks.base.BlockBaseFluid;
 import mctmods.basemod.fluids.FluidColored;
-import mctmods.basemod.itemblocks.ItemBlockFluid;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
@@ -117,42 +114,11 @@ public class RegistryFluid {
 		BLOCK_MIXEDREDSTONE
 	};
 
-	// fluid itemblocks
-	private static final ItemBlock [] item_block = {
-		// molten fluid
-		new ItemBlockFluid(BLOCK_MOLTEN_CONDUCTIVEIRON),
-		new ItemBlockFluid(BLOCK_MOLTEN_CONSTANTAN),
-		new ItemBlockFluid(BLOCK_MOLTEN_DARKSTEEL),
-		new ItemBlockFluid(BLOCK_MOLTEN_DRACONIUM),
-		new ItemBlockFluid(BLOCK_MOLTEN_DRACONIUMAWAKENED),
-		new ItemBlockFluid(BLOCK_MOLTEN_ELECTRICALSTEEL),
-		new ItemBlockFluid(BLOCK_MOLTEN_ENDSTEEL),
-		new ItemBlockFluid(BLOCK_MOLTEN_ENERGETICALLOY),
-		new ItemBlockFluid(BLOCK_MOLTEN_FLUXEDELECTRUM),
-		new ItemBlockFluid(BLOCK_MOLTEN_PULSATINGIRON),
-		new ItemBlockFluid(BLOCK_MOLTEN_QUARTZENRICHEDIRON),
-		new ItemBlockFluid(BLOCK_MOLTEN_REDSTONEALLOY),
-		new ItemBlockFluid(BLOCK_MOLTEN_REFINEDGLOWSTONE),
-		new ItemBlockFluid(BLOCK_MOLTEN_REFINEDOBSIDIAN),
-		new ItemBlockFluid(BLOCK_MOLTEN_SOULARIUM),
-		new ItemBlockFluid(BLOCK_MOLTEN_STABLEUNSTABLE),
-		new ItemBlockFluid(BLOCK_MOLTEN_VIBRANTALLOY),
-		// fluid
-		new ItemBlockFluid(BLOCK_MIXEDREDSTONE)
-	};
-
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		for(Block block : block) {
 			registry.register(block);
 			Basemod.logger.info("Added fluid block: " + block.getRegistryName());
 		 }
-	}
-
-	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-		for(ItemBlock item_block : item_block) {
-			registry.register(item_block.setRegistryName(item_block.getBlock().getRegistryName()));
-			Basemod.logger.info("Added fluid itemblock: " + item_block.getBlock().getRegistryName());
-		}
 	}
 
 	public static Fluid sendFluidForMelting(String ore, Fluid fluid) {
@@ -173,20 +139,6 @@ public class RegistryFluid {
 				throw new RuntimeException("ITEMBLOCK FOR "+loc+" : "+block+" IS NULL");
 			if(block instanceof BlockBaseFluid)
 				mapFluidState(block,((BlockBaseFluid)block).getFluid());
-
-		}
-
-		for(Item item : item_block) {
-			if(item instanceof ItemBlock) continue; {
-				final ResourceLocation loc = Item.REGISTRY.getNameForObject(item);
-				ModelBakery.registerItemVariants(item, loc);
-				ModelLoader.setCustomMeshDefinition(item, new ItemMeshDefinition() {
-					@Override
-					public ModelResourceLocation getModelLocation(ItemStack stack) {
-						return new ModelResourceLocation(loc, "inventory");
-					}
-				});
-			}
 		}
 	}
 

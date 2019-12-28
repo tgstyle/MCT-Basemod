@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -46,6 +47,10 @@ public class Basemod {
 	@SidedProxy(clientSide = "mctmods.basemod.proxies.ClientProxy", serverSide = "mctmods.basemod.proxies.CommonProxy")
 	public static CommonProxy proxy;
 
+	static {
+		FluidRegistry.enableUniversalBucket();
+	}
+
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		Registry.registerBlocks(event.getRegistry());
@@ -56,7 +61,6 @@ public class Basemod {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		Registry.registerItems(event.getRegistry());
 		Registry.registerItemBlocks(event.getRegistry());
-		RegistryFluid.registerItemBlocks(event.getRegistry());
 		RegistryDict.registerDictionaryBlocks();
 		RegistryDict.registerDictionaryItems();
 	}
