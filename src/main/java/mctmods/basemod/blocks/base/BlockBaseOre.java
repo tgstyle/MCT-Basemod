@@ -9,17 +9,17 @@ import net.minecraft.world.World;
 
 public class BlockBaseOre extends BlockBase {
 
-    public BlockBaseOre(Material material, MapColor mapColor, String registry) {
-        super(material, mapColor, registry);
-    }
+	public BlockBaseOre(Material material, MapColor mapColor, String name) {
+		super(material, mapColor, name);
+	}
 
-    @Override
-    public int getExpDrop(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune) {
-    	return 0 + RANDOM.nextInt(4);
-    }
+	@Override
+	public int getExpDrop(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune) {
+		return 0 + RANDOM.nextInt(4);
+	}
 
-    @Override
-    public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
-        return false;
-    }
+	@Override
+	public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
+		return false;
+	}
 }

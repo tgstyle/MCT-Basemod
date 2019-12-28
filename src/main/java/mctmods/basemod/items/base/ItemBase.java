@@ -7,10 +7,10 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
 
-    public ItemBase(String registry) {
-        setRegistryName(Basemod.MODID, registry);
-        setUnlocalizedName(getRegistryName().toString());
-        setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
-    }
+	public ItemBase(String name) {
+		setRegistryName(Basemod.MODID, name);
+		setUnlocalizedName(getRegistryName().toString());
+		setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
+	}
 
 }

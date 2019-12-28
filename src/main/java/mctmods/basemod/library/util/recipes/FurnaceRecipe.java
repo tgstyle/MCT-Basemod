@@ -3,7 +3,7 @@ package mctmods.basemod.library.util.recipes;
 import java.util.Iterator;
 import java.util.Map;
 
-import mctmods.basemod.library.util.LoggerBM;
+import mctmods.basemod.Basemod;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -13,7 +13,6 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 public class FurnaceRecipe {
 
 	public static void removeSmeltingPreInit() {
-
 		removeSmeltingRecipesFor(new ItemStack(Items.BRICK));
 		removeSmeltingRecipesFor(new ItemStack(Items.COAL, 1, 1));
 		removeSmeltingRecipesFor(new ItemStack(Items.COAL, 1, 0));
@@ -36,9 +35,9 @@ public class FurnaceRecipe {
 		while(iterator.hasNext()) {
 			ItemStack recipe = iterator.next();
 			recipeResult = recipes.get(recipe);
-			if (ItemStack.areItemStacksEqual(output, recipeResult)) {
-				LoggerBM.info(" Removed furnace recipe: " + recipe + " -> " + recipeResult);
+			if(ItemStack.areItemStacksEqual(output, recipeResult)) {
 				iterator.remove();
+				Basemod.logger.info("Removed furnace recipe: " + recipe.getDisplayName() + " -> " + recipeResult.getDisplayName());
 			}
 		}
 	}

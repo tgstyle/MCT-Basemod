@@ -14,54 +14,54 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemFoods extends ItemBaseFood {
 
 	public ItemFoods() {
-        super("foods");
-        setHasSubtypes(true);
-    }
+		super("foods");
+		setHasSubtypes(true);
+	}
 
-    @Override
+	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (this.isInCreativeTab(tab)) {
-			for (EnumFood type : EnumFood.values()) {
+		if(this.isInCreativeTab(tab)) {
+			for(EnumFood type : EnumFood.values()) {
 				list.add(new ItemStack(this, type.getMaxSize(), type.ordinal()));
 			}
 		}
 	}
 
-    @Override
+	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + EnumFood.values()[stack.getMetadata()].getName();
-    }
+		return super.getUnlocalizedName() + "." + EnumFood.values()[stack.getMetadata()].getName();
+	}
 
-    @Override
-    public EnumRarity getRarity(ItemStack stack) {
-        return EnumFood.values()[stack.getMetadata()].getRarity();
-    }
+	@Override
+	public EnumRarity getRarity(ItemStack stack) {
+		return EnumFood.values()[stack.getMetadata()].getRarity();
+	}
 
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		return EnumFood.values()[stack.getMetadata()].getMaxSize();
 	}
-	
-	@Override
-    public int getHealAmount(ItemStack stack) {
-        return EnumFood.values()[stack.getMetadata()].getHealAmount();
-    }
-    
-	@Override
-    public float getSaturationModifier(ItemStack stack) {
-        return EnumFood.values()[stack.getMetadata()].getSaturation();
-    }
-	
-    @Override
-    public int getMetadata(int damage) {
-        return damage;
-    }
 
-    @SideOnly(Side.CLIENT)
-    public void initItemModels() {
-    	for (EnumFood variant : EnumFood.values()) {
-    		ModelLoader.setCustomModelResourceLocation(this, variant.ordinal(), new ModelResourceLocation(this.getRegistryName() + "/" + variant.getName(), "inventory"));
-    	}
-    }
+	@Override
+	public int getHealAmount(ItemStack stack) {
+		return EnumFood.values()[stack.getMetadata()].getHealAmount();
+	}
+
+	@Override
+	public float getSaturationModifier(ItemStack stack) {
+		return EnumFood.values()[stack.getMetadata()].getSaturation();
+	}
+
+	@Override
+	public int getMetadata(int damage) {
+		return damage;
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void initItemModels() {
+		for(EnumFood variant : EnumFood.values()) {
+			ModelLoader.setCustomModelResourceLocation(this, variant.ordinal(), new ModelResourceLocation(this.getRegistryName() + "/" + variant.getName(), "inventory"));
+		}
+	}
 
 }

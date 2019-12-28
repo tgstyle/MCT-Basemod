@@ -14,47 +14,47 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMaterials extends ItemBase {
 
-    public ItemMaterials() {
-        super("materials");
-        setHasSubtypes(true);
-    }
+	public ItemMaterials() {
+		super("materials");
+		setHasSubtypes(true);
+	}
 
-    @Override
+	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (this.isInCreativeTab(tab)) {
-			for (EnumMaterials type : EnumMaterials.values()) {
-				if (type.getName() != "open") {
+		if(this.isInCreativeTab(tab)) {
+			for(EnumMaterials type : EnumMaterials.values()) {
+				if(type.getName() != "open") {
 					list.add(new ItemStack(this, 1, type.ordinal()));
 				}
 			}
 		}
 	}
 
-    @Override
+	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + EnumMaterials.values()[stack.getMetadata()].getName();
-    }
+		return super.getUnlocalizedName() + "." + EnumMaterials.values()[stack.getMetadata()].getName();
+	}
 
-    @Override
-    public EnumRarity getRarity(ItemStack stack) {
-        return EnumMaterials.values()[stack.getMetadata()].getRarity();
-    }
+	@Override
+	public EnumRarity getRarity(ItemStack stack) {
+		return EnumMaterials.values()[stack.getMetadata()].getRarity();
+	}
 
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		return EnumMaterials.values()[stack.getMetadata()].getMaxSize();
 	}
 
-    @Override
-    public int getMetadata(int meta) {
-        return meta;
-    }
+	@Override
+	public int getMetadata(int meta) {
+		return meta;
+	}
 
-    @SideOnly(Side.CLIENT)
-    public void initItemModels() {   	
-    	for (EnumMaterials variant : EnumMaterials.values()) {
-    		ModelLoader.setCustomModelResourceLocation(this, variant.ordinal(), new ModelResourceLocation(this.getRegistryName() + "/" + variant.getName(), "inventory"));
-    	}
-    }
+	@SideOnly(Side.CLIENT)
+	public void initItemModels() {
+		for(EnumMaterials variant : EnumMaterials.values()) {
+			ModelLoader.setCustomModelResourceLocation(this, variant.ordinal(), new ModelResourceLocation(this.getRegistryName() + "/" + variant.getName(), "inventory"));
+		}
+	}
 
 }

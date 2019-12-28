@@ -24,72 +24,72 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockOreDrop4 extends BlockBase {
 
-    private static final PropertyEnum<EnumOre4> VARIANT = PropertyEnum.create("blocks", EnumOre4.class);
+	private static final PropertyEnum<EnumOre4> VARIANT = PropertyEnum.create("blocks", EnumOre4.class);
 
-    public BlockOreDrop4() {
-        super(Material.ROCK, MapColor.GRAY, "ore_drop4");
-    }
+	public BlockOreDrop4() {
+		super(Material.ROCK, MapColor.GRAY, "ore_drop4");
+	}
 
-    @Override
-    protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, VARIANT);
-    }
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, VARIANT);
+	}
 
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)	{
-		for (EnumOre4 type : EnumOre4.values()) {
+		for(EnumOre4 type : EnumOre4.values()) {
 			list.add(new ItemStack(this, 1, type.ordinal()));
 		}
-    }
+	}
 
 	@Override
-    public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, EnumOre4.values()[meta]);
-    }
+	public IBlockState getStateFromMeta(int meta) {
+		return getDefaultState().withProperty(VARIANT, EnumOre4.values()[meta]);
+	}
 
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        return state.getValue(VARIANT).ordinal();
-    }
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		return state.getValue(VARIANT).ordinal();
+	}
 
-    @Override
-    public int damageDropped(IBlockState state) {
-        return getMetaFromState(state);
-    }
+	@Override
+	public int damageDropped(IBlockState state) {
+		return getMetaFromState(state);
+	}
 
-    public String getRecipeOreDict1(IBlockState state) {
-    	return state.getValue(VARIANT).getRecipeOreDict1();
-    }
+	public String getRecipeOreDict1(IBlockState state) {
+		return state.getValue(VARIANT).getRecipeOreDict1();
+	}
 
-    public String getRecipeOreDict2(IBlockState state) {
-    	return state.getValue(VARIANT).getRecipeOreDict2();
-    }
+	public String getRecipeOreDict2(IBlockState state) {
+		return state.getValue(VARIANT).getRecipeOreDict2();
+	}
 
-    @Override
-    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return state.getValue(VARIANT).getLight();
-    }
+	@Override
+	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+		return state.getValue(VARIANT).getLight();
+	}
 
-    @Override
-    public int getHarvestLevel(IBlockState state) {
-        return state.getValue(VARIANT).getHarvestLevel();
-    }
+	@Override
+	public int getHarvestLevel(IBlockState state) {
+		return state.getValue(VARIANT).getHarvestLevel();
+	}
 
-    @Override
-    public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
-        return state.getValue(VARIANT).getHardness();
-    }
+	@Override
+	public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
+		return state.getValue(VARIANT).getHardness();
+	}
 
-    @Override
-    public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-        return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
-    }
+	@Override
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
+		return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
+	}
 
-    @SideOnly(Side.CLIENT)
-    public void initItemBlockModels() {
-    	for (EnumOre4 variant : EnumOre4.values()) {
-    		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(Item.getItemFromBlock(this).getRegistryName(), "blocks=" + variant.getName()));
-    	}
-    }
+	@SideOnly(Side.CLIENT)
+	public void initItemBlockModels() {
+		for(EnumOre4 variant : EnumOre4.values()) {
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(Item.getItemFromBlock(this).getRegistryName(), "blocks=" + variant.getName()));
+		}
+	}
 
 }

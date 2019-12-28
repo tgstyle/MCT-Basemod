@@ -59,8 +59,8 @@
 		"endsteel": [{
 			"custom": { "fluid": "endsteel" }
 		}],
-		"mixed_redstone": [{
-			"custom": { "fluid": "mixed_redstone" }
+		"mixedredstone": [{
+			"custom": { "fluid": "mixedredstone" }
 		}]
 	}
 }

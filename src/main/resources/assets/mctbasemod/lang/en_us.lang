@@ -232,8 +232,8 @@ fluid.endsteel=Molten End Stel
 
 
 # Fluids
-tile.mctbasemod:fluid_mixed_redstone.name=Mixed Redstone
-fluid.mixed_redstone=Mixed Redstone
+tile.mctbasemod:mixedredstone.name=Mixed Redstone
+fluid.mixedredstone=Mixed Redstone
 
 
 # Item Materials

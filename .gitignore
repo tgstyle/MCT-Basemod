@@ -19,7 +19,7 @@ build.bat
 build.gradle
 gradle.properties
 gradlesetup.bat
-T1 Sync from Test.cmd
 /build/
 /bin/
 /run/
+*.cmd

@@ -9,13 +9,13 @@ import net.minecraft.block.material.Material;
 
 public class BlockBaseOreCracked extends BlockFalling {
 
-    public BlockBaseOreCracked(Material material,String registry) {
-        super(material);
-        setRegistryName(Basemod.MODID, registry);
-        setUnlocalizedName(getRegistryName().toString());
-        setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
-        setHarvestLevel("shovel", 0);
-        setSoundType(SoundType.GROUND);
-    }
+	public BlockBaseOreCracked(Material material,String name) {
+		super(material);
+		setRegistryName(Basemod.MODID, name);
+		setUnlocalizedName(getRegistryName().toString());
+		setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
+		setHarvestLevel("shovel", 0);
+		setSoundType(SoundType.GROUND);
+	}
 
 }

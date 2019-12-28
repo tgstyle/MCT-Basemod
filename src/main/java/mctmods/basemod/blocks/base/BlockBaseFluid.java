@@ -3,18 +3,17 @@ package mctmods.basemod.blocks.base;
 import mctmods.basemod.Basemod;
 import mctmods.basemod.library.util.CreativeTabBM;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.fluids.BlockFluidClassic;
+import net.minecraftforge.fluids.Fluid;
 
-public class BlockBase extends Block {
+public class BlockBaseFluid extends BlockFluidClassic {
 
-	public BlockBase(Material material, MapColor mapColor, String name) {
-		super(material, mapColor);
+	public BlockBaseFluid(Fluid fluid, Material material, String name) {
+		super(fluid, material);
 		setRegistryName(Basemod.MODID, name);
 		setUnlocalizedName(getRegistryName().toString());
 		setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
-		setHarvestLevel("pickaxe", 0);
 	}
 
 }
