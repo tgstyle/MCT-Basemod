@@ -11,15 +11,12 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 *.launch
+*.cmd
+build.bat
 .classpath
 .gradle
 .project
 .settings
-build.bat
-build.gradle
-gradle.properties
-gradlesetup.bat
 /build/
 /bin/
 /run/
-*.cmd
