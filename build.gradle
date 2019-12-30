@@ -8,7 +8,7 @@ buildscript {
     }
 }
 
-ext.configFile = file "../../common/common-1.12.properties"
+ext.configFile = file "../common/common-1.12.properties"
 configFile.withReader {
     def prop = new Properties()
     prop.load(it)
