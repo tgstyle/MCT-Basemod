@@ -39,9 +39,6 @@ public class JEI implements IModPlugin {
 		for(EnumOre4 variant : EnumOre4.values()) {
 			blacklist.addIngredientToBlacklist(new ItemStack(Registry.ORE4, 1, variant.ordinal()));
 		}
-
-		// hidden items
-		blacklist.addIngredientToBlacklist(new ItemStack(Registry.MATERIALS, 1, 358));
 	}
 
 }

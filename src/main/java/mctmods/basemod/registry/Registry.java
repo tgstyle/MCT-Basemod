@@ -85,7 +85,7 @@ public class Registry {
 	};
 
 	// itemblocks
-	private static final ItemBlock[] item_block = {
+	private static final ItemBlock[] itemblock = {
 		new ItemBlockMaterials1(BLOCK_MATERIALS1),
 		new ItemBlockMaterials2(BLOCK_MATERIALS2),
 		new ItemBlockOre1(ORE1),
@@ -117,7 +117,7 @@ public class Registry {
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-		for(ItemBlock item_block : item_block) {
+		for(ItemBlock item_block : itemblock) {
 			registry.register(item_block.setRegistryName(item_block.getBlock().getRegistryName()));
 			Basemod.logger.info("Added itemblock: " + item_block.getBlock().getRegistryName());
 		}
