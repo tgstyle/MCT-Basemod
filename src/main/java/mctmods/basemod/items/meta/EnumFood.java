@@ -5,9 +5,9 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumFood implements IStringSerializable {
 
-	SWEER_POTATO("sweer_potato", EnumRarity.RARE, "", "", 1, 20, 5.0F),
-	CHICKEN_NUGGER("chicken_nugger", EnumRarity.RARE, "", "", 1, 20, 5.0F),
-	HAPPY_MEAL("happy_meal", EnumRarity.UNCOMMON, "", "", 8, 18, 0.5F);
+	SWEER_POTATO	("sweer_potato"		, EnumRarity.RARE		, "", "", 1, 20, 5.0F),
+	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 5.0F),
+	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 18, 0.5F);
 
 	private String name;
 	private EnumRarity rarity;
@@ -32,16 +32,16 @@ public enum EnumFood implements IStringSerializable {
 		return name;
 	}
 
+	public EnumRarity getRarity() {
+		return rarity;
+	}
+
 	public String getRecipeOreDict1() {
 		return recipeOreDict1;
 	}
 
 	public String getRecipeOreDict2() {
 		return recipeOreDict2;
-	}
-
-	public EnumRarity getRarity() {
-		return rarity;
 	}
 
 	public int getMaxSize() {

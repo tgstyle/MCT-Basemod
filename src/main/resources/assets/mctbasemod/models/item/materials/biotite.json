@@ -1,0 +1,6 @@
+{
+    "parent": "mctbasemod:item/materials",
+    "textures": { 
+        "layer0": "mctbasemod:items/materials/biotite"
+    }
+}

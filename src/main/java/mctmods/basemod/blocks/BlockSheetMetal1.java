@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,8 +38,8 @@ public class BlockSheetMetal1 extends BlockBase {
 
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)	{
-		for(EnumSheetMetal1 type : EnumSheetMetal1.values()) {
-			list.add(new ItemStack(this, 1, type.ordinal()));
+		for(EnumSheetMetal1 variant : EnumSheetMetal1.values()) {
+			list.add(new ItemStack(this, 1, variant.ordinal()));
 		}
 	}
 

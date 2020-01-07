@@ -1,0 +1,7 @@
+{
+    "parent": "mctbasemod:item/materials",
+    "textures": { 
+        "layer0": "mctbasemod:items/materials/knight_slime_nugget"
+    }
+}
+

@@ -17,6 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -36,8 +37,8 @@ public class BlockOreCracked2 extends BlockBaseOreCracked {
 
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)	{
-		for(EnumOreCracked2 type : EnumOreCracked2.values()) {
-			list.add(new ItemStack(this, 1, type.ordinal()));
+		for(EnumOreCracked2 variant : EnumOreCracked2.values()) {
+			list.add(new ItemStack(this, 1, variant.ordinal()));
 		}
 	}
 

@@ -86,10 +86,8 @@
 				}
 			},
 			"awakened_draconium_block": {
-                "model": "cube_column",
 				"textures": {
-					"side": "mctbasemod:blocks/awakened_draconium_block_side",
-					"end": "mctbasemod:blocks/awakened_draconium_block_top"
+					"all": "mctbasemod:blocks/awakened_draconium_block"
 				}
 			}	
 		}

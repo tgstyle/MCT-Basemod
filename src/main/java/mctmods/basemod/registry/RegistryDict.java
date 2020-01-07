@@ -39,41 +39,33 @@ public class RegistryDict {
 		for(EnumOre1 variant : EnumOre1.values()) {
 			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE1, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE_DROP1, 1, variant.ordinal()));
 			}
 			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE1, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_DROP1, 1, variant.ordinal()));
 			}
 		}
 		for(EnumOre2 variant : EnumOre2.values()) {
 			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE2, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE_DROP2, 1, variant.ordinal()));
 			}
 			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE2, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_DROP2, 1, variant.ordinal()));
 			}
 		}
 		for(EnumOre3 variant : EnumOre3.values()) {
 			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE3, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE_DROP3, 1, variant.ordinal()));
 			}
 			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE3, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_DROP3, 1, variant.ordinal()));
 			}
 		}
 		for(EnumOre4 variant : EnumOre4.values()) {
 			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE4, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE_DROP4, 1, variant.ordinal()));
 			}
 			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE4, 1, variant.ordinal()));
-				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_DROP4, 1, variant.ordinal()));
 			}
 		}
 		for(EnumOreCracked1 variant : EnumOreCracked1.values()) {

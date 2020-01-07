@@ -4,7 +4,6 @@ import java.util.Random;
 
 import mctmods.basemod.blocks.base.BlockBaseOre;
 import mctmods.basemod.blocks.meta.EnumOre2;
-import mctmods.basemod.registry.Registry;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -22,6 +21,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -41,8 +41,8 @@ public class BlockOre2 extends BlockBaseOre {
 
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)	{
-		for(EnumOre2 type : EnumOre2.values()) {
-			list.add(new ItemStack(this, 1, type.ordinal()));
+		for(EnumOre2 variant : EnumOre2.values()) {
+			list.add(new ItemStack(this, 1, variant.ordinal()));
 		}
 	}
 
@@ -94,38 +94,64 @@ public class BlockOre2 extends BlockBaseOre {
 		Random rand = world instanceof World ?((World)world).rand : RANDOM;
 
 		int count = quantityDropped(state, fortune, rand);
-		int meta = this.getMetaFromState(state);
+		EnumOre2 block = state.getValue(VARIANT);
+		ItemStack blockDrop1 = new ItemStack(block.getBlockDrop1(), block.getBlockDropAmount1(), block.getBlockDropMeta1());
+		ItemStack blockDrop2 = new ItemStack(block.getBlockDrop2(), block.getBlockDropAmount2(), block.getBlockDropMeta2());
 
 		for(int i = 0; i < count; i++) {
 			Item item = this.getItemDropped(state, rand, fortune);
 			if(item != Items.AIR) {
-				drops.add(new ItemStack(Registry.ORE_DROP2, 1, meta));
+				drops.add(blockDrop1);
+
+				int total = 1 + RANDOM.nextInt(100);
+
 				switch(fortune) {
-					case 0:
-						int total0 = 1 + RANDOM.nextInt(100);
-						if( total0 >= 1 && total0 <= 25 ) {
-							drops.add(new ItemStack(Registry.ORE_DROP2, 1, meta));
-						}
-						break;
-					case 1:
-						int total1 = 1 + RANDOM.nextInt(100);
-						if( total1 >= 1 && total1 <= 50 ) {
-							drops.add(new ItemStack(Registry.ORE_DROP2, 1, meta));
-						}
-						break;
-					case 2:
-						int total2 = 1 + RANDOM.nextInt(100);
-						if( total2 >= 1 && total2 <= 75 ) {
-							drops.add(new ItemStack(Registry.ORE_DROP2, 1, meta));
-						}
-						break;
-					case 3:
-						drops.add(new ItemStack(Registry.ORE_DROP2, 1, meta));
-						break;
+				case 0:
+					if( total >= 1 && total <= 25 ) {
+						drops.add(blockDrop1);
+				}
+				break;
+				case 1:
+					if( total >= 1 && total <= 50 ) {
+						drops.add(blockDrop1);
+				}
+				break;
+				case 2:
+					if( total >= 1 && total <= 75 ) {
+						drops.add(blockDrop1);
+				}
+				break;
+				case 3:
+					drops.add(blockDrop1);
+				break;
+			}
+			if(block.getBlockDrop2() != null) {
+				switch(fortune) {
+				case 0:
+					if( total >= 1 && total <= 15 ) {
+						drops.add(blockDrop2);
+					}
+					break;
+				case 1:
+					if( total >= 1 && total <= 25 ) {
+						drops.add(blockDrop2);
+					}
+					break;
+				case 2:
+					if( total >= 1 && total <= 35 ) {
+						drops.add(blockDrop2);
+					}
+					break;
+				case 3:
+					if( total >= 1 && total <= 45 ) {
+						drops.add(blockDrop2);
+					}
+				break;
 				}
 			}
 		}
 	}
+}
 
 	@SideOnly(Side.CLIENT)
 	public void initItemBlockModels() {

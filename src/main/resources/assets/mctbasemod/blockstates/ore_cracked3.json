@@ -1,0 +1,18 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+		"transform": "forge:default-block",
+        "model": "cube_all"
+    },
+    "variants": {
+        "inventory": [{}],
+        "normal": [{}],
+        "blocks": {
+            "coal_cracked_ore": {
+                "textures": {
+                    "all": "mctbasemod:blocks/coal_cracked_ore"
+                }
+            }
+        }
+    }
+}

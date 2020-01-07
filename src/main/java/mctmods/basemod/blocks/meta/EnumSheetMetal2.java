@@ -5,13 +5,13 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumSheetMetal2 implements IStringSerializable {
 
-	OSMIUM_SHEET_METAL("osmium_sheet_metal", EnumRarity.UNCOMMON, "blockSheetmetalOsmium", "", 0, 2, 3, 15, 64),
-	WOOD_SHEET_BLOCK("wood_sheet_block", EnumRarity.COMMON, "blockSheetWood", "", 0, 2, 3, 15, 64),
-	STONE_SHEET_BLOCK("stone_sheet_block", EnumRarity.COMMON, "blockSheetStone", "", 0, 2, 3, 15, 64),
-	DIAMOND_SHEET_BLOCK("diamond_sheet_block", EnumRarity.COMMON, "blockSheetDiamond", "", 0, 2, 3, 15, 64),
-	IRIDIUM_SHEET_METAL("iridium_sheet_metal", EnumRarity.RARE, "blockSheetmetalIridium", "", 0, 2, 3, 15, 64),
-	DRACONIUM_SHEET_METAL("draconium_sheet_metal", EnumRarity.RARE, "blockSheetmetalDraconium", "", 0, 2, 3, 15, 64),
-	AWAKENED_DRACONIUM_SHEET_METAL("awakened_draconium_sheet_metal", EnumRarity.RARE, "blockSheetmetalDraconiumAwakened", "", 0, 2, 3, 15, 64);
+	OSMIUM_SHEET_METAL				("osmium_sheet_metal"				, EnumRarity.UNCOMMON	, "blockSheetmetalOsmium"			, "", 0, 2, 3, 15, 64),
+	WOOD_SHEET_BLOCK				("wood_sheet_block"					, EnumRarity.COMMON		, "blockSheetWood"					, "", 0, 2, 3, 15, 64),
+	STONE_SHEET_BLOCK				("stone_sheet_block"				, EnumRarity.COMMON		, "blockSheetStone"					, "", 0, 2, 3, 15, 64),
+	DIAMOND_SHEET_BLOCK				("diamond_sheet_block"				, EnumRarity.COMMON		, "blockSheetDiamond"				, "", 0, 2, 3, 15, 64),
+	IRIDIUM_SHEET_METAL				("iridium_sheet_metal"				, EnumRarity.EPIC		, "blockSheetmetalIridium"			, "", 0, 2, 3, 15, 64),
+	DRACONIUM_SHEET_METAL			("draconium_sheet_metal"			, EnumRarity.EPIC		, "blockSheetmetalDraconium"		, "", 0, 2, 3, 15, 64),
+	AWAKENED_DRACONIUM_SHEET_METAL	("awakened_draconium_sheet_metal"	, EnumRarity.EPIC		, "blockSheetmetalDraconiumAwakened", "", 0, 2, 3, 15, 64);
 
 	private String name;
 	private EnumRarity rarity;
