@@ -9,20 +9,20 @@ import net.minecraft.util.IStringSerializable;
 public enum EnumOre2 implements IStringSerializable {
 
 	COAL_POOR_ORE		("coal_poor_ore"		, EnumRarity.COMMON		, "mctPoorCoal"		, "", 0, 1, 3, 15, 64, Registry.ORE_CRACKED3, 1, 0, null, 1, 0),
-	COAL_ORE			("coal_ore"				, EnumRarity.COMMON		, "mctCoal"			, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 2, 0, null, 2, 0),
-	COAL_DENSE_ORE		("coal_dense_ore"		, EnumRarity.COMMON		, "mctDenseCoal"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 3, 0, null, 3, 0),
+	COAL_ORE			("coal_ore"				, EnumRarity.COMMON		, "mctCoal"			, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 1, 0, null, 1, 0),
+	COAL_DENSE_ORE		("coal_dense_ore"		, EnumRarity.COMMON		, "mctDenseCoal"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 1, 0, null, 1, 0),
 	REDSTONE_POOR_ORE	("redstone_poor_ore"	, EnumRarity.COMMON		, "mctPoorRedstone"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 5, null, 1, 0),
-	REDSTONE_ORE		("redstone_ore"			, EnumRarity.COMMON		, "mctRedstone"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 5, null, 2, 0),
-	REDSTONE_DENSE_ORE	("redstone_dense_ore"	, EnumRarity.COMMON		, "mctDenseRedstone", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 5, null, 3, 0),
+	REDSTONE_ORE		("redstone_ore"			, EnumRarity.COMMON		, "mctRedstone"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 5, null, 1, 0),
+	REDSTONE_DENSE_ORE	("redstone_dense_ore"	, EnumRarity.COMMON		, "mctDenseRedstone", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 5, null, 1, 0),
 	LAPIS_POOR_ORE		("lapis_poor_ore"		, EnumRarity.UNCOMMON	, "mctPoorLapis"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 6, null, 1, 0),
-	LAPIS_ORE			("lapis_ore"			, EnumRarity.UNCOMMON	, "mctLapis"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 6, null, 2, 0),
-	LAPIS_DENSE_ORE		("lapis_dense_ore"		, EnumRarity.UNCOMMON	, "mctDenseLapis"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 6, null, 3, 0),
+	LAPIS_ORE			("lapis_ore"			, EnumRarity.UNCOMMON	, "mctLapis"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 6, null, 1, 0),
+	LAPIS_DENSE_ORE		("lapis_dense_ore"		, EnumRarity.UNCOMMON	, "mctDenseLapis"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 6, null, 1, 0),
 	DIAMOND_POOR_ORE	("diamond_poor_ore"		, EnumRarity.UNCOMMON	, "mctPoorDiamond"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 8, null, 1, 0),
-	DIAMOND_ORE			("diamond_ore"			, EnumRarity.UNCOMMON	, "mctDiamond"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 8, null, 2, 0),
-	DIAMOND_DENSE_ORE	("diamond_dense_ore"	, EnumRarity.UNCOMMON	, "mctDenseDiamond"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 8, null, 3, 0),
+	DIAMOND_ORE			("diamond_ore"			, EnumRarity.UNCOMMON	, "mctDiamond"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 8, null, 1, 0),
+	DIAMOND_DENSE_ORE	("diamond_dense_ore"	, EnumRarity.UNCOMMON	, "mctDenseDiamond"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 8, null, 1, 0),
 	EMERALD_POOR_ORE	("emerald_poor_ore"		, EnumRarity.RARE		, "mctPoorEmerald"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 1, 9, null, 1, 0),
-	EMERALD_ORE			("emerald_ore"			, EnumRarity.RARE		, "mctEmerald"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 2, 9, null, 2, 0),
-	EMERALD_DENSE_ORE	("emerald_dense_ore"	, EnumRarity.RARE		, "mctDenseEmerald"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 3, 9, null, 3, 0);
+	EMERALD_ORE			("emerald_ore"			, EnumRarity.RARE		, "mctEmerald"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 1, 9, null, 1, 0),
+	EMERALD_DENSE_ORE	("emerald_dense_ore"	, EnumRarity.RARE		, "mctDenseEmerald"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 1, 9, null, 1, 0);
 
 	private String name;
 	private EnumRarity rarity;

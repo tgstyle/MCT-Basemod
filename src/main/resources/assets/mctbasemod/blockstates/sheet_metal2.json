@@ -42,6 +42,21 @@
                 "textures": {
                     "all": "mctbasemod:blocks/awakened_draconium_sheet_metal"
                 }
+            },
+			"emerald_sheet_block": {
+                "textures": {
+                    "all": "mctbasemod:blocks/emerald_sheet_block"
+                }
+            },
+			"ardite_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/ardite_sheet_metal"
+                }
+            },
+			"cobalt_sheet_metal": {
+                "textures": {
+                    "all": "mctbasemod:blocks/cobalt_sheet_metal"
+                }
             }
         }
     }

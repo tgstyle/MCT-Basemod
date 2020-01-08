@@ -29,6 +29,26 @@
 				"textures": {
 					"all": "mctbasemod:blocks/quartz_enriched_iron_block"
 				}
+			},
+			"aluminum_brass_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/aluminum_brass_block"
+				}
+			},
+			"ardite_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/ardite_block"
+				}
+			},
+			"cobalt_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/cobalt_block"
+				}
+			},
+			"manyullyn_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/manyullyn_block"
+				}
 			}
         }
     }

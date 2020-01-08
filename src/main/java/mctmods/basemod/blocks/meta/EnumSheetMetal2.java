@@ -11,7 +11,10 @@ public enum EnumSheetMetal2 implements IStringSerializable {
 	DIAMOND_SHEET_BLOCK				("diamond_sheet_block"				, EnumRarity.COMMON		, "blockSheetDiamond"				, "", 0, 2, 3, 15, 64),
 	IRIDIUM_SHEET_METAL				("iridium_sheet_metal"				, EnumRarity.EPIC		, "blockSheetmetalIridium"			, "", 0, 2, 3, 15, 64),
 	DRACONIUM_SHEET_METAL			("draconium_sheet_metal"			, EnumRarity.EPIC		, "blockSheetmetalDraconium"		, "", 0, 2, 3, 15, 64),
-	AWAKENED_DRACONIUM_SHEET_METAL	("awakened_draconium_sheet_metal"	, EnumRarity.EPIC		, "blockSheetmetalDraconiumAwakened", "", 0, 2, 3, 15, 64);
+	AWAKENED_DRACONIUM_SHEET_METAL	("awakened_draconium_sheet_metal"	, EnumRarity.EPIC		, "blockSheetmetalDraconiumAwakened", "", 0, 2, 3, 15, 64),
+	EMERALD_SHEET_BLOCK				("emerald_sheet_block"				, EnumRarity.RARE		, "blockSheetEmerald"				, "", 0, 2, 3, 15, 64),
+	ARDITE_SHEET_METAL				("ardite_sheet_metal"				, EnumRarity.COMMON		, "blockSheetArdite"				, "", 0, 2, 3, 15, 64),
+	COBALT_SHEET_METAL				("cobalt_sheet_metal"				, EnumRarity.COMMON		, "blockSheetCobalt"				, "", 0, 2, 3, 15, 64);
 
 	private String name;
 	private EnumRarity rarity;

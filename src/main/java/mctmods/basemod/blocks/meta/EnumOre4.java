@@ -9,8 +9,8 @@ import net.minecraft.util.IStringSerializable;
 public enum EnumOre4 implements IStringSerializable {
 
 	QUARTZ_POOR_ORE	("quartz_poor_ore"	, EnumRarity.RARE, "mctPoorQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 2, null, 1, 0),
-	QUARTZ_ORE		("quartz_ore"		, EnumRarity.RARE, "mctQuartz"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 2, 2, null, 1, 0),
-	QUARTZ_DENSE_ORE("quartz_dense_ore"	, EnumRarity.RARE, "mctDenseQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 3, 2, null, 1, 0),
+	QUARTZ_ORE		("quartz_ore"		, EnumRarity.RARE, "mctQuartz"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 2, null, 1, 0),
+	QUARTZ_DENSE_ORE("quartz_dense_ore"	, EnumRarity.RARE, "mctDenseQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 2, null, 1, 0),
 	ARDITE_ORE		("ardite_ore"		, EnumRarity.RARE, "mctArdite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 3, null, 1, 0),
 	COBALT_ORE		("cobalt_ore"		, EnumRarity.RARE, "mctCobalt"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 4, null, 1, 0),
 	BIOTITE_ORE		("biotite_ore"		, EnumRarity.EPIC, "mctBiotite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED3, 1, 6, null, 1, 0),

@@ -31,7 +31,6 @@ public class RegistryFluid {
 	// molten fluids
 	public static final Fluid FLUID_MOLTEN_DRACONIUM = new FluidColored("draconium", 0x9900ff, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_DRACONIUMAWAKENED = new FluidColored("draconiumawakened", 0xff4f1a, 850, 2000, 10000);
-	public static final Fluid FLUID_MOLTEN_FLUXEDELECTRUM = new FluidColored("fluxedelectrum", 0xe68600, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_QUARTZENRICHEDIRON = new FluidColored("quartzenrichediron", 0xef6262, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_REFINEDGLOWSTONE = new FluidColored("refinedglowstone", 0xf2cb3a, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_REFINEDOBSIDIAN = new FluidColored("refinedobsidian", 0x592b88, 850, 2000, 10000);
@@ -41,7 +40,6 @@ public class RegistryFluid {
 	static {
 		sendFluidForMelting("draconium", FLUID_MOLTEN_DRACONIUM);
 		sendFluidForMelting("draconiumawakened", FLUID_MOLTEN_DRACONIUMAWAKENED);
-		sendFluidForMelting("fluxedelectrum", FLUID_MOLTEN_FLUXEDELECTRUM);
 		sendFluidForMelting("quartzenriched", FLUID_MOLTEN_QUARTZENRICHEDIRON);
 		sendFluidForMelting("refinedglowstone", FLUID_MOLTEN_REFINEDGLOWSTONE);
 		sendFluidForMelting("refinedobsidian", FLUID_MOLTEN_REFINEDOBSIDIAN);
@@ -50,7 +48,6 @@ public class RegistryFluid {
 	// molten fluid blocks
 	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUM = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUM, Material.LAVA, "molten_draconium");
 	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUMAWAKENED = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUMAWAKENED, Material.LAVA, "molten_draconiumawakened");
-	public static final BlockMoltenFluid BLOCK_MOLTEN_FLUXEDELECTRUM = new BlockMoltenFluid(FLUID_MOLTEN_FLUXEDELECTRUM, Material.LAVA, "molten_fluxedelectrum");
 	public static final BlockMoltenFluid BLOCK_MOLTEN_QUARTZENRICHEDIRON = new BlockMoltenFluid(FLUID_MOLTEN_QUARTZENRICHEDIRON, Material.LAVA, "molten_quartzenrichediron");
 	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDGLOWSTONE = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDGLOWSTONE, Material.LAVA, "molten_refinedglowstone");
 	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDOBSIDIAN = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDOBSIDIAN, Material.LAVA, "molten_refinedobsidian");
@@ -62,7 +59,6 @@ public class RegistryFluid {
 		// molten fluid
 		BLOCK_MOLTEN_DRACONIUM,
 		BLOCK_MOLTEN_DRACONIUMAWAKENED,
-		BLOCK_MOLTEN_FLUXEDELECTRUM,
 		BLOCK_MOLTEN_QUARTZENRICHEDIRON,
 		BLOCK_MOLTEN_REFINEDGLOWSTONE,
 		BLOCK_MOLTEN_REFINEDOBSIDIAN,

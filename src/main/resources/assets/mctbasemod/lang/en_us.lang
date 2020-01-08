@@ -113,6 +113,9 @@ tile.mctbasemod:sheet_metal2.diamond_sheet_block.name=Diamond Sheetblock
 tile.mctbasemod:sheet_metal2.iridium_sheet_metal.name=Iridium Sheetmetal
 tile.mctbasemod:sheet_metal2.draconium_sheet_metal.name=Draconium Sheetmetal
 tile.mctbasemod:sheet_metal2.awakened_draconium_sheet_metal.name=Awakened Draconium Sheetmetal
+tile.mctbasemod:sheet_metal2.emerald_sheet_block.name=Emerald Sheetblock
+tile.mctbasemod:sheet_metal2.ardite_sheet_metal.name=Ardite Sheetmetal
+tile.mctbasemod:sheet_metal2.cobalt_sheet_metal.name=Cobalt Sheetmetal
 
 
 # Materials
@@ -136,17 +139,19 @@ tile.mctbasemod:block_materials2.coal_coke_block.name=Coal Coke Block
 tile.mctbasemod:block_materials2.charcoal_block.name=Charcoal Block
 tile.mctbasemod:block_materials2.redstone_heating_element.name=Redstone Heating Element
 tile.mctbasemod:block_materials2.quartz_enriched_iron_block.name=Quartz Enriched Iron Block
+tile.mctbasemod:block_materials2.aluminum_brass_block.name=Aluminum Brass Block
+tile.mctbasemod:block_materials2.ardite_block.name=Ardite Block
+tile.mctbasemod:block_materials2.cobalt_block.name=Cobalt Block
+tile.mctbasemod:block_materials2.manyullyn_block.name=Manyullyn Block
 
 
 # Molten Fluids
 tile.mctbasemod:molten_draconium.name=Molten Draconium
 tile.mctbasemod:molten_draconiumawakened.name=Molten Awakened Draconium
-tile.mctbasemod:molten_fluxedelectrum.name=Molten Fluxed Electrum
 tile.mctbasemod:molten_quartzenrichediron.name=Molten Quartz Enriched Iron
 tile.mctbasemod:molten_refinedobsidian.name=Molten Refined Obsidian
 tile.mctbasemod:molten_refinedglowstone.name=Molten Refined Glowstone
 fluid.draconium=Molten Draconium
-fluid.fluxedelectrum=Molten Fluxed Electrum
 fluid.quartzenrichediron=Molten Quartz Enriched Iron
 fluid.draconiumawakened=Molten Awakened Draconium
 fluid.refinedobsidian=Molten Refined Obsidian
@@ -284,12 +289,6 @@ item.mctbasemod:materials.energetic_alloy_clump.name=Energetic Alloy Clump
 item.mctbasemod:materials.energetic_alloy_ingot.name=Energetic Alloy Ingot
 item.mctbasemod:materials.energetic_alloy_nugget.name=Energetic Alloy Nugget
 item.mctbasemod:materials.energetic_alloy_plate.name=Energetic Alloy Plate
-item.mctbasemod:materials.fluxed_electrum_clump.name=Fluxed Electrum Clump
-item.mctbasemod:materials.fluxed_electrum_dust.name=Fluxed Electrum Dust
-item.mctbasemod:materials.fluxed_electrum_gear.name=Fluxed Electrum Gear
-item.mctbasemod:materials.fluxed_electrum_ingot.name=Fluxed Electrum Ingot
-item.mctbasemod:materials.fluxed_electrum_nugget.name=Fluxed Electrum Nugget
-item.mctbasemod:materials.fluxed_electrum_plate.name=Fluxed Electrum Plate
 item.mctbasemod:materials.gold_clump.name=Gold Clump
 item.mctbasemod:materials.gold_crushed_ore.name=Gold Crushed Ore
 item.mctbasemod:materials.gold_dust.name=Gold Dust
