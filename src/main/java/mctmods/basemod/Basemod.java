@@ -61,8 +61,7 @@ public class Basemod {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		Registry.registerItems(event.getRegistry());
 		Registry.registerItemBlocks(event.getRegistry());
-		RegistryDict.registerDictionaryBlocks();
-		RegistryDict.registerDictionaryItems();
+		RegistryDict.registerDictionary();
 	}
 
 	@SubscribeEvent

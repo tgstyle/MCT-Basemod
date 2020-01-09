@@ -17,7 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RegistryDict {
 
-	public static void registerDictionaryBlocks() {
+	public static void registerDictionary() {
 
 		// Blocks
 		for(EnumMaterials1 variant : EnumMaterials1.values()) {
@@ -100,9 +100,7 @@ public class RegistryDict {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.SHEET_METAL2, 1, variant.ordinal()));
 			}
 		}
-	}
 
-	public static void registerDictionaryItems() {
 		// Items
 		for(EnumMaterials variant : EnumMaterials.values()) {
 			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
