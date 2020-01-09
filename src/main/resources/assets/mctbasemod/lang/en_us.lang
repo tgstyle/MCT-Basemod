@@ -299,6 +299,7 @@ item.mctbasemod:materials.gold_plate.name=Gold Plate
 item.mctbasemod:materials.gold_rod.name=Gold Rod
 item.mctbasemod:materials.gold_shard.name=Gold Shard
 item.mctbasemod:materials.graphite_dust.name=Graphite Dust
+item.mctbasemod:materials.graphite_plate.name=Graphite Plate
 item.mctbasemod:materials.invar_clump.name=Invar Clump
 item.mctbasemod:materials.invar_dust.name=Invar Dust
 item.mctbasemod:materials.invar_gear.name=Invar Gear
