@@ -139,10 +139,13 @@ tile.mctbasemod:block_materials2.coal_coke_block.name=Coal Coke Block
 tile.mctbasemod:block_materials2.charcoal_block.name=Charcoal Block
 tile.mctbasemod:block_materials2.redstone_heating_element.name=Redstone Heating Element
 tile.mctbasemod:block_materials2.quartz_enriched_iron_block.name=Quartz Enriched Iron Block
+tile.mctbasemod:block_materials2.knight_slime_block.name=Knightslime Block
 tile.mctbasemod:block_materials2.aluminum_brass_block.name=Aluminum Brass Block
 tile.mctbasemod:block_materials2.ardite_block.name=Ardite Block
 tile.mctbasemod:block_materials2.cobalt_block.name=Cobalt Block
 tile.mctbasemod:block_materials2.manyullyn_block.name=Manyullyn Block
+tile.mctbasemod:block_materials2.refined_obsidian_block.name=Refined Obsidian Block
+tile.mctbasemod:block_materials2.refined_glowstone.name=Refined Glowstone Block
 
 
 # Molten Fluids

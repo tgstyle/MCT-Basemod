@@ -30,6 +30,11 @@
 					"all": "mctbasemod:blocks/quartz_enriched_iron_block"
 				}
 			},
+			"knight_slime_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/knight_slime_block"
+				}
+			},
 			"aluminum_brass_block": {
 				"textures": {
 					"all": "mctbasemod:blocks/aluminum_brass_block"
@@ -48,6 +53,16 @@
 			"manyullyn_block": {
 				"textures": {
 					"all": "mctbasemod:blocks/manyullyn_block"
+				}
+			},
+			"refined_obsidian_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/refined_obsidian_block"
+				}
+			},
+			"refined_glowstone_block": {
+				"textures": {
+					"all": "mctbasemod:blocks/refined_glowstone_block"
 				}
 			}
         }

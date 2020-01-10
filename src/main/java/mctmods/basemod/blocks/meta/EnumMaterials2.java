@@ -9,10 +9,13 @@ public enum EnumMaterials2 implements IStringSerializable {
 	CHARCOAL_BLOCK				("charcoal_block"				, EnumRarity.COMMON		, "blockCharcoal"			, "", 0, 1, 3, 15, 64),
 	REDSTONE_HEATING_ELEMENT	("redstone_heating_element"		, EnumRarity.COMMON		, ""						, "", 0, 1, 3, 15, 64),
 	QUARTZ_ENRICHED_IRON_BLOCK	("quartz_enriched_iron_block"	, EnumRarity.UNCOMMON	, "blockQuartzEnrichedIron"	, "", 0, 1, 3, 15, 64),
+	KNIGHT_SLIME_BLOCK			("knight_slime_block"			, EnumRarity.COMMON		, "blockKnightslime"		, "", 0, 1, 3, 15, 64),
 	ALUMINUM_BRASS_BLOCK		("aluminum_brass_block"			, EnumRarity.UNCOMMON	, "blockAlubrass"			, "", 0, 1, 3, 15, 64),
 	ARDITE_BLOCK				("ardite_block"					, EnumRarity.RARE		, "blockArdite"				, "", 0, 1, 3, 15, 64),
 	COBALT_BLOCK				("cobalt_block"					, EnumRarity.RARE		, "blockCobalt"				, "", 0, 1, 3, 15, 64),
-	MANYULLYN_BLOCK				("manyullyn_block"				, EnumRarity.RARE		, "blockManyullyn"			, "", 0, 1, 3, 15, 64);
+	MANYULLYN_BLOCK				("manyullyn_block"				, EnumRarity.RARE		, "blockManyullyn"			, "", 0, 1, 3, 15, 64),
+	REFINED_OBSIDIAN_BLOCK		("refined_obsidian_block"		, EnumRarity.UNCOMMON	, "blockRefinedObsidian"	, "", 0, 1, 3, 15, 64),
+	REFINED_GLOWSTONE_BLOCK		("refined_glowstone_block"		, EnumRarity.RARE		, "blockRefinedGlowstone"	, "", 0, 1, 3, 15, 64);
 
 	private String name;
 	private EnumRarity rarity;
