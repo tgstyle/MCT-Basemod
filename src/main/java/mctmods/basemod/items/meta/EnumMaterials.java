@@ -174,7 +174,7 @@ public enum EnumMaterials implements IStringSerializable {
 	ELECTRUM_PLATE	("electrum_plate"	,EnumRarity.UNCOMMON,"plateElectrum",""				,64),
 
 	OPEN_0140					("open"							,EnumRarity.UNCOMMON,""							,"",64),
-	OPEN_0141					("open"							,EnumRarity.UNCOMMON,""							,"",64),
+	QUARTZ_ENRICHED_IRON_DUST   ("quartz_enriched_iron_dust"	,EnumRarity.UNCOMMON,"dustQuartzEnrichedIron"	,"",64),
 	OPEN_0142					("open"							,EnumRarity.UNCOMMON,""							,"",64),
 	OPEN_0143					("open"							,EnumRarity.UNCOMMON,""							,"",64),
 	OPEN_0144					("open"							,EnumRarity.UNCOMMON,""							,"",64),
