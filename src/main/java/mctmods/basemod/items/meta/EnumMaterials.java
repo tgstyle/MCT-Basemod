@@ -138,7 +138,7 @@ public enum EnumMaterials implements IStringSerializable {
 	BRONZE_PLATE	("bronze_plate"	,EnumRarity.COMMON,"plateBronze"	,""			,64),
 
 	OPEN_0110	("open"			,EnumRarity.COMMON,""			,""			,64),
-	STEEL_DUST	("steel_dust"	,EnumRarity.COMMON,"dust_steel"	,""			,64),
+	STEEL_DUST	("steel_dust"	,EnumRarity.COMMON,"dustSteel"	,""			,64),
 	OPEN_0111	("open"			,EnumRarity.COMMON,""			,""			,64),
 	OPEN_0112	("open"			,EnumRarity.COMMON,""			,""			,64),
 	OPEN_0113	("open"			,EnumRarity.COMMON,""			,""			,64),
