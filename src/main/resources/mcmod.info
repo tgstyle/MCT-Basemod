@@ -2,9 +2,10 @@
 {
   "modid": "mctbasemod",
   "name": "MCT Basemod",
-  "description": "***NOT FOR DISTRIBUTION, AUTHORIZATION FROM MOD AUTHOR ONLY!!!*** Base mod for ores and materials.",
+  "description": "A library mod for the TiCh Immersion Modpack",
   "version": "${version}",
   "mcversion": "${mcversion}",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/mct-basemod",
   "authorList": ["TGstyle"],
   "credits": "FairyMensch for some good textures!",
   "logoFile": "",
