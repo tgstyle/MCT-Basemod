@@ -1,7 +1,9 @@
 package mctmods.basemod.proxies;
 
+import mctmods.basemod.Basemod;
 import mctmods.basemod.registry.Registry;
 import mctmods.basemod.registry.RegistryFluid;
+import mctmods.basemod.registry.RegistryFluidMolten;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -13,6 +15,7 @@ public class ClientProxy extends CommonProxy {
 	public void registerRenders() {
 		Registry.initModels();
 		RegistryFluid.initModels();
+		if(Basemod.tconstruct) {RegistryFluidMolten.initModels();}
 	}
 
 	@Override

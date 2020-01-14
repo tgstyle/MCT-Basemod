@@ -6,13 +6,14 @@ import mctmods.basemod.proxies.CommonProxy;
 import mctmods.basemod.registry.Registry;
 import mctmods.basemod.registry.RegistryDict;
 import mctmods.basemod.registry.RegistryFluid;
-
+import mctmods.basemod.registry.RegistryFluidMolten;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -32,8 +33,7 @@ import org.apache.logging.log4j.Logger;
 	acceptedMinecraftVersions = "[1.12.2,1.13)",
 	dependencies =
 			"required-after:forge@[14.23.+,);" +
-			"required-after:tconstruct;" +
-			"before:mekanism;")
+			"after:tconstruct;")
 
 @EventBusSubscriber
 public class Basemod {
@@ -43,6 +43,7 @@ public class Basemod {
 	public static final String VERSION = "${version}";
 
 	public static Logger logger = LogManager.getLogger(MODID);
+	public static boolean tconstruct;
 
 	@SidedProxy(clientSide = "mctmods.basemod.proxies.ClientProxy", serverSide = "mctmods.basemod.proxies.CommonProxy")
 	public static CommonProxy proxy;
@@ -55,6 +56,7 @@ public class Basemod {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		Registry.registerBlocks(event.getRegistry());
 		RegistryFluid.registerBlocks(event.getRegistry());
+		if(tconstruct) {RegistryFluidMolten.registerBlocks(event.getRegistry());}
 	}
 
 	@SubscribeEvent
@@ -74,6 +76,7 @@ public class Basemod {
 		FilePlacerBM.filePlacer();
 		FurnaceRecipe.removeSmeltingPreInit();
 
+		tconstruct = Loader.isModLoaded("tconstruct");
 		proxy.preInit();
 	}
 

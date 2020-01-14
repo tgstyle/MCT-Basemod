@@ -1,7 +1,7 @@
 package mctmods.basemod.registry;
 
 import mctmods.basemod.Basemod;
-import mctmods.basemod.blocks.BlockFluid;
+import mctmods.basemod.blocks.BlockMoltenFluid;
 import mctmods.basemod.blocks.base.BlockBaseFluid;
 import mctmods.basemod.fluids.FluidColored;
 
@@ -25,14 +25,35 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
 
-public class RegistryFluid {
+public class RegistryFluidMolten {
 
-	public static final Fluid FLUID_MIXEDREDSTONE = new FluidColored("mixedredstone", 0xD9740303, 1600, 1000);
+	public static final Fluid FLUID_MOLTEN_DRACONIUM = new FluidColored("draconium", 0x9900ff, 850, 2000, 10000);
+	public static final Fluid FLUID_MOLTEN_DRACONIUMAWAKENED = new FluidColored("draconiumawakened", 0xff4f1a, 850, 2000, 10000);
+	public static final Fluid FLUID_MOLTEN_QUARTZENRICHEDIRON = new FluidColored("quartzenrichediron", 0xef6262, 850, 2000, 10000);
+	public static final Fluid FLUID_MOLTEN_REFINEDGLOWSTONE = new FluidColored("refinedglowstone", 0xf2cb3a, 850, 2000, 10000);
+	public static final Fluid FLUID_MOLTEN_REFINEDOBSIDIAN = new FluidColored("refinedobsidian", 0x592b88, 850, 2000, 10000);
 
-	public static final BlockFluid BLOCK_MIXEDREDSTONE = new BlockFluid(FLUID_MIXEDREDSTONE, Material.WATER, "mixedredstone");
+	static {
+		sendFluidForMelting("draconium", FLUID_MOLTEN_DRACONIUM);
+		sendFluidForMelting("draconiumawakened", FLUID_MOLTEN_DRACONIUMAWAKENED);
+		sendFluidForMelting("quartzenrichediron", FLUID_MOLTEN_QUARTZENRICHEDIRON);
+		sendFluidForMelting("refinedglowstone", FLUID_MOLTEN_REFINEDGLOWSTONE);
+		sendFluidForMelting("refinedobsidian", FLUID_MOLTEN_REFINEDOBSIDIAN);
+		Basemod.logger.info("Registered Molten Fluids with TConstruct");
+	}
+
+	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUM = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUM, Material.LAVA, "molten_draconium");
+	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUMAWAKENED = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUMAWAKENED, Material.LAVA, "molten_draconiumawakened");
+	public static final BlockMoltenFluid BLOCK_MOLTEN_QUARTZENRICHEDIRON = new BlockMoltenFluid(FLUID_MOLTEN_QUARTZENRICHEDIRON, Material.LAVA, "molten_quartzenrichediron");
+	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDGLOWSTONE = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDGLOWSTONE, Material.LAVA, "molten_refinedglowstone");
+	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDOBSIDIAN = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDOBSIDIAN, Material.LAVA, "molten_refinedobsidian");
 
 	private static final Block [] block = {
-		BLOCK_MIXEDREDSTONE
+		BLOCK_MOLTEN_DRACONIUM,
+		BLOCK_MOLTEN_DRACONIUMAWAKENED,
+		BLOCK_MOLTEN_QUARTZENRICHEDIRON,
+		BLOCK_MOLTEN_REFINEDGLOWSTONE,
+		BLOCK_MOLTEN_REFINEDOBSIDIAN,
 	};
 
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
