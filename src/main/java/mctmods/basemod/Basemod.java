@@ -33,7 +33,8 @@ import org.apache.logging.log4j.Logger;
 	acceptedMinecraftVersions = "[1.12.2,1.13)",
 	dependencies =
 			"required-after:forge@[14.23.+,);" +
-			"after:tconstruct;")
+			"after:tconstruct;" +
+			"before:mekanism;")
 
 @EventBusSubscriber
 public class Basemod {
