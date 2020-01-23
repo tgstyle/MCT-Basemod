@@ -20,7 +20,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Links
 - [MCT Basemod on CurseForge](https://www.curseforge.com/minecraft/mc-mods/mct-basemod)<br/>
+- [TiCh Immersion Modpack on CurseForge](https://www.curseforge.com/minecraft/modpacks/mct-tich-immersion)<br/>
 
 # Credits
 
-* FairyMensch for Textures
+* FairyMensch for Textures<br/>
