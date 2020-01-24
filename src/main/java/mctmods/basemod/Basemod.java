@@ -1,5 +1,6 @@
 package mctmods.basemod;
 
+import mctmods.basemod.library.util.ConfigBM;
 import mctmods.basemod.library.util.FilePlacerBM;
 import mctmods.basemod.library.util.recipes.FurnaceRecipe;
 import mctmods.basemod.proxies.CommonProxy;
@@ -11,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Loader;
@@ -48,6 +50,7 @@ public class Basemod {
 
 	@SidedProxy(clientSide = "mctmods.basemod.proxies.ClientProxy", serverSide = "mctmods.basemod.proxies.CommonProxy")
 	public static CommonProxy proxy;
+	public static Configuration config;
 
 	static {
 		FluidRegistry.enableUniversalBucket();
@@ -74,10 +77,13 @@ public class Basemod {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		config = new Configuration(event.getSuggestedConfigurationFile());
+		tconstruct = Loader.isModLoaded("tconstruct");
+
+		ConfigBM.syncConfig();
 		FilePlacerBM.filePlacer();
 		FurnaceRecipe.removeSmeltingPreInit();
 
-		tconstruct = Loader.isModLoaded("tconstruct");
 		proxy.preInit();
 	}
 

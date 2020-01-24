@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import mctmods.basemod.Basemod;
-
+import mctmods.basemod.library.util.ConfigBM;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -13,6 +13,9 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 public class FurnaceRecipe {
 
 	public static void removeSmeltingPreInit() {
+		
+		if(!ConfigBM.disableFurnaceRecipeRemoval) {
+
 		removeSmeltingRecipesFor(new ItemStack(Items.BRICK));
 		removeSmeltingRecipesFor(new ItemStack(Items.COAL, 1, 1));
 		removeSmeltingRecipesFor(new ItemStack(Items.COAL, 1, 0));
@@ -26,6 +29,8 @@ public class FurnaceRecipe {
 		removeSmeltingRecipesFor(new ItemStack(Items.QUARTZ));
 		removeSmeltingRecipesFor(new ItemStack(Items.REDSTONE));
 		removeSmeltingRecipesFor(new ItemStack(Blocks.HARDENED_CLAY));
+
+		}
 	}
 
 	private static void removeSmeltingRecipesFor(ItemStack output) {
