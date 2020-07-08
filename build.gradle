@@ -40,8 +40,8 @@ repositories {
 	}
 	maven {
 		name = 'tterrag Maven'
-		url = 'http://maven.blamejared.com'
-	}	
+		url = 'http://maven.tterrag.com/'
+	}		
 }
 
 
