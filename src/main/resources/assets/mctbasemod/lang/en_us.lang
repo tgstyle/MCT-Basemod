@@ -145,7 +145,7 @@ tile.mctbasemod:block_materials2.ardite_block.name=Ardite Block
 tile.mctbasemod:block_materials2.cobalt_block.name=Cobalt Block
 tile.mctbasemod:block_materials2.manyullyn_block.name=Manyullyn Block
 tile.mctbasemod:block_materials2.refined_obsidian_block.name=Refined Obsidian Block
-tile.mctbasemod:block_materials2.refined_glowstone.name=Refined Glowstone Block
+tile.mctbasemod:block_materials2.refined_glowstone_block.name=Refined Glowstone Block
 
 
 # Molten Fluids
