@@ -1,15 +1,22 @@
 package mctmods.basemod.items;
 
+import java.util.List;
+
 import mctmods.basemod.items.base.ItemBaseFood;
 import mctmods.basemod.items.meta.EnumFood;
+import mctmods.basemod.library.util.RomanNumeralHelper;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -67,6 +74,17 @@ public class ItemFoods extends ItemBaseFood {
 		if(!worldObj.isRemote) {
 			PotionEffect effect = EnumFood.values()[stack.getMetadata()].getPotion();
 			if(effect != null) entityplayer.addPotionEffect(new PotionEffect(effect.getPotion(), effect.getDuration(), effect.getAmplifier(), effect.getIsAmbient(), false));
+		}
+	}
+
+	@Override
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		PotionEffect effect = EnumFood.values()[stack.getMetadata()].getPotion();
+		if(effect != null) {
+			Potion potion = effect.getPotion();
+			if(potion.isBeneficial()) {
+				tooltip.add(TextFormatting.GREEN + I18n.format(effect.getEffectName()) + " " + RomanNumeralHelper.numberToRoman(effect.getAmplifier()));
+			}
 		}
 	}
 
