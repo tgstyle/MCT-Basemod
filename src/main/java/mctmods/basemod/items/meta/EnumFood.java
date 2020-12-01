@@ -1,13 +1,15 @@
 package mctmods.basemod.items.meta;
 
 import net.minecraft.item.EnumRarity;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.IStringSerializable;
 
 public enum EnumFood implements IStringSerializable {
 
-	SWEER_POTATO	("sweer_potato"		, EnumRarity.RARE		, "", "", 1, 20, 5.0F),
-	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 5.0F),
-	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 18, 0.5F);
+	SWEER_POTATO	("sweer_potato"		, EnumRarity.RARE		, "", "", 1, 20, 5.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 20, 3, false, false)),
+	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 5.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 20, 3, false, false)),
+	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 18, 0.5F, new PotionEffect(MobEffects.INSTANT_HEALTH, 12, 3, false, false));
 
 	private String name;
 	private EnumRarity rarity;
@@ -16,8 +18,9 @@ public enum EnumFood implements IStringSerializable {
  	private int maxSize;
  	private int healAmount;
  	private float saturation;
+ 	private PotionEffect potionEffect;
 
-	EnumFood(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int maxSize, int healAmount, float saturation) {
+	EnumFood(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int maxSize, int healAmount, float saturation, PotionEffect potionEffects) {
 		this.name = name;
 		this.rarity = rarity;
 		this.recipeOreDict1 = recipeOreDict1;
@@ -25,6 +28,7 @@ public enum EnumFood implements IStringSerializable {
 		this.maxSize = maxSize;
 		this.saturation = saturation;
 		this.healAmount = healAmount;
+		this.potionEffect = potionEffects;
 	}
 
 	@Override
@@ -54,6 +58,10 @@ public enum EnumFood implements IStringSerializable {
 
 	public float getSaturation() {
 		return saturation;
+	}
+
+	public PotionEffect getPotion() {
+		return potionEffect;
 	}
 
 }

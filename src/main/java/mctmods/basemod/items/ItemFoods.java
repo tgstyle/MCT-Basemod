@@ -2,11 +2,15 @@ package mctmods.basemod.items;
 
 import mctmods.basemod.items.base.ItemBaseFood;
 import mctmods.basemod.items.meta.EnumFood;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -15,6 +19,7 @@ public class ItemFoods extends ItemBaseFood {
 
 	public ItemFoods() {
 		super("foods");
+		this.setAlwaysEdible();
 		setHasSubtypes(true);
 	}
 
@@ -55,6 +60,14 @@ public class ItemFoods extends ItemBaseFood {
 	@Override
 	public int getMetadata(int damage) {
 		return damage;
+	}
+
+	@Override
+	protected void onFoodEaten(ItemStack stack, World worldObj, EntityPlayer entityplayer) {
+		if(!worldObj.isRemote) {
+			PotionEffect effect = EnumFood.values()[stack.getMetadata()].getPotion();
+			if(effect != null) entityplayer.addPotionEffect(new PotionEffect(effect.getPotion(), effect.getDuration(), effect.getAmplifier(), effect.getIsAmbient(), false));
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
