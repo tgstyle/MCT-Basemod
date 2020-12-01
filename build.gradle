@@ -18,30 +18,10 @@ configFile.withReader {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 repositories {
-	maven {
-		name = 'CoFH Maven'
-		url = 'http://maven.covers1624.net/'
-	}
-	maven {
-		name = 'ChickenBones Maven'
-		url = "http://chickenbones.net/maven/"
-	}	
-	maven {
-		name = 'JEI Maven'
-		url = 'http://dvs1.progwml6.com/files/maven'
-	}
-	maven {
-		name = 'HWYLA Maven'
-		url = 'http://tehnut.info/maven'
-	}
-	maven {
-		name = 'Immersive Maven'
-		url = 'http://blamejared.com/maven'
-	}
-	maven {
-		name = 'tterrag Maven'
-		url = 'http://maven.tterrag.com/'
-	}		
+    maven {
+        name = "CurseForge"
+        url = "https://www.cursemaven.com"
+    }
 }
 
 
@@ -62,18 +42,20 @@ minecraft {
 }
 
 dependencies {
-	compile "mezz.jei:jei_${common.mcversion}:${common.jei_version}"
 
-	deobfCompile "cofh:RedstoneFlux:${common.mcbaseversion}-${common.redf_version}:deobf"
-	deobfCompile "cofh:CoFHCore:${common.mcversion}-${common.cofh_version}:deobf"
-	deobfCompile "cofh:CoFHWorld:${common.mcversion}-${common.cwor_version}:deobf"
-	deobfCompile "cofh:ThermalFoundation:${common.mcversion}-${common.thfo_version}:deobf"
-	deobfCompile "cofh:ThermalExpansion:${common.mcversion}-${common.thex_version}:deobf"
-	deobfCompile "codechicken:CodeChickenLib:${common.mcversion}-${common.cclo_version}:deobf"
-	compileOnly "mcjty.theoneprobe:TheOneProbe-${common.mcbaseversion}:${common.mcbaseversion}-${common.top_version}"
 
-	compileOnly "slimeknights:TConstruct:${common.mcversion}-${common.tcon_version}"
-	compileOnly "slimeknights.mantle:Mantle:${common.mcbaseversion}-${common.mant_version}"
+
+
+
+
+
+
+
+
+
+	compileOnly "curse.maven:${common.tcon_version}"
+	compileOnly "curse.maven:${common.mant_version}"
+
 
 }
 
@@ -83,10 +65,10 @@ processResources {
 
 	from(sourceSets.main.resources.srcDirs) {
 		include "mcmod.info"
-				
+
 		expand "version":project.modversion + "." + project.modsubversion, "mcversion":project.minecraft.version
 	}
-		
+
 	from(sourceSets.main.resources.srcDirs) {
 		exclude "mcmod.info"
 	}

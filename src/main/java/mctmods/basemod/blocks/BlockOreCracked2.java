@@ -27,7 +27,7 @@ public class BlockOreCracked2 extends BlockBaseOreCracked {
 	private static final PropertyEnum<EnumOreCracked2> VARIANT = PropertyEnum.create("blocks", EnumOreCracked2.class);
 
 	public BlockOreCracked2() {
-		super(Material.GROUND, "ore_cracked2");
+		super(Material.SAND, "ore_cracked2");
 	}
 
 	@Override

@@ -8,15 +8,15 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumOre4 implements IStringSerializable {
 
-	QUARTZ_POOR_ORE	("quartz_poor_ore"	, EnumRarity.RARE, "mctPoorQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 2, null, 1, 0),
-	QUARTZ_ORE		("quartz_ore"		, EnumRarity.RARE, "mctQuartz"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 2, null, 1, 0),
-	QUARTZ_DENSE_ORE("quartz_dense_ore"	, EnumRarity.RARE, "mctDenseQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 2, null, 1, 0),
-	ARDITE_ORE		("ardite_ore"		, EnumRarity.RARE, "mctArdite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 3, null, 1, 0),
-	COBALT_ORE		("cobalt_ore"		, EnumRarity.RARE, "mctCobalt"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 4, null, 1, 0),
-	BIOTITE_ORE		("biotite_ore"		, EnumRarity.EPIC, "mctBiotite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 6, null, 1, 0),
-	IRIDIUM_ORE		("iridium_ore"		, EnumRarity.EPIC, "mctIridium"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 7, null, 1, 0),
-	END_ORE			("end_ore"			, EnumRarity.EPIC, "mctEnd"			, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 8, null, 1, 0),
-	DRACONIUM_ORE	("draconium_ore"	, EnumRarity.EPIC, "mctDraconium"	, "", 0, 4, 4, 15, 64, Registry.ORE_CRACKED2, 1, 9, null, 1, 0);
+	QUARTZ_POOR_ORE	("quartz_poor_ore"	, EnumRarity.RARE, "mctPoorQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 2, Registry.ORE_CRACKED2, 1, 2),
+	QUARTZ_ORE		("quartz_ore"		, EnumRarity.RARE, "mctQuartz"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 2, 2, Registry.ORE_CRACKED2, 2, 2),
+	QUARTZ_DENSE_ORE("quartz_dense_ore"	, EnumRarity.RARE, "mctDenseQuartz"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 3, 2, Registry.ORE_CRACKED2, 3, 2),
+	ARDITE_ORE		("ardite_ore"		, EnumRarity.RARE, "mctArdite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 3, null, 0, 0),
+	COBALT_ORE		("cobalt_ore"		, EnumRarity.RARE, "mctCobalt"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 2, 4, null, 0, 0),
+	BIOTITE_ORE		("biotite_ore"		, EnumRarity.EPIC, "mctBiotite"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 3, 6, null, 0, 0),
+	IRIDIUM_ORE		("iridium_ore"		, EnumRarity.EPIC, "mctIridium"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 1, 7, null, 0, 0),
+	END_ORE			("end_ore"			, EnumRarity.EPIC, "mctEnd"			, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED2, 2, 8, null, 0, 0),
+	DRACONIUM_ORE	("draconium_ore"	, EnumRarity.EPIC, "mctDraconium"	, "", 0, 4, 4, 15, 64, Registry.ORE_CRACKED2, 3, 9, null, 0, 0);
 
 	private String name;
 	private EnumRarity rarity;

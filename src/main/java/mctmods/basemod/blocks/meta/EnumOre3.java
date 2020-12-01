@@ -8,21 +8,21 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumOre3 implements IStringSerializable {
 
-	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
-	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
-	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore", EnumRarity.UNCOMMON, "mctDenseBlackQuartz", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
+	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, Registry.ORE_CRACKED1, 1, 7),
+	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2,  7, Registry.ORE_CRACKED1, 2, 7),
+	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore", EnumRarity.UNCOMMON, "mctDenseBlackQuartz", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3,  7, Registry.ORE_CRACKED1, 3, 7),
 	GALENA_POOR_ORE			("galena_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
-	GALENA_ORE				("galena_ore"			, EnumRarity.UNCOMMON, "mctGalena"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
-	GALENA_DENSE_ORE		("galena_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
-	BAUXITE_POOR_ORE		("bauxite_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorBauxite"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
-	BAUXITE_ORE				("bauxite_ore"			, EnumRarity.UNCOMMON, "mctBauxite"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
-	BAUXITE_DENSE_ORE		("bauxite_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBauxite"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
-	URANIUM_POOR_ORE		("uranium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorUranium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
-	URANIUM_ORE				("uranium_ore"			, EnumRarity.UNCOMMON, "mctUranium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
-	URANIUM_DENSE_ORE		("uranium_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseUranium"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
-	OSMIUM_POOR_ORE			("osmium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0),
-	OSMIUM_ORE				("osmium_ore"			, EnumRarity.UNCOMMON, "mctOsmium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0),
-	OSMIUM_DENSE_ORE		("osmium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0);
+	GALENA_ORE				("galena_ore"			, EnumRarity.UNCOMMON, "mctGalena"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 11, Registry.ORE_CRACKED1, 2, 10),
+	GALENA_DENSE_ORE		("galena_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 11, Registry.ORE_CRACKED1, 3, 10),
+	BAUXITE_POOR_ORE		("bauxite_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorBauxite"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 0, 0),
+	BAUXITE_ORE				("bauxite_ore"			, EnumRarity.UNCOMMON, "mctBauxite"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 12, null, 0, 0),
+	BAUXITE_DENSE_ORE		("bauxite_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBauxite"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 12, null, 0, 0),
+	URANIUM_POOR_ORE		("uranium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorUranium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 0, 0),
+	URANIUM_ORE				("uranium_ore"			, EnumRarity.UNCOMMON, "mctUranium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 13, null, 0, 0),
+	URANIUM_DENSE_ORE		("uranium_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseUranium"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 13, null, 0, 0),
+	OSMIUM_POOR_ORE			("osmium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 0, 0),
+	OSMIUM_ORE				("osmium_ore"			, EnumRarity.UNCOMMON, "mctOsmium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 14, null, 0, 0),
+	OSMIUM_DENSE_ORE		("osmium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 14, null, 0, 0);
 
 	private String name;
 	private EnumRarity rarity;

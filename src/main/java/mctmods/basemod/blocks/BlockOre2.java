@@ -106,52 +106,52 @@ public class BlockOre2 extends BlockBaseOre {
 				int total = 1 + RANDOM.nextInt(100);
 
 				switch(fortune) {
-				case 0:
-					if( total >= 1 && total <= 25 ) {
+					case 0:
+						if( total >= 1 && total <= 25 ) {
+							drops.add(blockDrop1);
+						}
+						break;
+					case 1:
+						if( total >= 1 && total <= 50 ) {
+							drops.add(blockDrop1);
+						}
+						break;
+					case 2:
+						if( total >= 1 && total <= 75 ) {
+							drops.add(blockDrop1);
+						}
+						break;
+					case 3:
 						drops.add(blockDrop1);
-				}
-				break;
-				case 1:
-					if( total >= 1 && total <= 50 ) {
-						drops.add(blockDrop1);
-				}
-				break;
-				case 2:
-					if( total >= 1 && total <= 75 ) {
-						drops.add(blockDrop1);
-				}
-				break;
-				case 3:
-					drops.add(blockDrop1);
-				break;
-			}
-			if(block.getBlockDrop2() != null) {
-				switch(fortune) {
-				case 0:
-					if( total >= 1 && total <= 15 ) {
-						drops.add(blockDrop2);
-					}
 					break;
-				case 1:
-					if( total >= 1 && total <= 25 ) {
-						drops.add(blockDrop2);
+				}
+				if(block.getBlockDrop2() != null) {
+					switch(fortune) {
+						case 0:
+							if( total >= 1 && total <= 15 ) {
+								drops.add(blockDrop2);
+							}
+							break;
+						case 1:
+							if( total >= 1 && total <= 25 ) {
+								drops.add(blockDrop2);
+							}
+							break;
+						case 2:
+							if( total >= 1 && total <= 35 ) {
+								drops.add(blockDrop2);
+							}
+							break;
+						case 3:
+							if( total >= 1 && total <= 45 ) {
+								drops.add(blockDrop2);
+							}
+						break;
 					}
-					break;
-				case 2:
-					if( total >= 1 && total <= 35 ) {
-						drops.add(blockDrop2);
-					}
-					break;
-				case 3:
-					if( total >= 1 && total <= 45 ) {
-						drops.add(blockDrop2);
-					}
-				break;
 				}
 			}
 		}
 	}
-}
 
 	@SideOnly(Side.CLIENT)
 	public void initItemBlockModels() {

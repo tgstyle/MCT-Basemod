@@ -60,7 +60,7 @@ public class Basemod {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		Registry.registerBlocks(event.getRegistry());
 		RegistryFluid.registerBlocks(event.getRegistry());
-		if(tconstruct) {RegistryFluidMolten.registerBlocks(event.getRegistry());}
+		if(tconstruct) RegistryFluidMolten.registerBlocks(event.getRegistry());
 	}
 
 	@SubscribeEvent
