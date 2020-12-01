@@ -7,9 +7,9 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumFood implements IStringSerializable {
 
-	SWEER_POTATO	("sweer_potato"		, EnumRarity.RARE		, "", "", 1, 20, 5.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 20, 4, false, false)),
-	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 5.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 20, 4, false, false)),
-	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 18, 0.5F, new PotionEffect(MobEffects.INSTANT_HEALTH, 10, 2, false, false));
+	SWEER_POTATO	("sweer_potato"		, EnumRarity.RARE		, "", "", 1, 20, 1.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 2, false, false)),
+	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 1.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 2, false, false)),
+	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 16, 0.5F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 1, false, false));
 
 	private String name;
 	private EnumRarity rarity;
