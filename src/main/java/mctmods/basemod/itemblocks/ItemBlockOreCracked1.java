@@ -23,6 +23,7 @@ public class ItemBlockOreCracked1 extends ItemBlockBase {
 	public EnumRarity getRarity(ItemStack stack) {
 		return EnumOreCracked1.values()[stack.getMetadata()].getRarity();
 	}
+
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		return EnumOreCracked1.values()[stack.getMetadata()].getMaxSize();
