@@ -6,6 +6,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
+import javax.annotation.Nonnull;
+
 public enum EnumOre1 implements IStringSerializable {
 
 	COPPER_POOR_ORE	("copper_poor_ore"	, EnumRarity.COMMON, "mctPoorCopper"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 0, null, 0, 0),
@@ -24,21 +26,21 @@ public enum EnumOre1 implements IStringSerializable {
 	GOLD_ORE		("gold_ore"			, EnumRarity.COMMON, "mctGold"			, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 2, 4, null, 0, 0),
 	GOLD_DENSE_ORE	("gold_dense_ore"	, EnumRarity.COMMON, "mctDenseGold"		, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 3, 4, null, 0, 0);
 
-	private String name;
-	private EnumRarity rarity;
-	private String recipeOreDict1;
-	private String recipeOreDict2;
-	private int light;
-	private int harvestLevel;
-	private float hardness;
-	private float resistance;
-	private int maxSize;
-	private Block blockDrop1;
-	private int blockDropAmount1;
-	private int blockDropMeta1;
-	private Block blockDrop2;
-	private int blockDropAmount2;
-	private int blockDropMeta2;
+	private final String name;
+	private final EnumRarity rarity;
+	private final String recipeOreDict1;
+	private final String recipeOreDict2;
+	private final int light;
+	private final int harvestLevel;
+	private final float hardness;
+	private final float resistance;
+	private final int maxSize;
+	private final Block blockDrop1;
+	private final int blockDropAmount1;
+	private final int blockDropMeta1;
+	private final Block blockDrop2;
+	private final int blockDropAmount2;
+	private final int blockDropMeta2;
 
 	EnumOre1(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize, Block blockDrop1, int blockDropAmount1, int blockDropMeta1, Block blockDrop2, int blockDropAmount2, int blockDropMeta2) {
 		this.name = name;
@@ -58,10 +60,7 @@ public enum EnumOre1 implements IStringSerializable {
 		this.blockDropMeta2 = blockDropMeta2;
 	}
 
-	@Override
-	public String getName() {
-		return name;
-	}
+	@Override @Nonnull public String getName() { return name; }
 
 	public EnumRarity getRarity() {
 		return rarity;
@@ -118,5 +117,4 @@ public enum EnumOre1 implements IStringSerializable {
  	public int getBlockDropMeta2() {
  		return blockDropMeta2;
  	}
-
 }

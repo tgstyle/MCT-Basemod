@@ -4,7 +4,7 @@ import java.util.TreeMap;
 
 public class RomanNumeralHelper {
 
-    private final static TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+    private final static TreeMap<Integer, String> map = new TreeMap<>();
 
     static {
         map.put(1000, "M");
@@ -23,10 +23,9 @@ public class RomanNumeralHelper {
         map.put(0, "");
     }
 
-    public final static String numberToRoman(int number) {
+    public static String numberToRoman(int number) {
         int key =  map.floorKey(number);
         if(number == key) return map.get(number);
         return map.get(key) + numberToRoman(number - key);
     }
-
 }

@@ -10,5 +10,4 @@ public class BlockFluid extends BlockBaseFluid {
 	public BlockFluid(Fluid fluid, Material material, String name) {
 		super(fluid, material, name);
 	}
-
 }

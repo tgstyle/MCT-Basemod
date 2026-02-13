@@ -7,19 +7,19 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
+
 public class BlockBaseOre extends BlockBase {
 
 	public BlockBaseOre(Material material, MapColor mapColor, String name) {
 		super(material, mapColor, name);
 	}
 
-	@Override
-	public int getExpDrop(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune) {
-		return 0 + RANDOM.nextInt(4);
+	@Override public int getExpDrop(@Nonnull IBlockState state, @Nonnull net.minecraft.world.IBlockAccess world, @Nonnull BlockPos pos, int fortune) {
+		return RANDOM.nextInt(4);
 	}
 
-	@Override
-	public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
+	@Override public boolean canSilkHarvest(@Nonnull World world, @Nonnull BlockPos pos, @Nonnull IBlockState state, @Nonnull EntityPlayer player) {
 		return false;
 	}
 }

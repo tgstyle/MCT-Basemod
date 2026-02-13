@@ -22,12 +22,11 @@ public class ConfigBM {
 	 	 	disableFurnaceRecipeRemoval = disableFurnaceRecipeRemovalProperty.getBoolean();
 
 	 	} catch (Exception e) {
-	 		Basemod.logger.error("Config Error %d" + e);
+            Basemod.logger.error("Config Error %d{}", String.valueOf(e));
 	 	} finally {
 	 	 	if (config.hasChanged()) {
 	 	 		config.save();
 	 	 	}
 	 	}
 	}
-
 }

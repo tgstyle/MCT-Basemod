@@ -13,7 +13,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.Fluid;
@@ -29,26 +28,21 @@ public class RegistryFluid {
 
 	public static final BlockFluid BLOCK_MIXEDREDSTONE = new BlockFluid(FLUID_MIXEDREDSTONE, Material.WATER, "mixedredstone");
 
-	private static final Block [] block = {
-		BLOCK_MIXEDREDSTONE
-	};
+	private static final Block [] block = { BLOCK_MIXEDREDSTONE };
 
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		for(Block block : block) {
 			registry.register(block);
-			Basemod.logger.info("Added fluid block: " + block.getRegistryName());
+            Basemod.logger.info("Added fluid block: {}", block.getRegistryName());
 		 }
 	}
 
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
 		for(Block block : block) {
-			final ResourceLocation loc = Block.REGISTRY.getNameForObject(block);
-			Item blockItem = Item.getItemFromBlock(block);
-			if(blockItem == null)
-				throw new RuntimeException("ITEMBLOCK FOR "+loc+" : "+block+" IS NULL");
-			if(block instanceof BlockBaseFluid)
-				mapFluidState(block,((BlockBaseFluid)block).getFluid());
+            Block.REGISTRY.getNameForObject(block);
+            Item.getItemFromBlock(block);
+            mapFluidState(block,((BlockBaseFluid)block).getFluid());
 		}
 	}
 
@@ -69,17 +63,12 @@ public class RegistryFluid {
 			this.location = new ModelResourceLocation(Basemod.MODID + ":fluid", fluid.getName());
 		}
 
-		@Nonnull
-		@Override
-		protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
+		@Override @Nonnull protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
 			return location;
 		}
 
-		@Nonnull
-		@Override
-		public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack)	{
+		@Override @Nonnull public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack)	{
 			return location;
 		}
 	}
-
 }

@@ -6,39 +6,41 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
+import javax.annotation.Nonnull;
+
 public enum EnumOre3 implements IStringSerializable {
 
-	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, Registry.ORE_CRACKED1, 1, 7),
-	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2,  7, Registry.ORE_CRACKED1, 2, 7),
-	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore", EnumRarity.UNCOMMON, "mctDenseBlackQuartz", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3,  7, Registry.ORE_CRACKED1, 3, 7),
-	GALENA_POOR_ORE			("galena_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
-	GALENA_ORE				("galena_ore"			, EnumRarity.UNCOMMON, "mctGalena"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 11, Registry.ORE_CRACKED1, 2, 10),
-	GALENA_DENSE_ORE		("galena_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 11, Registry.ORE_CRACKED1, 3, 10),
-	BAUXITE_POOR_ORE		("bauxite_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorBauxite"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 0, 0),
-	BAUXITE_ORE				("bauxite_ore"			, EnumRarity.UNCOMMON, "mctBauxite"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 12, null, 0, 0),
-	BAUXITE_DENSE_ORE		("bauxite_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBauxite"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 12, null, 0, 0),
-	URANIUM_POOR_ORE		("uranium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorUranium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 0, 0),
-	URANIUM_ORE				("uranium_ore"			, EnumRarity.UNCOMMON, "mctUranium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 13, null, 0, 0),
-	URANIUM_DENSE_ORE		("uranium_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseUranium"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 13, null, 0, 0),
-	OSMIUM_POOR_ORE			("osmium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 0, 0),
-	OSMIUM_ORE				("osmium_ore"			, EnumRarity.UNCOMMON, "mctOsmium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 14, null, 0, 0),
-	OSMIUM_DENSE_ORE		("osmium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 14, null, 0, 0);
+	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
+	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
+	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
+	GALENA_POOR_ORE			("galena_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorGalena"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
+	GALENA_ORE				("galena_ore"				, EnumRarity.UNCOMMON, "mctGalena"				, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
+	GALENA_DENSE_ORE		("galena_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseGalena"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 11, Registry.ORE_CRACKED1, 1, 10),
+	BAUXITE_POOR_ORE		("bauxite_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorBauxite"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
+	BAUXITE_ORE				("bauxite_ore"			, EnumRarity.UNCOMMON, "mctBauxite"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
+	BAUXITE_DENSE_ORE		("bauxite_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseBauxite"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 12, null, 1, 0),
+	URANIUM_POOR_ORE		("uranium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorUranium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
+	URANIUM_ORE				("uranium_ore"			, EnumRarity.UNCOMMON, "mctUranium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
+	URANIUM_DENSE_ORE		("uranium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseUranium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 13, null, 1, 0),
+	OSMIUM_POOR_ORE			("osmium_poor_ore"		, EnumRarity.UNCOMMON, "mctPoorOsmium"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0),
+	OSMIUM_ORE				("osmium_ore"				, EnumRarity.UNCOMMON, "mctOsmium"				, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0),
+	OSMIUM_DENSE_ORE		("osmium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0);
 
-	private String name;
-	private EnumRarity rarity;
-	private String recipeOreDict1;
-	private String recipeOreDict2;
-	private int light;
-	private int harvestLevel;
-	private float hardness;
-	private float resistance;
-	private int maxSize;
-	private Block blockDrop1;
-	private int blockDropAmount1;
-	private int blockDropMeta1;
-	private Block blockDrop2;
-	private int blockDropAmount2;
-	private int blockDropMeta2;
+	private final String name;
+	private final EnumRarity rarity;
+	private final String recipeOreDict1;
+	private final String recipeOreDict2;
+	private final int light;
+	private final int harvestLevel;
+	private final float hardness;
+	private final float resistance;
+	private final int maxSize;
+	private final Block blockDrop1;
+	private final int blockDropAmount1;
+	private final int blockDropMeta1;
+	private final Block blockDrop2;
+	private final int blockDropAmount2;
+	private final int blockDropMeta2;
 
 	EnumOre3(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize, Block blockDrop1, int blockDropAmount1, int blockDropMeta1, Block blockDrop2, int blockDropAmount2, int blockDropMeta2) {
 		this.name = name;
@@ -58,10 +60,7 @@ public enum EnumOre3 implements IStringSerializable {
 		this.blockDropMeta2 = blockDropMeta2;
 	}
 
-	@Override
-	public String getName() {
-		return name;
-	}
+	@Override @Nonnull public String getName() { return name; }
 
 	public EnumRarity getRarity() {
 		return rarity;
@@ -118,5 +117,4 @@ public enum EnumOre3 implements IStringSerializable {
  	public int getBlockDropMeta2() {
  		return blockDropMeta2;
  	}
-
 }

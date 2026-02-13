@@ -34,7 +34,7 @@ public class FurnaceRecipe {
 	}
 
 	private static void removeSmeltingRecipesFor(ItemStack output) {
-		ItemStack recipeResult = null;
+		ItemStack recipeResult;
 		Map<ItemStack,ItemStack> recipes = FurnaceRecipes.instance().getSmeltingList();
 		Iterator<ItemStack> iterator = recipes.keySet().iterator();
 		while(iterator.hasNext()) {
@@ -42,9 +42,8 @@ public class FurnaceRecipe {
 			recipeResult = recipes.get(recipe);
 			if(ItemStack.areItemStacksEqual(output, recipeResult)) {
 				iterator.remove();
-				Basemod.logger.info("Removed furnace recipe: " + recipe.getDisplayName() + " -> " + recipeResult.getDisplayName());
+                Basemod.logger.info("Removed furnace recipe: {} -> {}", recipe.getDisplayName(), recipeResult.getDisplayName());
 			}
 		}
 	}
-
 }

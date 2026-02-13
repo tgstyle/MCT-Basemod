@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.Fluid;
@@ -42,50 +41,46 @@ public class RegistryFluidMolten {
 		Basemod.logger.info("Registered Molten Fluids with TConstruct");
 	}
 
-	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUM = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUM, Material.LAVA, "molten_draconium");
-	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUMAWAKENED = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUMAWAKENED, Material.LAVA, "molten_draconiumawakened");
-	public static final BlockMoltenFluid BLOCK_MOLTEN_QUARTZENRICHEDIRON = new BlockMoltenFluid(FLUID_MOLTEN_QUARTZENRICHEDIRON, Material.LAVA, "molten_quartzenrichediron");
-	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDGLOWSTONE = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDGLOWSTONE, Material.LAVA, "molten_refinedglowstone");
-	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDOBSIDIAN = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDOBSIDIAN, Material.LAVA, "molten_refinedobsidian");
+	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUM = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUM, Material.LAVA, "molten_draconium").setFlammability(100, 60);
+	public static final BlockMoltenFluid BLOCK_MOLTEN_DRACONIUMAWAKENED = new BlockMoltenFluid(FLUID_MOLTEN_DRACONIUMAWAKENED, Material.LAVA, "molten_draconiumawakened").setFlammability(100, 60);
+	public static final BlockMoltenFluid BLOCK_MOLTEN_QUARTZENRICHEDIRON = new BlockMoltenFluid(FLUID_MOLTEN_QUARTZENRICHEDIRON, Material.LAVA, "molten_quartzenrichediron").setFlammability(100, 60);
+	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDGLOWSTONE = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDGLOWSTONE, Material.LAVA, "molten_refinedglowstone").setFlammability(100, 60);
+	public static final BlockMoltenFluid BLOCK_MOLTEN_REFINEDOBSIDIAN = new BlockMoltenFluid(FLUID_MOLTEN_REFINEDOBSIDIAN, Material.LAVA, "molten_refinedobsidian").setFlammability(100, 60);
 
 	private static final Block [] block = {
-		BLOCK_MOLTEN_DRACONIUM,
-		BLOCK_MOLTEN_DRACONIUMAWAKENED,
-		BLOCK_MOLTEN_QUARTZENRICHEDIRON,
-		BLOCK_MOLTEN_REFINEDGLOWSTONE,
-		BLOCK_MOLTEN_REFINEDOBSIDIAN,
+			BLOCK_MOLTEN_DRACONIUM,
+			BLOCK_MOLTEN_DRACONIUMAWAKENED,
+			BLOCK_MOLTEN_QUARTZENRICHEDIRON,
+			BLOCK_MOLTEN_REFINEDGLOWSTONE,
+			BLOCK_MOLTEN_REFINEDOBSIDIAN,
 	};
 
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		for(Block block : block) {
 			registry.register(block);
-			Basemod.logger.info("Added fluid block: " + block.getRegistryName());
-		 }
+			Basemod.logger.info("Added fluid block: {}", block.getRegistryName());
+		}
 	}
 
-	public static Fluid sendFluidForMelting(String ore, Fluid fluid) {
+	public static void sendFluidForMelting(String ore, Fluid fluid) {
 		NBTTagCompound tag = new NBTTagCompound();
 		tag.setString("fluid", fluid.getName());
 		tag.setString("ore", ore);
 		tag.setBoolean("toolforge", true);
 		FMLInterModComms.sendMessage("tconstruct", "integrateSmeltery", tag);
-		return fluid;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
 		for(Block block : block) {
-			final ResourceLocation loc = Block.REGISTRY.getNameForObject(block);
-			Item blockItem = Item.getItemFromBlock(block);
-			if(blockItem == null)
-				throw new RuntimeException("ITEMBLOCK FOR "+loc+" : "+block+" IS NULL");
-			if(block instanceof BlockBaseFluid)
-				mapFluidState(block,((BlockBaseFluid)block).getFluid());
+			Block.REGISTRY.getNameForObject(block);
+			Item.getItemFromBlock(block);
+			mapFluidState(block,((BlockBaseFluid)block).getFluid());
 		}
 	}
 
 	@SideOnly(Side.CLIENT)
-	private static void mapFluidState(Block block, Fluid fluid)	{
+	private static void mapFluidState(Block block, Fluid fluid)    {
 		Item item = Item.getItemFromBlock(block);
 		FluidStateMapper mapper = new FluidStateMapper(fluid);
 		ModelLoader.registerItemVariants(item);
@@ -94,24 +89,13 @@ public class RegistryFluidMolten {
 	}
 
 	@SideOnly(Side.CLIENT)
-	static class FluidStateMapper extends StateMapperBase implements ItemMeshDefinition	{
+	static class FluidStateMapper extends StateMapperBase implements ItemMeshDefinition    {
 		public final ModelResourceLocation location;
 
-		public FluidStateMapper(Fluid fluid) {
-			this.location = new ModelResourceLocation(Basemod.MODID + ":fluid", fluid.getName());
-		}
+		public FluidStateMapper(Fluid fluid) { this.location = new ModelResourceLocation(Basemod.MODID + ":fluid", fluid.getName());}
 
-		@Nonnull
-		@Override
-		protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
-			return location;
-		}
+		@Override @Nonnull protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) { return location; }
 
-		@Nonnull
-		@Override
-		public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack)	{
-			return location;
-		}
+		@Override @Nonnull public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack) { return location; }
 	}
-
 }

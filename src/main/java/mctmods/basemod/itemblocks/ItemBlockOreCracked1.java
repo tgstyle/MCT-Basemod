@@ -7,6 +7,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 
+import javax.annotation.Nonnull;
+
 public class ItemBlockOreCracked1 extends ItemBlockBase {
 
 	public ItemBlockOreCracked1(Block block) {
@@ -14,24 +16,17 @@ public class ItemBlockOreCracked1 extends ItemBlockBase {
 		setHasSubtypes(true);
 	}
 
-	@Override
-	public String getUnlocalizedName(ItemStack stack) {
-		return super.getUnlocalizedName() + "." + EnumOreCracked1.values()[stack.getMetadata()].getName();
+	@Override @Nonnull public String getTranslationKey(ItemStack stack) {
+		return super.getTranslationKey() + "." + EnumOreCracked1.values()[stack.getMetadata()].getName();
 	}
 
-	@Override
-	public EnumRarity getRarity(ItemStack stack) {
-		return EnumOreCracked1.values()[stack.getMetadata()].getRarity();
-	}
+	@Override @Nonnull public EnumRarity getRarity(ItemStack stack) { return EnumOreCracked1.values()[stack.getMetadata()].getRarity(); }
 
-	@Override
-	public int getItemStackLimit(ItemStack stack) {
+	@Override public int getItemStackLimit(ItemStack stack) {
 		return EnumOreCracked1.values()[stack.getMetadata()].getMaxSize();
 	}
 
-	@Override
-	public int getMetadata(int damage) {
+	@Override public int getMetadata(int damage) {
 		return damage;
 	}
-
 }

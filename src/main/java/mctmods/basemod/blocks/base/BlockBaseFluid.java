@@ -7,13 +7,14 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
+import java.util.Objects;
+
 public class BlockBaseFluid extends BlockFluidClassic {
 
 	public BlockBaseFluid(Fluid fluid, Material material, String name) {
 		super(fluid, material);
 		setRegistryName(Basemod.MODID, name);
-		setUnlocalizedName(getRegistryName().toString());
+		setTranslationKey(Objects.requireNonNull(getRegistryName()).toString());
 		setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
 	}
-
 }

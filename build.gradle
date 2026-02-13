@@ -1,75 +1,171 @@
-buildscript {
-	repositories {
-		jcenter()
-		maven { url = "http://files.minecraftforge.net/maven" }
-	}
-	dependencies {
-		classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-	}
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.72'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'wtf.gofancy.fancygradle' version '1.1.3-0'
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 
-ext.configFile = file "../common/common-1.12.properties"
+ext.configFile = file '../common/common-1.12.properties'
+
 configFile.withReader {
-	def prop = new Properties()
-	prop.load(it)
-	ext.common = new ConfigSlurper().parse prop
+    def prop = new Properties()
+    prop.load(it)
+    ext.common = new ConfigSlurper().parse prop
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+
+compileJava {
+    sourceCompatibility = '8'
+    targetCompatibility = '8'
+}
 
 repositories {
     maven {
-        name = "CurseForge"
-        url = "https://www.cursemaven.com"
+        url = "https://cursemaven.com"
+        content { includeGroup "curse.maven" }
+    }
+    maven { url = 'https://jitpack.io' }
+    maven { url = 'https://maven.blamejared.com' }
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+    maven { url = 'https://maven.minecraftforge.net' }
+    maven { url = 'https://maven.neoforged.net/releases' }
+	maven { url = 'https://maven.gofancy.wtf/releases' }
+    maven { url = 'https://maven.cleanroommc.com' }
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+version = "${common.mcversion}-${modversion}.${modsubversion}"
+
+group = modgroup
+
+archivesBaseName = modarchivename
+
+if (gradle.startParameter.taskNames.any { it == 'jar' || it == 'build' }) {
+    def propsFile = file('gradle.properties')
+    def props = new Properties()
+    propsFile.withInputStream { props.load(it) }
+    def currentSub = Integer.parseInt(props['modsubversion'])
+    def newSub = currentSub + 1
+    modsubversion = newSub
+    version = "${common.mcversion}-${modversion}.${modsubversion}"
+    jar.doLast {
+        props['modsubversion'] = newSub.toString()
+        propsFile.withWriter { writer ->
+            props.store(writer, null)
+        }
     }
 }
 
+dependencies {
+    minecraft "net.minecraftforge:forge:${common.mcversion}-${common.forgeversion}"
 
-version = common.mcversion + "-" + modversion+ "." + modsubversion
-group = modgroup
-archivesBaseName = modarchivename
+    implementation fg.deobf("${common.mjei_version}")
 
-sourceCompatibility = targetCompatibility = "1.8"
-compileJava {
-	sourceCompatibility = targetCompatibility = "1.8"
+    implementation fg.deobf("curse.maven:${common.tcon_version}")
+    implementation fg.deobf("curse.maven:${common.mant_version}")
+
+    compileOnly 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
+    runtimeOnly 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
+
+    annotationProcessor 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
 }
 
 minecraft {
-	version = common.mcversion + "-" + common.forgeversion
-	mappings = common.mcp_mappings
-	runDir = "run"
-	replace '${version}', modversion+ "." + modsubversion
+    mappings channel: 'stable', version: "${common.mcp_mappings}"
+    runs {
+        client {
+            workingDirectory project.file('run')
+            args '--width', '1920'
+            args '--height', '1080'
+            args '--add-opens=java.base/java.lang=ALL-UNNAMED'
+            args '--version', common.mcversion
+            args '--username', 'tgstyle'			
+            args '--tweakClass', 'org.spongepowered.asm.launch.MixinTweaker'
+            args '--mixin', 'mixins.basemod.json'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${archivesBaseName}" {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            workingDirectory project.file('run/server')
+            args '--version', common.mcversion
+            args '--tweakClass', 'org.spongepowered.asm.launch.MixinTweaker'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${archivesBaseName}" {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
 }
 
-dependencies {
+tasks.withType(JavaExec).configureEach { task ->
+    if (task.name in ['runClient', 'runServer']) {
+        doFirst {
+            def modJar = project.file("build/libs/${archivesBaseName}-${version}.jar")
+            if (modJar.exists()) {
+                println "Removing JAR from classpath: ${modJar}"
+                def newClasspath = classpath.minus(modJar).plus(sourceSets.main.output)
+                classpath.setFrom(newClasspath)
+            }
+            println "Classpath files: ${classpath.files.collect { it.absolutePath }.join(', ')}"
+        }
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-	compileOnly "curse.maven:${common.tcon_version}"
-	compileOnly "curse.maven:${common.mant_version}"
-
-
+compileJava.doLast {
+    ['basemod'].each { name ->
+        def refmapSrc = file("build/tmp/compileJava/compileJava-${name}-refmap.json")
+        if (refmapSrc.exists()) {
+            new File(sourceSets.main.output.resourcesDir, "mixins.${name}.refmap.json").bytes = refmapSrc.bytes
+        }
+    }
 }
 
 processResources {
-	inputs.property "version", project.modversion + "." + project.modsubversion
-	inputs.property "mcversion", project.minecraft.version
-
-	from(sourceSets.main.resources.srcDirs) {
-		include "mcmod.info"
-
-		expand "version":project.modversion + "." + project.modsubversion, "mcversion":project.minecraft.version
-	}
-
-	from(sourceSets.main.resources.srcDirs) {
-		exclude "mcmod.info"
-	}
+    inputs.property 'version', "${modversion}.${modsubversion}"
+    inputs.property 'mcversion', common.mcversion
+    filesMatching('mcmod.info') {
+        expand 'version': "${modversion}.${modsubversion}", 'mcversion': common.mcversion
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
+
+fancyGradle {
+    patches {
+        resources
+        asm
+        coremods
+        codeChickenLib
+        mergetool
+    }
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    // Exclude all mixin-related content from the release jar *NOT LICENSED FOR DISTRO IN THIS MOD*
+    exclude 'mctmods/basemod/mixin/**'
+    exclude 'mixins.basemod.json'
+    exclude 'mixins.basemod.refmap.json'
+
+    // Clean MANIFEST.MF (remove MixinConfigs)
+    doLast {
+        def tempDir = file("$buildDir/tmp/clean_manifest")
+        tempDir.mkdirs()
+        def cleanManifest = new File(tempDir, "MANIFEST.MF")
+        cleanManifest.text = "Manifest-Version: 1.0\r\n\r\n"
+
+        ant.zip(destfile: archiveFile.get().getAsFile(), update: true) {
+            zipfileset(dir: tempDir, prefix: "META-INF", includes: "MANIFEST.MF")
+        }
+    }
+}
+
+sourceSets.configureEach { it.output.resourcesDir = it.output.classesDirs.getFiles().iterator().next() }

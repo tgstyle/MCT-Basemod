@@ -9,28 +9,24 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
+@SuppressWarnings("unused")
 public class ClientProxy extends CommonProxy {
 
-	@Override
-	public void registerRenders() {
+	@Override public void registerRenders() {
 		Registry.initModels();
 		RegistryFluid.initModels();
 		if(Basemod.tconstruct) {RegistryFluidMolten.initModels();}
 	}
 
-	@Override
-	public void preInit() {
+	@Override public void preInit() {
 		super.preInit();
 	}
 
-	@Override
-	public void init() {
+	@Override public void init() {
 		super.init();
 	}
 
-	@Override
-	public void postInit() {
+	@Override public void postInit() {
 		super.postInit();
 	}
-
 }

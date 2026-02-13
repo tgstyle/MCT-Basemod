@@ -3,34 +3,36 @@ package mctmods.basemod.blocks.meta;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
+import javax.annotation.Nonnull;
+
 public enum EnumOreCracked1 implements IStringSerializable {
 
-	COPPER_CRACKED_ORE		("copper_cracked_ore"		, EnumRarity.COMMON		, "oreCopper"		, "", 0, 2, 3, 15, 64),
+	COPPER_CRACKED_ORE		("copper_cracked_ore"			, EnumRarity.COMMON		, "oreCopper"		, "", 0, 2, 3, 15, 64),
 	TIN_CRACKED_ORE			("tin_cracked_ore"			, EnumRarity.COMMON		, "oreTin"			, "", 0, 2, 3, 15, 64),
-	NICKEL_CRACKED_ORE		("nickel_cracked_ore"		, EnumRarity.COMMON		, "oreNickel"		, "", 0, 2, 3, 15, 64),
-	IRON_CRACKED_ORE		("iron_cracked_ore"			, EnumRarity.COMMON		, "oreIron"			, "", 0, 1, 3, 15, 64),
-	GOLD_CRACKED_ORE		("gold_cracked_ore"			, EnumRarity.COMMON		, "oreGold"			, "", 0, 1, 3, 15, 64),
-	REDSTONE_CRACKED_ORE	("redstone_cracked_ore"		, EnumRarity.COMMON		, "oreRedstone"		, "", 0, 2, 3, 15, 64),
-	LAPIS_CRACKED_ORE		("lapis_cracked_ore"		, EnumRarity.UNCOMMON	, "oreLapis"		, "", 0, 2, 3, 15, 64),
+	NICKEL_CRACKED_ORE		("nickel_cracked_ore"			, EnumRarity.COMMON		, "oreNickel"		, "", 0, 2, 3, 15, 64),
+	IRON_CRACKED_ORE		("iron_cracked_ore"			, EnumRarity.COMMON		, "oreIron"		, "", 0, 1, 3, 15, 64),
+	GOLD_CRACKED_ORE		("gold_cracked_ore"			, EnumRarity.COMMON		, "oreGold"		, "", 0, 1, 3, 15, 64),
+	REDSTONE_CRACKED_ORE	("redstone_cracked_ore"		, EnumRarity.COMMON		, "oreRedstone"	, "", 0, 2, 3, 15, 64),
+	LAPIS_CRACKED_ORE		("lapis_cracked_ore"			, EnumRarity.UNCOMMON	, "oreLapis"		, "", 0, 2, 3, 15, 64),
 	BLACKQUARTZ_CRACKED_ORE	("blackquartz_cracked_ore"	, EnumRarity.UNCOMMON	, "oreQuartzBlack"	, "", 0, 2, 3, 15, 64),
 	DIAMOND_CRACKED_ORE		("diamond_cracked_ore"		, EnumRarity.UNCOMMON	, "oreDiamond"		, "", 0, 2, 3, 15, 64),
 	EMERALD_CRACKED_ORE		("emerald_cracked_ore"		, EnumRarity.RARE		, "oreEmerald"		, "", 0, 2, 3, 15, 64),
-	SILVER_CRACKED_ORE		("silver_cracked_ore"		, EnumRarity.UNCOMMON	, "oreSilver"		, "", 0, 2, 3, 15, 64),
-	LEAD_CRACKED_ORE		("lead_cracked_ore"			, EnumRarity.UNCOMMON	, "oreLead"			, "", 0, 2, 3, 15, 64),
-	ALUMINUM_CRACKED_ORE	("aluminum_cracked_ore"		, EnumRarity.UNCOMMON	, "oreAluminum"		, "", 0, 2, 3, 15, 64),
+	SILVER_CRACKED_ORE		("silver_cracked_ore"			, EnumRarity.UNCOMMON	, "oreSilver"		, "", 0, 2, 3, 15, 64),
+	LEAD_CRACKED_ORE		("lead_cracked_ore"			, EnumRarity.UNCOMMON	, "oreLead"		, "", 0, 2, 3, 15, 64),
+	ALUMINUM_CRACKED_ORE	("aluminum_cracked_ore"		, EnumRarity.UNCOMMON	, "oreAluminum"	, "", 0, 2, 3, 15, 64),
 	URANIUM_CRACKED_ORE		("uranium_cracked_ore"		, EnumRarity.UNCOMMON	, "oreUranium"		, "", 0, 2, 3, 15, 64),
-	OSMIUM_CRACKED_ORE		("osmium_cracked_ore"		, EnumRarity.UNCOMMON	, "oreOsmium"		, "", 0, 2, 3, 15, 64),
+	OSMIUM_CRACKED_ORE		("osmium_cracked_ore"			, EnumRarity.UNCOMMON	, "oreOsmium"		, "", 0, 2, 3, 15, 64),
 	EMERALD_CRACKED_ORE2	("emerald_cracked_ore2"		, EnumRarity.COMMON		, "oreEmerald"		, "", 0, 2, 3, 15, 64);
 
-	private String name;
-	private EnumRarity rarity;
-	private String recipeOreDict1;
-	private String recipeOreDict2;
-	private int light;
-	private int harvestLevel;
-	private float hardness;
-	private float resistance;
-	private int maxSize;
+	private final String name;
+	private final EnumRarity rarity;
+	private final String recipeOreDict1;
+	private final String recipeOreDict2;
+	private final int light;
+	private final int harvestLevel;
+	private final float hardness;
+	private final float resistance;
+	private final int maxSize;
 
 	EnumOreCracked1(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize) {
 		this.name = name;
@@ -44,10 +46,7 @@ public enum EnumOreCracked1 implements IStringSerializable {
 		this.maxSize = maxSize;
 	}
 
-	@Override
-	public String getName() {
-		return name;
-	}
+	@Override @Nonnull public String getName() { return name; }
 
 	public EnumRarity getRarity() {
 		return rarity;
@@ -80,5 +79,4 @@ public enum EnumOreCracked1 implements IStringSerializable {
  	public int getMaxSize() {
  		return maxSize;
  	}
-
 }

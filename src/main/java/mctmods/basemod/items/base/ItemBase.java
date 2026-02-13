@@ -5,12 +5,13 @@ import mctmods.basemod.library.util.CreativeTabBM;
 
 import net.minecraft.item.Item;
 
+import java.util.Objects;
+
 public class ItemBase extends Item {
 
 	public ItemBase(String name) {
 		setRegistryName(Basemod.MODID, name);
-		setUnlocalizedName(getRegistryName().toString());
+		setTranslationKey(Objects.requireNonNull(getRegistryName()).toString());
 		setCreativeTab(CreativeTabBM.MCTBASEMOD_TAB);
 	}
-
 }

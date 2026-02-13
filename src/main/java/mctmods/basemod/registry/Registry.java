@@ -35,6 +35,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
+import java.util.Objects;
+
 @ObjectHolder(Basemod.MODID)
 public class Registry {
 
@@ -94,21 +96,21 @@ public class Registry {
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		for(Block block : block) {
 			registry.register(block);
-			Basemod.logger.info("Added block: " + block.getRegistryName());
+            Basemod.logger.info("Added block: {}", block.getRegistryName());
 		 }
 	}
 
 	public static void registerItems(IForgeRegistry<Item> registry) {
 		for(Item item : item) {
 			registry.register(item);
-			Basemod.logger.info("Added item: " + item.getRegistryName());
+            Basemod.logger.info("Added item: {}", item.getRegistryName());
 		}
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
 		for(ItemBlock item_block : itemblock) {
-			registry.register(item_block.setRegistryName(item_block.getBlock().getRegistryName()));
-			Basemod.logger.info("Added itemblock: " + item_block.getBlock().getRegistryName());
+			registry.register(item_block.setRegistryName(Objects.requireNonNull(item_block.getBlock().getRegistryName())));
+            Basemod.logger.info("Added itemblock: {}", item_block.getBlock().getRegistryName());
 		}
 	}
 
@@ -130,5 +132,4 @@ public class Registry {
 		FOODS.initItemModels();		
 		MATERIALS.initItemModels();
 	}
-
 }

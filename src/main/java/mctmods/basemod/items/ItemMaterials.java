@@ -12,6 +12,8 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nonnull;
+
 public class ItemMaterials extends ItemBase {
 
 	public ItemMaterials() {
@@ -20,33 +22,29 @@ public class ItemMaterials extends ItemBase {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
 		if(this.isInCreativeTab(tab)) {
 			for(EnumMaterials type : EnumMaterials.values()) {
-				if(type.getName() != "open") {
+				if(!type.getName().equals("open")) {
 					list.add(new ItemStack(this, 1, type.ordinal()));
 				}
 			}
 		}
 	}
 
-	@Override
-	public String getUnlocalizedName(ItemStack stack) {
-		return super.getUnlocalizedName() + "." + EnumMaterials.values()[stack.getMetadata()].getName();
+	@Override @Nonnull public String getTranslationKey(ItemStack stack) {
+		return super.getTranslationKey() + "." + EnumMaterials.values()[stack.getMetadata()].getName();
 	}
 
-	@Override
-	public EnumRarity getRarity(ItemStack stack) {
+	@Override @Nonnull public EnumRarity getRarity(ItemStack stack) {
 		return EnumMaterials.values()[stack.getMetadata()].getRarity();
 	}
 
-	@Override
-	public int getItemStackLimit(ItemStack stack) {
+	@Override public int getItemStackLimit(ItemStack stack) {
 		return EnumMaterials.values()[stack.getMetadata()].getMaxSize();
 	}
 
-	@Override
-	public int getMetadata(int meta) {
+	@Override public int getMetadata(int meta) {
 		return meta;
 	}
 
@@ -56,5 +54,4 @@ public class ItemMaterials extends ItemBase {
 			ModelLoader.setCustomModelResourceLocation(this, variant.ordinal(), new ModelResourceLocation(this.getRegistryName() + "/" + variant.getName(), "inventory"));
 		}
 	}
-
 }

@@ -15,26 +15,26 @@ public class FluidColored extends Fluid {
 	int color;
 	public FluidColored(String name, int color, int temp, int density, int viscosity) {
 		super(name, ICON_MetalStill, ICON_MetalFlowing);
-		if(FluidRegistry.isFluidRegistered(name) == false) {
+		if(!FluidRegistry.isFluidRegistered(name)) {
 			this.color = color;
 			this.setTemperature(temp);
 			this.setDensity(density);
 			this.setViscosity(viscosity);
 			FluidRegistry.registerFluid(this);
 			FluidRegistry.addBucketForFluid(this);
-			Basemod.logger.info("Added molten fluid: " + Basemod.MODID + ":" + name);
+            Basemod.logger.info("Added molten fluid: " + Basemod.MODID + ":{}", name);
 		}
 	}
 
 	public FluidColored(String name, int color, int density, int viscosity) {
 		super(name, ICON_Still, ICON_Flowing);
-		if(FluidRegistry.isFluidRegistered(name) == false) {
+		if(!FluidRegistry.isFluidRegistered(name)) {
 			this.color = color;
 			this.setDensity(density);
 			this.setViscosity(viscosity);
 			FluidRegistry.registerFluid(this);
 			FluidRegistry.addBucketForFluid(this);
-			Basemod.logger.info("Added fluid: " + Basemod.MODID + ":" + name);
+            Basemod.logger.info("Added fluid: " + Basemod.MODID + ":{}", name);
 		}
 	}
 

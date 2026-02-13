@@ -1,7 +1,6 @@
 package mctmods.basemod;
 
 import mctmods.basemod.library.util.ConfigBM;
-import mctmods.basemod.library.util.FilePlacerBM;
 import mctmods.basemod.library.util.recipes.FurnaceRecipe;
 import mctmods.basemod.proxies.CommonProxy;
 import mctmods.basemod.registry.Registry;
@@ -31,7 +30,6 @@ import org.apache.logging.log4j.Logger;
 @Mod(
 	modid = Basemod.MODID,
 	name = Basemod.MODNAME,
-	version = Basemod.VERSION,
 	acceptedMinecraftVersions = "[1.12.2,1.13)",
 	dependencies =
 			"required-after:forge@[14.23.+,);" +
@@ -43,7 +41,6 @@ public class Basemod {
 
 	public static final String MODID = "mctbasemod";
 	public static final String MODNAME = "MCT Basemod";
-	public static final String VERSION = "${version}";
 
 	public static Logger logger = LogManager.getLogger(MODID);
 	public static boolean tconstruct;
@@ -52,9 +49,7 @@ public class Basemod {
 	public static CommonProxy proxy;
 	public static Configuration config;
 
-	static {
-		FluidRegistry.enableUniversalBucket();
-	}
+	static { FluidRegistry.enableUniversalBucket(); }
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -81,7 +76,6 @@ public class Basemod {
 		tconstruct = Loader.isModLoaded("tconstruct");
 
 		ConfigBM.syncConfig();
-		FilePlacerBM.filePlacer();
 		FurnaceRecipe.removeSmeltingPreInit();
 
 		proxy.preInit();
@@ -96,5 +90,4 @@ public class Basemod {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit();
 	}
-
 }

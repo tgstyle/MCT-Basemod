@@ -23,6 +23,9 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nonnull;
+import java.util.Objects;
+
 public class BlockSheetMetal2 extends BlockBase {
 
 	private static final PropertyEnum<EnumSheetMetal2> VARIANT = PropertyEnum.create("blocks", EnumSheetMetal2.class);
@@ -31,30 +34,25 @@ public class BlockSheetMetal2 extends BlockBase {
 		super(Material.IRON, MapColor.GRAY, "sheet_metal2");
 	}
 
-	@Override
-	protected BlockStateContainer createBlockState() {
+	@Override @Nonnull protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, VARIANT);
 	}
 
-	@Override
-	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)	{
+	@Override public void getSubBlocks(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list)	{
 		for(EnumSheetMetal2 variant : EnumSheetMetal2.values()) {
 			list.add(new ItemStack(this, 1, variant.ordinal()));
 		}
 	}
 
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
+	@Override @Nonnull public IBlockState getStateFromMeta(int meta) {
 		return getDefaultState().withProperty(VARIANT, EnumSheetMetal2.values()[meta]);
 	}
 
-	@Override
-	public int getMetaFromState(IBlockState state) {
+	@Override public int getMetaFromState(IBlockState state) {
 		return state.getValue(VARIANT).ordinal();
 	}
 
-	@Override
-	public int damageDropped(IBlockState state) {
+	@Override public int damageDropped(@Nonnull IBlockState state) {
 		return getMetaFromState(state);
 	}
 
@@ -66,31 +64,26 @@ public class BlockSheetMetal2 extends BlockBase {
 		return state.getValue(VARIANT).getRecipeOreDict2();
 	}
 
-	@Override
-	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+	@Override public int getLightValue(IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos) {
 		return state.getValue(VARIANT).getLight();
 	}
 
-	@Override
-	public int getHarvestLevel(IBlockState state) {
+	@Override public int getHarvestLevel(IBlockState state) {
 		return state.getValue(VARIANT).getHarvestLevel();
 	}
 
-	@Override
-	public float getBlockHardness(IBlockState state, World worldIn, BlockPos pos) {
+	@Override public float getBlockHardness(IBlockState state, @Nonnull World worldIn, @Nonnull BlockPos pos) {
 		return state.getValue(VARIANT).getHardness();
 	}
 
-	@Override
-	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
+	@Override public float getExplosionResistance(World world, @Nonnull BlockPos pos, Entity exploder, @Nonnull Explosion explosion) {
 		return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void initItemBlockModels() {
 		for(EnumSheetMetal2 variant : EnumSheetMetal2.values()) {
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(Item.getItemFromBlock(this).getRegistryName(), "blocks=" + variant.getName()));
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), variant.ordinal(), new ModelResourceLocation(Objects.requireNonNull(Item.getItemFromBlock(this).getRegistryName()), "blocks=" + variant.getName()));
 		}
 	}
-
 }
