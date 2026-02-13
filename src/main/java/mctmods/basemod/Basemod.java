@@ -27,6 +27,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
+
 @Mod(
 	modid = Basemod.MODID,
 	name = Basemod.MODNAME,
@@ -72,7 +74,7 @@ public class Basemod {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		config = new Configuration(event.getSuggestedConfigurationFile());
+		config = new Configuration(new File(event.getModConfigurationDirectory(), "mct_basemod.cfg"));
 		tconstruct = Loader.isModLoaded("tconstruct");
 
 		ConfigBM.syncConfig();
