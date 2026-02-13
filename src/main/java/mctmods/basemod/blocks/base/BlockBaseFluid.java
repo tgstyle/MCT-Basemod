@@ -10,7 +10,6 @@ import net.minecraftforge.fluids.Fluid;
 import java.util.Objects;
 
 public class BlockBaseFluid extends BlockFluidClassic {
-
 	public BlockBaseFluid(Fluid fluid, Material material, String name) {
 		super(fluid, material);
 		setRegistryName(Basemod.MODID, name);

@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import javax.annotation.Nonnull;
 
 public class BlockBaseOre extends BlockBase {
-
 	public BlockBaseOre(Material material, MapColor mapColor, String name) {
 		super(material, mapColor, name);
 	}

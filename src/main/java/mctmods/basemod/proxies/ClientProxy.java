@@ -11,7 +11,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 @SuppressWarnings("unused")
 public class ClientProxy extends CommonProxy {
-
 	@Override public void registerRenders() {
 		Registry.initModels();
 		RegistryFluid.initModels();

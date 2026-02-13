@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumOreCracked3 implements IStringSerializable {
-
 	COAL_CRACKED_ORE("coal_cracked_ore", EnumRarity.COMMON, "oreCoal", "", 0, 2, 3, 15, 64);
 
 	private final String name;

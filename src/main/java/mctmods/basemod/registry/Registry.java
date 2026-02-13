@@ -39,7 +39,6 @@ import java.util.Objects;
 
 @ObjectHolder(Basemod.MODID)
 public class Registry {
-
 	// blocks
 	public static final BlockSheetMetal1 SHEET_METAL1 = new BlockSheetMetal1();
 	public static final BlockSheetMetal2 SHEET_METAL2 = new BlockSheetMetal2();

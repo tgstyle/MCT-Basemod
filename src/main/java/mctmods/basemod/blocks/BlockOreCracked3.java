@@ -25,8 +25,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 public class BlockOreCracked3 extends BlockBaseOreCracked {
-
 	private static final PropertyEnum<EnumOreCracked3> VARIANT = PropertyEnum.create("blocks", EnumOreCracked3.class);
 
 	public BlockOreCracked3() {

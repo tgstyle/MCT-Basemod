@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+@SuppressWarnings("deprecation")
 public class ItemBlockSheetMetal1 extends ItemBlockBase {
-
 	public ItemBlockSheetMetal1(Block block) {
 		super(block);
 		setHasSubtypes(true);

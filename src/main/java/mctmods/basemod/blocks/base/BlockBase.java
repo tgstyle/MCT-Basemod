@@ -10,7 +10,6 @@ import net.minecraft.block.material.Material;
 import java.util.Objects;
 
 public class BlockBase extends Block {
-
 	public BlockBase(Material material, MapColor mapColor, String name) {
 		super(material, mapColor);
 		setRegistryName(Basemod.MODID, name);

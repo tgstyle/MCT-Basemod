@@ -1,7 +1,6 @@
 package mctmods.basemod.proxies;
 
 public class CommonProxy {
-
 	public void registerRenders() {}
 
 	public void preInit() {}

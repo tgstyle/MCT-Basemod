@@ -9,7 +9,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumOre3 implements IStringSerializable {
-
 	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
 	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
 	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),

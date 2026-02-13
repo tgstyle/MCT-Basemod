@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
 public class FurnaceRecipe {
-
 	public static void removeSmeltingPreInit() {
 		
 		if(!ConfigBM.disableFurnaceRecipeRemoval) {
@@ -29,7 +28,6 @@ public class FurnaceRecipe {
 		removeSmeltingRecipesFor(new ItemStack(Items.QUARTZ));
 		removeSmeltingRecipesFor(new ItemStack(Items.REDSTONE));
 		removeSmeltingRecipesFor(new ItemStack(Blocks.HARDENED_CLAY));
-
 		}
 	}
 

@@ -16,7 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class RegistryDict {
-
 	public static void registerDictionary() {
 
 		// Blocks

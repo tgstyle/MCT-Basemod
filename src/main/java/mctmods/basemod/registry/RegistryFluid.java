@@ -23,7 +23,6 @@ import net.minecraftforge.registries.IForgeRegistry;
 import javax.annotation.Nonnull;
 
 public class RegistryFluid {
-
 	public static final Fluid FLUID_MIXEDREDSTONE = new FluidColored("mixedredstone", 0xD9740303, 1600, 1000);
 
 	public static final BlockFluid BLOCK_MIXEDREDSTONE = new BlockFluid(FLUID_MIXEDREDSTONE, Material.WATER, "mixedredstone");

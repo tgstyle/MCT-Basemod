@@ -9,7 +9,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumOre1 implements IStringSerializable {
-
 	COPPER_POOR_ORE	("copper_poor_ore"	, EnumRarity.COMMON, "mctPoorCopper"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 0, null, 0, 0),
 	COPPER_ORE		("copper_ore"		, EnumRarity.COMMON, "mctCopper"		, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 2, 0, null, 0, 0),
 	COPPER_DENSE_ORE("copper_dense_ore"	, EnumRarity.COMMON, "mctDenseCopper"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 3, 0, null, 0, 0),

@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumOreCracked2 implements IStringSerializable {
-
 	DESTABALIZED_REDSTONE_CRACKED_ORE	("destabalized_redstone_cracked_ore"	, EnumRarity.RARE, "oreClathrateRedstone"	, "", 0, 2, 3, 15, 64),
 	ENERGIZED_GLOWSTONE_CRACKED_ORE		("energized_glowstone_cracked_ore"	, EnumRarity.RARE, "oreClathrateGlowstone"	, "", 0, 2, 3, 15, 64),
 	QUARTZ_CRACKED_ORE					("quartz_cracked_ore"					, EnumRarity.RARE, "oreQuartz"				, "", 0, 2, 3, 15, 64),

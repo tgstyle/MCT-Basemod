@@ -14,15 +14,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 
+@SuppressWarnings("deprecation")
 public class ItemMaterials extends ItemBase {
-
 	public ItemMaterials() {
 		super("materials");
 		setHasSubtypes(true);
 	}
 
-	@Override
-	public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
+	@Override public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
 		if(this.isInCreativeTab(tab)) {
 			for(EnumMaterials type : EnumMaterials.values()) {
 				if(!type.getName().equals("open")) {

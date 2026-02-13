@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumOreCracked1 implements IStringSerializable {
-
 	COPPER_CRACKED_ORE		("copper_cracked_ore"			, EnumRarity.COMMON		, "oreCopper"		, "", 0, 2, 3, 15, 64),
 	TIN_CRACKED_ORE			("tin_cracked_ore"			, EnumRarity.COMMON		, "oreTin"			, "", 0, 2, 3, 15, 64),
 	NICKEL_CRACKED_ORE		("nickel_cracked_ore"			, EnumRarity.COMMON		, "oreNickel"		, "", 0, 2, 3, 15, 64),

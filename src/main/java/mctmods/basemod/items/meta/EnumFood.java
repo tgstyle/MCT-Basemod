@@ -1,15 +1,16 @@
 package mctmods.basemod.items.meta;
 
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
 public enum EnumFood implements IStringSerializable {
-
-	SWEER_POTATO   ("sweer_potato"    , EnumRarity.RARE     , "", "", 1, 20, 5.0F),
-	CHICKEN_NUGGER ("chicken_nugger"  , EnumRarity.RARE     , "", "", 1, 20, 5.0F),
-	HAPPY_MEAL    ("happy_meal"     , EnumRarity.UNCOMMON  , "", "", 8, 18, 0.5F);
+	SWEER_POTATO	("sweer_potato"	, EnumRarity.RARE		, "", "", 1, 20, 1.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 2, false, false)),
+	CHICKEN_NUGGER	("chicken_nugger"	, EnumRarity.RARE		, "", "", 1, 20, 1.0F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 2, false, false)),
+	HAPPY_MEAL		("happy_meal"		, EnumRarity.UNCOMMON	, "", "", 8, 16, 0.5F, new PotionEffect(MobEffects.INSTANT_HEALTH, 1, 1, false, false));
 
 	private final String name;
 	private final EnumRarity rarity;
@@ -18,15 +19,17 @@ public enum EnumFood implements IStringSerializable {
 	private final int maxSize;
 	private final int healAmount;
 	private final float saturation;
+	private final PotionEffect potionEffect;
 
-	EnumFood(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int maxSize, int healAmount, float saturation) {
+	EnumFood(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int maxSize, int healAmount, float saturation, PotionEffect potionEffect) {
 		this.name = name;
 		this.rarity = rarity;
 		this.recipeOreDict1 = recipeOreDict1;
 		this.recipeOreDict2 = recipeOreDict2;
 		this.maxSize = maxSize;
-		this.healAmount = healAmount;
 		this.saturation = saturation;
+		this.healAmount = healAmount;
+		this.potionEffect = potionEffect;
 	}
 
 	@Override @Nonnull public String getName() {
@@ -56,4 +59,6 @@ public enum EnumFood implements IStringSerializable {
 	public float getSaturation() {
 		return saturation;
 	}
+
+	public PotionEffect getPotion() { return potionEffect; }
 }

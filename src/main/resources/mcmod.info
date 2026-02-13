@@ -1,15 +1,15 @@
 [
-{
-  "modid": "mctbasemod",
-  "name": "MCT Basemod",
-  "description": "A library mod for the TiCh Immersion Modpack",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "https://www.curseforge.com/minecraft/mc-mods/mct-basemod",
-  "authorList": ["TGstyle"],
-  "credits": "FairyMensch for some good textures!",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "mctbasemod",
+    "name": "Basemod",
+    "description": "A library mod for the TiCh Immersion Modpack",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mct-basemod",
+    "authorList": ["TGstyle"],
+    "credits": "FairyMensch for some good textures!",
+    "logoFile": "assets/mctbasemod/MCTlogo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]

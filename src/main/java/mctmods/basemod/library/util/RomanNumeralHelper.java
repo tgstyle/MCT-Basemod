@@ -3,7 +3,6 @@ package mctmods.basemod.library.util;
 import java.util.TreeMap;
 
 public class RomanNumeralHelper {
-
     private final static TreeMap<Integer, String> map = new TreeMap<>();
 
     static {

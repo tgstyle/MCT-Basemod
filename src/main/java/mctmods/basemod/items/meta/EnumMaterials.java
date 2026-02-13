@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumMaterials implements IStringSerializable {
-
 	IRON_CRUSHED_ORE("iron_crushed_ore"	,EnumRarity.COMMON,"crushedIron"	,""			,64),
 	IRON_DUST		("iron_dust"			,EnumRarity.COMMON,"dustIron"		,""			,64),
 	IRON_DUST_DIRTY	("iron_dust_dirty"	,EnumRarity.COMMON,"dustDirtyIron"	,""			,64),
@@ -27,7 +26,7 @@ public enum EnumMaterials implements IStringSerializable {
 	OPEN_0011		("open"				,EnumRarity.COMMON,""				,""			,64),
 	GOLD_CLUMP		("gold_clump"			,EnumRarity.COMMON,"clumpGold"		,""			,64),
 	OPEN_0012		("open"				,EnumRarity.COMMON,""				,""			,64),
-	GOLD_ROD		("gold_rod"			,EnumRarity.COMMON,"stickGold"		,"rodGold	"	,64),
+	GOLD_ROD		("gold_rod"			,EnumRarity.COMMON,"stickGold"		,"rodGold"		,64),
 	GOLD_GEAR		("gold_gear"			,EnumRarity.COMMON,"gearGold"		,""			,64),
 	GOLD_PLATE		("gold_plate"			,EnumRarity.COMMON,"plateGold"		,""			,64),
 
@@ -152,7 +151,7 @@ public enum EnumMaterials implements IStringSerializable {
 	STEEL_PLATE	("steel_plate"	,EnumRarity.COMMON,"plateSteel"	,""			,64),
 
 	OPEN_0120			("open"				,EnumRarity.COMMON,""					,""				,64),
-	CONSTANTAN_DUST		("constantan_dust"	,EnumRarity.COMMON,"dustContantan"		,""				,64),
+	CONSTANTAN_DUST		("constantan_dust"	,EnumRarity.COMMON,"dustConstantan"	,""				,64),
 	OPEN_0121			("open"				,EnumRarity.COMMON,""					,""				,64),
 	OPEN_0122			("open"				,EnumRarity.COMMON,""					,""				,64),
 	OPEN_0123			("open"				,EnumRarity.COMMON,""					,""				,64),

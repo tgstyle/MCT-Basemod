@@ -6,7 +6,6 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
 public class ConfigBM {
-
 	public static boolean disableFurnaceRecipeRemoval;
 
 	public static void syncConfig() {
@@ -21,12 +20,8 @@ public class ConfigBM {
 
 	 	 	disableFurnaceRecipeRemoval = disableFurnaceRecipeRemovalProperty.getBoolean();
 
-	 	} catch (Exception e) {
-            Basemod.logger.error("Config Error %d{}", String.valueOf(e));
-	 	} finally {
-	 	 	if (config.hasChanged()) {
-	 	 		config.save();
-	 	 	}
 	 	}
+		catch (Exception e) { Basemod.logger.error("Config Error %d{}", String.valueOf(e)); }
+		finally { if (config.hasChanged()) { config.save(); }}
 	}
 }

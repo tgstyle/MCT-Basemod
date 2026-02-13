@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+@SuppressWarnings("deprecation")
 public class ItemBlockOre3 extends ItemBlockBase {
-
 	public ItemBlockOre3(Block block) {
 		super(block);
 		setHasSubtypes(true);

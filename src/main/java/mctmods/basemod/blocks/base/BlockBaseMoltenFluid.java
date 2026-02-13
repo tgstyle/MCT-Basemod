@@ -10,10 +10,7 @@ import net.minecraftforge.fluids.Fluid;
 import javax.annotation.Nonnull;
 
 public class BlockBaseMoltenFluid extends BlockBaseFluid {
-
-	public BlockBaseMoltenFluid(Fluid fluid, Material material, String name) {
-		super(fluid, material, name);
-	}
+	public BlockBaseMoltenFluid(Fluid fluid, Material material, String name) { super(fluid, material, name); }
 
 	private int flammability = 0;
 	private int fireSpread = 0;
@@ -25,15 +22,9 @@ public class BlockBaseMoltenFluid extends BlockBaseFluid {
 		return this;
 	}
 
-	@Override public int getFlammability(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) {
-		return this.flammability;
-	}
+	@Override public int getFlammability(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) { return this.flammability; }
 
-	@Override public int getFireSpreadSpeed(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) {
-		return fireSpread;
-	}
+	@Override public int getFireSpreadSpeed(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) { return fireSpread; }
 
-	@Override public boolean isFlammable(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) {
-		return this.flammability > 0;
-	}
+	@Override public boolean isFlammable(@Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EnumFacing face) { return this.flammability > 0; }
 }

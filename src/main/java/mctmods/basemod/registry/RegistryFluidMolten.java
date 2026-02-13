@@ -25,7 +25,6 @@ import net.minecraftforge.registries.IForgeRegistry;
 import javax.annotation.Nonnull;
 
 public class RegistryFluidMolten {
-
 	public static final Fluid FLUID_MOLTEN_DRACONIUM = new FluidColored("draconium", 0x9900ff, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_DRACONIUMAWAKENED = new FluidColored("draconiumawakened", 0xff4f1a, 850, 2000, 10000);
 	public static final Fluid FLUID_MOLTEN_QUARTZENRICHEDIRON = new FluidColored("quartzenrichediron", 0xef6262, 850, 2000, 10000);

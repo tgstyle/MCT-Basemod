@@ -8,7 +8,6 @@ import net.minecraft.item.Item;
 import java.util.Objects;
 
 public class ItemBase extends Item {
-
 	public ItemBase(String name) {
 		setRegistryName(Basemod.MODID, name);
 		setTranslationKey(Objects.requireNonNull(getRegistryName()).toString());

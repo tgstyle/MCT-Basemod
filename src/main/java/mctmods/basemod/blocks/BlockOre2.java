@@ -29,8 +29,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 
+@SuppressWarnings("deprecation")
 public class BlockOre2 extends BlockBaseOre {
-
 	private static final PropertyEnum<EnumOre2> VARIANT = PropertyEnum.create("blocks", EnumOre2.class);
 
 	public BlockOre2() {

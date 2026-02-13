@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumMaterials1 implements IStringSerializable {
-
 	COPPER_BLOCK			("copper_block"				, EnumRarity.COMMON		, "blockCopper"			, "", 0, 2, 3, 15, 64),
 	TIN_BLOCK				("tin_block"					, EnumRarity.COMMON		, "blockTin"				, "", 0, 2, 3, 15, 64),
 	NICKEL_BLOCK			("nickel_block"				, EnumRarity.COMMON		, "blockNickel"			, "", 0, 2, 3, 15, 64),

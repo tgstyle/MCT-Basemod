@@ -26,8 +26,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 public class BlockSheetMetal1 extends BlockBase {
-
 	private static final PropertyEnum<EnumSheetMetal1> VARIANT = PropertyEnum.create("blocks", EnumSheetMetal1.class);
 
 	public BlockSheetMetal1() {

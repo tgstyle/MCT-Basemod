@@ -6,7 +6,6 @@ import net.minecraft.util.IStringSerializable;
 import javax.annotation.Nonnull;
 
 public enum EnumSheetMetal1 implements IStringSerializable {
-
 	COPPER_SHEET_METAL		("copper_sheet_metal"		, EnumRarity.COMMON		, "blockSheetmetalCopper"		, "", 0, 2, 3, 15, 64),
 	TIN_SHEET_METAL			("tin_sheet_metal"		, EnumRarity.COMMON		, "blockSheetmetalTin"			, "", 0, 2, 3, 15, 64),
 	NICKEL_SHEET_METAL		("nickel_sheet_metal"		, EnumRarity.COMMON		, "blockSheetmetalNickel"		, "", 0, 2, 3, 15, 64),

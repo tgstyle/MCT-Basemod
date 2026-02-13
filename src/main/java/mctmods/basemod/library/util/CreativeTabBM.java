@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import javax.annotation.Nonnull;
 
 public class CreativeTabBM extends CreativeTabs {
-
 	public static final CreativeTabBM MCTBASEMOD_TAB = new CreativeTabBM();
 
 	public CreativeTabBM() { super(Basemod.MODID); }
