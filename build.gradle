@@ -151,11 +151,14 @@ jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     // Exclude all mixin-related content from the release jar *NOT LICENSED FOR DISTRO IN THIS MOD*
-    exclude 'mctmods/basemod/mixin/**'
-    exclude 'mixins.basemod.json'
-    exclude 'mixins.basemod.refmap.json'
+    exclude {
+        def p = it.path
+        p.startsWith('mctmods/basemod/mixin/') ||
+        p == 'mixins.basemod.json' ||
+        p.endsWith('.refmap.json')
+    }
 
-    // Clean MANIFEST.MF (remove MixinConfigs)
+    // Replace MANIFEST.MF with a clean version (no MixinConfigs) in the built JAR
     doLast {
         def tempDir = file("$buildDir/tmp/clean_manifest")
         tempDir.mkdirs()
