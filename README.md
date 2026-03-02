@@ -1,3 +1,8 @@
+# Links
+- [Official Discord](https://discord.gg/ujY2mV9)<br/>
+
+- [MCT Basemod on CurseForge](https://www.curseforge.com/minecraft/mc-mods/mct-basemod)
+
 # MCT Basemod
 A library mod for the TiCh Immersion Modpack.<br/>
 
