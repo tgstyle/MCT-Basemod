@@ -13,15 +13,15 @@ public class ConfigBM {
 		try {
 			config.load();
 
-	 	 	Property disableFurnaceRecipeRemovalProperty = config.get(Configuration.CATEGORY_GENERAL,
-	 	 	 	 	"disableFurnaceRecipeRemoval",
-	 	 	 	 	"false",
-	 	 	 	 	"Disable Furnace Recipe Removal (Default = False)");
+			Property disableFurnaceRecipeRemovalProperty = config.get(Configuration.CATEGORY_GENERAL,
+					"disableFurnaceRecipeRemoval",
+					false,
+					"Disable Furnace Recipe Removal (Default = False)");
 
-	 	 	disableFurnaceRecipeRemoval = disableFurnaceRecipeRemovalProperty.getBoolean();
+			disableFurnaceRecipeRemoval = disableFurnaceRecipeRemovalProperty.getBoolean();
 
-	 	}
-		catch (Exception e) { Basemod.logger.error("Config Error %d{}", String.valueOf(e)); }
+		}
+		catch (Exception e) { Basemod.logger.error("Config Error {}", String.valueOf(e)); }
 		finally { if (config.hasChanged()) { config.save(); }}
 	}
 }

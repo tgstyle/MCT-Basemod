@@ -1,8 +1,5 @@
 package mctmods.basemod.blocks;
 
-import java.util.Objects;
-import java.util.Random;
-
 import mctmods.basemod.blocks.base.BlockBaseOre;
 import mctmods.basemod.blocks.meta.EnumOre3;
 
@@ -22,12 +19,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
 import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.Random;
 
 @SuppressWarnings("deprecation")
 public class BlockOre3 extends BlockBaseOre {
@@ -67,59 +64,47 @@ public class BlockOre3 extends BlockBaseOre {
 		int count = quantityDropped(state, fortune, rand);
 		EnumOre3 block = state.getValue(VARIANT);
 		ItemStack blockDrop1 = new ItemStack(block.getBlockDrop1(), block.getBlockDropAmount1(), block.getBlockDropMeta1());
-		ItemStack blockDrop2 = new ItemStack(block.getBlockDrop2(), block.getBlockDropAmount2(), block.getBlockDropMeta2());
+		ItemStack blockDrop2 = block.getBlockDrop2() == null ? ItemStack.EMPTY : new ItemStack(block.getBlockDrop2(), block.getBlockDropAmount2(), block.getBlockDropMeta2());
 
 		for(int i = 0; i < count; i++) {
 			Item item = this.getItemDropped(state, rand, fortune);
 			if(item != Items.AIR) {
-				drops.add(blockDrop1);
+				drops.add(blockDrop1.copy());
 
-				int total = 1 + RANDOM.nextInt(100);
+				int total = 1 + rand.nextInt(100);
 
 				switch(fortune) {
 					case 0:
-						if(total <= 25) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 25) { drops.add(blockDrop1.copy()); }
 						break;
 					case 1:
-						if(total <= 50) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 50) { drops.add(blockDrop1.copy()); }
 						break;
 					case 2:
-						if(total <= 75) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 75) { drops.add(blockDrop1.copy()); }
 						break;
 					case 3:
-						drops.add(blockDrop1);
+						drops.add(blockDrop1.copy());
 						break;
 				}
 
-                switch (fortune) {
-                    case 0:
-                        if (total <= 15) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 1:
-                        if (total <= 25) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 2:
-                        if (total <= 35) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 3:
-                        if (total <= 45) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                }
-            }
+				if(!blockDrop2.isEmpty()) {
+					switch(fortune) {
+						case 0:
+							if(total <= 15) { drops.add(blockDrop2.copy()); }
+							break;
+						case 1:
+							if(total <= 25) { drops.add(blockDrop2.copy()); }
+							break;
+						case 2:
+							if(total <= 35) { drops.add(blockDrop2.copy()); }
+							break;
+						case 3:
+							if(total <= 45) { drops.add(blockDrop2.copy()); }
+							break;
+					}
+				}
+			}
 		}
 	}
 

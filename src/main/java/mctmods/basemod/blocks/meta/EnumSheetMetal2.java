@@ -14,8 +14,8 @@ public enum EnumSheetMetal2 implements IStringSerializable {
 	DRACONIUM_SHEET_METAL			("draconium_sheet_metal"			, EnumRarity.EPIC		, "blockSheetmetalDraconium"			, "", 0, 2, 3, 15, 64),
 	AWAKENED_DRACONIUM_SHEET_METAL	("awakened_draconium_sheet_metal"	, EnumRarity.EPIC		, "blockSheetmetalDraconiumAwakened"	, "", 0, 2, 3, 15, 64),
 	EMERALD_SHEET_BLOCK				("emerald_sheet_block"			, EnumRarity.RARE		, "blockSheetEmerald"					, "", 0, 2, 3, 15, 64),
-	ARDITE_SHEET_METAL				("ardite_sheet_metal"				, EnumRarity.COMMON		, "blockSheetArdite"					, "", 0, 2, 3, 15, 64),
-	COBALT_SHEET_METAL				("cobalt_sheet_metal"				, EnumRarity.COMMON		, "blockSheetCobalt"					, "", 0, 2, 3, 15, 64);
+	ARDITE_SHEET_METAL				("ardite_sheet_metal"				, EnumRarity.COMMON		, "blockSheetmetalArdite"				, "", 0, 2, 3, 15, 64),
+	COBALT_SHEET_METAL				("cobalt_sheet_metal"				, EnumRarity.COMMON		, "blockSheetmetalCobalt"				, "", 0, 2, 3, 15, 64);
 
 	private final String name;
 	private final EnumRarity rarity;
@@ -41,35 +41,19 @@ public enum EnumSheetMetal2 implements IStringSerializable {
 
 	@Override @Nonnull public String getName() { return name; }
 
-	public EnumRarity getRarity() {
-		return rarity;
-	}
+	public EnumRarity getRarity() { return rarity; }
 
-	public String getRecipeOreDict1() {
-		return recipeOreDict1;
-	}
+	public String getRecipeOreDict1() { return recipeOreDict1; }
 
-	public String getRecipeOreDict2() {
-		return recipeOreDict2;
-	}
+	public String getRecipeOreDict2() { return recipeOreDict2; }
 
-	public int getLight() {
-		return light;
-	}
+	public int getLight() { return light; }
 
-	public int getHarvestLevel() {
-		return harvestLevel;
-	}
+	public int getHarvestLevel() { return harvestLevel; }
 
-	public float getHardness() {
-		return hardness;
-	}
+	public float getHardness() { return hardness; }
 
-	public float getResistance() {
-		return resistance;
-	}
+	public float getResistance() { return resistance; }
 
- 	public int getMaxSize() {
- 		return maxSize;
- 	}
+	public int getMaxSize() { return maxSize; }
 }

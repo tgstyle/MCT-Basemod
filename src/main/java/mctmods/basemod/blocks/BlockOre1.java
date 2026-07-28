@@ -1,8 +1,5 @@
 package mctmods.basemod.blocks;
 
-import java.util.Objects;
-import java.util.Random;
-
 import mctmods.basemod.blocks.base.BlockBaseOre;
 import mctmods.basemod.blocks.meta.EnumOre1;
 
@@ -22,24 +19,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
 import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.Random;
 
 @SuppressWarnings("deprecation")
 public class BlockOre1 extends BlockBaseOre {
 	private static final PropertyEnum<EnumOre1> VARIANT = PropertyEnum.create("blocks", EnumOre1.class);
 
-	public BlockOre1() {
-		super(Material.ROCK, MapColor.GRAY, "ore1");
-	}
+	public BlockOre1() { super(Material.ROCK, MapColor.GRAY, "ore1"); }
 
-	@Override @Nonnull protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, VARIANT);
-	}
+	@Override @Nonnull protected BlockStateContainer createBlockState() { return new BlockStateContainer(this, VARIANT); }
 
 	@Override public void getSubBlocks(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
 		for(EnumOre1 variant : EnumOre1.values()) {
@@ -49,37 +42,21 @@ public class BlockOre1 extends BlockBaseOre {
 
 	@Override @Nonnull public IBlockState getStateFromMeta(int meta) { return getDefaultState().withProperty(VARIANT, EnumOre1.values()[meta]); }
 
-	@Override public int getMetaFromState(IBlockState state) {
-		return state.getValue(VARIANT).ordinal();
-	}
+	@Override public int getMetaFromState(IBlockState state) { return state.getValue(VARIANT).ordinal(); }
 
-	@Override public int damageDropped(@Nonnull IBlockState state) {
-		return getMetaFromState(state);
-	}
+	@Override public int damageDropped(@Nonnull IBlockState state) { return getMetaFromState(state); }
 
-	public String getRecipeOreDict1(IBlockState state) {
-		return state.getValue(VARIANT).getRecipeOreDict1();
-	}
+	public String getRecipeOreDict1(IBlockState state) { return state.getValue(VARIANT).getRecipeOreDict1(); }
 
-	public String getRecipeOreDict2(IBlockState state) {
-		return state.getValue(VARIANT).getRecipeOreDict2();
-	}
+	public String getRecipeOreDict2(IBlockState state) { return state.getValue(VARIANT).getRecipeOreDict2(); }
 
-	@Override public int getLightValue(IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos) {
-		return state.getValue(VARIANT).getLight();
-	}
+	@Override public int getLightValue(IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos) { return state.getValue(VARIANT).getLight(); }
 
-	@Override public int getHarvestLevel(IBlockState state) {
-		return state.getValue(VARIANT).getHarvestLevel();
-	}
+	@Override public int getHarvestLevel(IBlockState state) { return state.getValue(VARIANT).getHarvestLevel(); }
 
-	@Override public float getBlockHardness(IBlockState state, @Nonnull World worldIn, @Nonnull BlockPos pos) {
-		return state.getValue(VARIANT).getHardness();
-	}
+	@Override public float getBlockHardness(IBlockState state, @Nonnull World worldIn, @Nonnull BlockPos pos) { return state.getValue(VARIANT).getHardness(); }
 
-	@Override public float getExplosionResistance(World world, @Nonnull BlockPos pos, Entity exploder, @Nonnull Explosion explosion) {
-		return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F;
-	}
+	@Override public float getExplosionResistance(World world, @Nonnull BlockPos pos, Entity exploder, @Nonnull Explosion explosion) { return world.getBlockState(pos).getValue(VARIANT).getResistance() / 5F; }
 
 	@Override public void getDrops(@Nonnull NonNullList<ItemStack> drops, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull IBlockState state, int fortune) {
 		Random rand = world instanceof World ? ((World)world).rand : RANDOM;
@@ -87,59 +64,47 @@ public class BlockOre1 extends BlockBaseOre {
 		int count = quantityDropped(state, fortune, rand);
 		EnumOre1 block = state.getValue(VARIANT);
 		ItemStack blockDrop1 = new ItemStack(block.getBlockDrop1(), block.getBlockDropAmount1(), block.getBlockDropMeta1());
-		ItemStack blockDrop2 = new ItemStack(block.getBlockDrop2(), block.getBlockDropAmount2(), block.getBlockDropMeta2());
+		ItemStack blockDrop2 = block.getBlockDrop2() == null ? ItemStack.EMPTY : new ItemStack(block.getBlockDrop2(), block.getBlockDropAmount2(), block.getBlockDropMeta2());
 
 		for(int i = 0; i < count; i++) {
 			Item item = this.getItemDropped(state, rand, fortune);
 			if(item != Items.AIR) {
-				drops.add(blockDrop1);
+				drops.add(blockDrop1.copy());
 
-				int total = 1 + RANDOM.nextInt(100);
+				int total = 1 + rand.nextInt(100);
 
 				switch(fortune) {
 					case 0:
-						if(total <= 25) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 25) { drops.add(blockDrop1.copy()); }
 						break;
 					case 1:
-						if(total <= 50) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 50) { drops.add(blockDrop1.copy()); }
 						break;
 					case 2:
-						if(total <= 75) {
-							drops.add(blockDrop1);
-						}
+						if(total <= 75) { drops.add(blockDrop1.copy()); }
 						break;
 					case 3:
-						drops.add(blockDrop1);
+						drops.add(blockDrop1.copy());
 						break;
 				}
 
-                switch (fortune) {
-                    case 0:
-                        if (total <= 15) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 1:
-                        if (total <= 25) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 2:
-                        if (total <= 35) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                    case 3:
-                        if (total <= 45) {
-                            drops.add(blockDrop2);
-                        }
-                        break;
-                }
-            }
+				if(!blockDrop2.isEmpty()) {
+					switch(fortune) {
+						case 0:
+							if(total <= 15) { drops.add(blockDrop2.copy()); }
+							break;
+						case 1:
+							if(total <= 25) { drops.add(blockDrop2.copy()); }
+							break;
+						case 2:
+							if(total <= 35) { drops.add(blockDrop2.copy()); }
+							break;
+						case 3:
+							if(total <= 45) { drops.add(blockDrop2.copy()); }
+							break;
+					}
+				}
+			}
 		}
 	}
 

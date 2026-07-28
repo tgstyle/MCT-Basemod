@@ -7,9 +7,9 @@ import mctmods.basemod.registry.Registry;
 import mctmods.basemod.registry.RegistryDict;
 import mctmods.basemod.registry.RegistryFluid;
 import mctmods.basemod.registry.RegistryFluidMolten;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -23,20 +23,19 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 @Mod(
-	modid = Basemod.MODID,
-	name = Basemod.MODNAME,
-	acceptedMinecraftVersions = "[1.12.2,1.13)",
-	dependencies =
-			"required-after:forge@[14.23.+,);" +
-			"after:tconstruct;" +
-			"before:mekanism;")
+		modid = Basemod.MODID,
+		name = Basemod.MODNAME,
+		useMetadata = true,
+		acceptedMinecraftVersions = "[1.12.2,1.13)",
+		dependencies =
+				"required-after:forge@[14.23.+,);" +
+						"after:tconstruct;" +
+						"before:mekanism;")
 
 @EventBusSubscriber
 public class Basemod {
@@ -57,7 +56,7 @@ public class Basemod {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		Registry.registerBlocks(event.getRegistry());
 		RegistryFluid.registerBlocks(event.getRegistry());
-		if(tconstruct) RegistryFluidMolten.registerBlocks(event.getRegistry());
+		if(tconstruct) { RegistryFluidMolten.registerBlocks(event.getRegistry()); }
 	}
 
 	@SubscribeEvent
@@ -68,9 +67,7 @@ public class Basemod {
 	}
 
 	@SubscribeEvent
-	public static void registerModels(ModelRegistryEvent event) {
-		proxy.registerRenders();
-	}
+	public static void registerModels(ModelRegistryEvent event) { proxy.registerRenders(); }
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -84,12 +81,8 @@ public class Basemod {
 	}
 
 	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		proxy.init();
-	}
+	public void init(FMLInitializationEvent event) { proxy.init(); }
 
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		proxy.postInit();
-	}
+	public void postInit(FMLPostInitializationEvent event) { proxy.postInit(); }
 }

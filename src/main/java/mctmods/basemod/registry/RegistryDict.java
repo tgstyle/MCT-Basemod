@@ -8,6 +8,7 @@ import mctmods.basemod.blocks.meta.EnumOre3;
 import mctmods.basemod.blocks.meta.EnumOre4;
 import mctmods.basemod.blocks.meta.EnumOreCracked1;
 import mctmods.basemod.blocks.meta.EnumOreCracked2;
+import mctmods.basemod.blocks.meta.EnumOreCracked3;
 import mctmods.basemod.blocks.meta.EnumSheetMetal1;
 import mctmods.basemod.blocks.meta.EnumSheetMetal2;
 import mctmods.basemod.items.meta.EnumMaterials;
@@ -81,6 +82,14 @@ public class RegistryDict {
 			}
 			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
 				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_CRACKED2, 1, variant.ordinal()));
+			}
+		}
+		for(EnumOreCracked3 variant : EnumOreCracked3.values()) {
+			if(variant.getRecipeOreDict1() != null && !variant.getRecipeOreDict1().isEmpty()) {
+				OreDictionary.registerOre(variant.getRecipeOreDict1(), new ItemStack(Registry.ORE_CRACKED3, 1, variant.ordinal()));
+			}
+			if(variant.getRecipeOreDict2() != null && !variant.getRecipeOreDict2().isEmpty()) {
+				OreDictionary.registerOre(variant.getRecipeOreDict2(), new ItemStack(Registry.ORE_CRACKED3, 1, variant.ordinal()));
 			}
 		}
 		for(EnumSheetMetal1 variant : EnumSheetMetal1.values()) {
