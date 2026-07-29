@@ -1,6 +1,7 @@
 package mctmods.basemod;
 
 import mctmods.basemod.library.util.ConfigBM;
+import mctmods.basemod.library.util.config.ConfigVariants;
 import mctmods.basemod.library.util.recipes.FurnaceRecipe;
 import mctmods.basemod.proxies.CommonProxy;
 import mctmods.basemod.registry.Registry;
@@ -75,13 +76,18 @@ public class Basemod {
 		tconstruct = Loader.isModLoaded("tconstruct");
 
 		ConfigBM.syncConfig();
+		ConfigVariants.load(event.getModConfigurationDirectory());
 		FurnaceRecipe.removeSmeltingPreInit();
 
 		proxy.preInit();
 	}
 
 	@EventHandler
-	public void init(FMLInitializationEvent event) { proxy.init(); }
+	public void init(FMLInitializationEvent event) {
+		ConfigVariants.resolveDeferred();
+
+		proxy.init();
+	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) { proxy.postInit(); }

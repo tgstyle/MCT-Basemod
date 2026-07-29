@@ -1,5 +1,6 @@
 package mctmods.basemod.blocks.meta;
 
+import mctmods.basemod.library.util.config.IVariantOre;
 import mctmods.basemod.registry.Registry;
 
 import net.minecraft.block.Block;
@@ -8,38 +9,38 @@ import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public enum EnumOre2 implements IStringSerializable {
+public enum EnumOre2 implements IStringSerializable, IVariantOre {
 	COAL_POOR_ORE		("coal_poor_ore"		, EnumRarity.COMMON		, "mctPoorCoal"		, "", 0, 1, 3, 15, 64, Registry.ORE_CRACKED3, 1, 0, null, 0, 0),
-	COAL_ORE			("coal_ore"				, EnumRarity.COMMON		, "mctCoal"			, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 2, 0, null, 0, 0),
-	COAL_DENSE_ORE		("coal_dense_ore"		, EnumRarity.COMMON		, "mctDenseCoal"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 3, 0, null, 0, 0),
+	COAL_ORE			("coal_ore"			, EnumRarity.COMMON		, "mctCoal"			, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 2, 0, null, 0, 0),
+	COAL_DENSE_ORE		("coal_dense_ore"		, EnumRarity.COMMON		, "mctDenseCoal"		, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED3, 3, 0, null, 0, 0),
 	REDSTONE_POOR_ORE	("redstone_poor_ore"	, EnumRarity.COMMON		, "mctPoorRedstone"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 5, null, 0, 0),
-	REDSTONE_ORE		("redstone_ore"			, EnumRarity.COMMON		, "mctRedstone"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 5, null, 0, 0),
-	REDSTONE_DENSE_ORE	("redstone_dense_ore"	, EnumRarity.COMMON		, "mctDenseRedstone", "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 5, null, 0, 0),
-	LAPIS_POOR_ORE		("lapis_poor_ore"		, EnumRarity.UNCOMMON	, "mctPoorLapis"	, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 6, Registry.ORE_CRACKED1, 1, 6),
-	LAPIS_ORE			("lapis_ore"			, EnumRarity.UNCOMMON	, "mctLapis"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 6, Registry.ORE_CRACKED1, 2, 6),
-	LAPIS_DENSE_ORE		("lapis_dense_ore"		, EnumRarity.UNCOMMON	, "mctDenseLapis"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 6, Registry.ORE_CRACKED1, 3, 6),
-	DIAMOND_POOR_ORE	("diamond_poor_ore"		, EnumRarity.UNCOMMON	, "mctPoorDiamond"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 8, Registry.ORE_CRACKED1, 1, 8),
-	DIAMOND_ORE			("diamond_ore"			, EnumRarity.UNCOMMON	, "mctDiamond"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 8, Registry.ORE_CRACKED1, 2, 8),
+	REDSTONE_ORE		("redstone_ore"		, EnumRarity.COMMON		, "mctRedstone"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 5, null, 0, 0),
+	REDSTONE_DENSE_ORE	("redstone_dense_ore"	, EnumRarity.COMMON		, "mctDenseRedstone"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 5, null, 0, 0),
+	LAPIS_POOR_ORE		("lapis_poor_ore"		, EnumRarity.UNCOMMON	, "mctPoorLapis"		, "", 0, 2, 3, 15, 64, Registry.ORE_CRACKED1, 1, 6, Registry.ORE_CRACKED1, 1, 6),
+	LAPIS_ORE			("lapis_ore"			, EnumRarity.UNCOMMON	, "mctLapis"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 6, Registry.ORE_CRACKED1, 2, 6),
+	LAPIS_DENSE_ORE		("lapis_dense_ore"	, EnumRarity.UNCOMMON	, "mctDenseLapis"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 6, Registry.ORE_CRACKED1, 3, 6),
+	DIAMOND_POOR_ORE	("diamond_poor_ore"	, EnumRarity.UNCOMMON	, "mctPoorDiamond"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 8, Registry.ORE_CRACKED1, 1, 8),
+	DIAMOND_ORE			("diamond_ore"		, EnumRarity.UNCOMMON	, "mctDiamond"			, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 2, 8, Registry.ORE_CRACKED1, 2, 8),
 	DIAMOND_DENSE_ORE	("diamond_dense_ore"	, EnumRarity.UNCOMMON	, "mctDenseDiamond"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 3, 8, Registry.ORE_CRACKED1, 3, 8),
-	EMERALD_POOR_ORE	("emerald_poor_ore"		, EnumRarity.RARE		, "mctPoorEmerald"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 1, 9, Registry.ORE_CRACKED1, 1, 9),
-	EMERALD_ORE			("emerald_ore"			, EnumRarity.RARE		, "mctEmerald"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 2, 9, Registry.ORE_CRACKED1, 2, 9),
+	EMERALD_POOR_ORE	("emerald_poor_ore"	, EnumRarity.RARE		, "mctPoorEmerald"		, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 1, 9, Registry.ORE_CRACKED1, 1, 9),
+	EMERALD_ORE			("emerald_ore"		, EnumRarity.RARE		, "mctEmerald"			, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 2, 9, Registry.ORE_CRACKED1, 2, 9),
 	EMERALD_DENSE_ORE	("emerald_dense_ore"	, EnumRarity.RARE		, "mctDenseEmerald"	, "", 0, 4, 3, 15, 64, Registry.ORE_CRACKED1, 3, 9, Registry.ORE_CRACKED1, 3, 9);
 
 	private final String name;
-	private final EnumRarity rarity;
-	private final String recipeOreDict1;
-	private final String recipeOreDict2;
-	private final int light;
-	private final int harvestLevel;
-	private final float hardness;
-	private final float resistance;
-	private final int maxSize;
-	private final Block blockDrop1;
-	private final int blockDropAmount1;
-	private final int blockDropMeta1;
-	private final Block blockDrop2;
-	private final int blockDropAmount2;
-	private final int blockDropMeta2;
+	private EnumRarity rarity;
+	private String recipeOreDict1;
+	private String recipeOreDict2;
+	private int light;
+	private int harvestLevel;
+	private float hardness;
+	private float resistance;
+	private int maxSize;
+	private Block blockDrop1;
+	private int blockDropAmount1;
+	private int blockDropMeta1;
+	private Block blockDrop2;
+	private int blockDropAmount2;
+	private int blockDropMeta2;
 
 	EnumOre2(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize, Block blockDrop1, int blockDropAmount1, int blockDropMeta1, Block blockDrop2, int blockDropAmount2, int blockDropMeta2) {
 		this.name = name;
@@ -89,31 +90,59 @@ public enum EnumOre2 implements IStringSerializable {
 		return resistance;
 	}
 
- 	public int getMaxSize() {
- 		return maxSize;
- 	}
- 	
- 	public Block getBlockDrop1() {
- 		return blockDrop1;
- 	}
+	public int getMaxSize() {
+		return maxSize;
+	}
 
- 	public int getBlockDropAmount1() {
- 		return blockDropAmount1;
- 	}
- 
- 	public int getBlockDropMeta1() {
- 		return blockDropMeta1;
- 	}
+	public Block getBlockDrop1() {
+		return blockDrop1;
+	}
 
- 	public Block getBlockDrop2() {
- 		return blockDrop2;
- 	}
+	public int getBlockDropAmount1() {
+		return blockDropAmount1;
+	}
 
- 	public int getBlockDropAmount2() {
- 		return blockDropAmount2;
- 	}
- 
- 	public int getBlockDropMeta2() {
- 		return blockDropMeta2;
- 	}
+	public int getBlockDropMeta1() {
+		return blockDropMeta1;
+	}
+
+	public Block getBlockDrop2() {
+		return blockDrop2;
+	}
+
+	public int getBlockDropAmount2() {
+		return blockDropAmount2;
+	}
+
+	public int getBlockDropMeta2() {
+		return blockDropMeta2;
+	}
+
+	@Override public void setRarity(EnumRarity rarity) { this.rarity = rarity; }
+
+	@Override public void setRecipeOreDict1(String recipeOreDict1) { this.recipeOreDict1 = recipeOreDict1; }
+
+	@Override public void setRecipeOreDict2(String recipeOreDict2) { this.recipeOreDict2 = recipeOreDict2; }
+
+	@Override public void setMaxSize(int maxSize) { this.maxSize = maxSize; }
+
+	@Override public void setLight(int light) { this.light = light; }
+
+	@Override public void setHarvestLevel(int harvestLevel) { this.harvestLevel = harvestLevel; }
+
+	@Override public void setHardness(float hardness) { this.hardness = hardness; }
+
+	@Override public void setResistance(float resistance) { this.resistance = resistance; }
+
+	@Override public void setBlockDrop1(Block blockDrop1) { this.blockDrop1 = blockDrop1; }
+
+	@Override public void setBlockDropAmount1(int blockDropAmount1) { this.blockDropAmount1 = blockDropAmount1; }
+
+	@Override public void setBlockDropMeta1(int blockDropMeta1) { this.blockDropMeta1 = blockDropMeta1; }
+
+	@Override public void setBlockDrop2(Block blockDrop2) { this.blockDrop2 = blockDrop2; }
+
+	@Override public void setBlockDropAmount2(int blockDropAmount2) { this.blockDropAmount2 = blockDropAmount2; }
+
+	@Override public void setBlockDropMeta2(int blockDropMeta2) { this.blockDropMeta2 = blockDropMeta2; }
 }

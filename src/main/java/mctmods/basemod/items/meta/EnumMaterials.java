@@ -1,11 +1,13 @@
 package mctmods.basemod.items.meta;
 
+import mctmods.basemod.library.util.config.IVariantBase;
+
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public enum EnumMaterials implements IStringSerializable {
+public enum EnumMaterials implements IStringSerializable, IVariantBase {
 	IRON_CRUSHED_ORE("iron_crushed_ore"	,EnumRarity.COMMON,"crushedIron"	,""			,64),
 	IRON_DUST		("iron_dust"			,EnumRarity.COMMON,"dustIron"		,""			,64),
 	IRON_DUST_DIRTY	("iron_dust_dirty"	,EnumRarity.COMMON,"dustDirtyIron"	,""			,64),
@@ -30,17 +32,17 @@ public enum EnumMaterials implements IStringSerializable {
 	GOLD_GEAR		("gold_gear"			,EnumRarity.COMMON,"gearGold"		,""			,64),
 	GOLD_PLATE		("gold_plate"			,EnumRarity.COMMON,"plateGold"		,""			,64),
 
-	COPPER_CRUSHED_ORE	("copper_crushed_ore"	,EnumRarity.COMMON,"crushedCopper"	,""			,64),
-	COPPER_DUST			("copper_dust"		,EnumRarity.COMMON,"dustCopper"	,""			,64),
-	COPPER_DUST_DIRTY	("copper_dust_dirty"	,EnumRarity.COMMON,"dustDirtyCopper",""			,64),
-	OPEN_0020			("open"				,EnumRarity.COMMON,""				,""			,64),
-	COPPER_SHARD		("copper_shard"		,EnumRarity.COMMON,"shardCopper"	,""			,64),
-	COPPER_NUGGET		("copper_nugget"		,EnumRarity.COMMON,"nuggetCopper"	,""			,64),
-	COPPER_CLUMP		("copper_clump"		,EnumRarity.COMMON,"clumpCopper"	,""			,64),
-	COPPER_INGOT		("copper_ingot"		,EnumRarity.COMMON,"ingotCopper"	,""			,64),
-	COPPER_ROD			("copper_rod"			,EnumRarity.COMMON,"stickCopper"	,"rodCopper"	,64),
-	COPPER_GEAR			("copper_gear"		,EnumRarity.COMMON,"gearCopper"	,""			,64),
-	COPPER_PLATE		("copper_plate"		,EnumRarity.COMMON,"plateCopper"	,""			,64),
+	COPPER_CRUSHED_ORE	("copper_crushed_ore"	,EnumRarity.COMMON,"crushedCopper"		,""			,64),
+	COPPER_DUST			("copper_dust"		,EnumRarity.COMMON,"dustCopper"		,""			,64),
+	COPPER_DUST_DIRTY	("copper_dust_dirty"	,EnumRarity.COMMON,"dustDirtyCopper"	,""			,64),
+	OPEN_0020			("open"				,EnumRarity.COMMON,""					,""			,64),
+	COPPER_SHARD		("copper_shard"		,EnumRarity.COMMON,"shardCopper"		,""			,64),
+	COPPER_NUGGET		("copper_nugget"		,EnumRarity.COMMON,"nuggetCopper"		,""			,64),
+	COPPER_CLUMP		("copper_clump"		,EnumRarity.COMMON,"clumpCopper"		,""			,64),
+	COPPER_INGOT		("copper_ingot"		,EnumRarity.COMMON,"ingotCopper"		,""			,64),
+	COPPER_ROD			("copper_rod"			,EnumRarity.COMMON,"stickCopper"		,"rodCopper"	,64),
+	COPPER_GEAR			("copper_gear"		,EnumRarity.COMMON,"gearCopper"		,""			,64),
+	COPPER_PLATE		("copper_plate"		,EnumRarity.COMMON,"plateCopper"		,""			,64),
 
 	TIN_CRUSHED_ORE	("tin_crushed_ore",EnumRarity.COMMON,"crushedTin"	,""			,64),
 	TIN_DUST		("tin_dust"		,EnumRarity.COMMON,"dustTin"		,""			,64),
@@ -54,17 +56,17 @@ public enum EnumMaterials implements IStringSerializable {
 	TIN_GEAR		("tin_gear"		,EnumRarity.COMMON,"gearTin"		,""			,64),
 	TIN_PLATE		("tin_plate"		,EnumRarity.COMMON,"plateTin"		,""			,64),
 
-	NICKEL_CRUSHED_ORE	("nickel_crushed_ore"	,EnumRarity.COMMON,"crushedNickel"	,""			,64),
-	NICKEL_DUST			("nickel_dust"		,EnumRarity.COMMON,"dustNickel"	,""			,64),
-	NICKEL_DUST_DIRTY	("nickel_dust_dirty"	,EnumRarity.COMMON,"dustDirtyNickel",""			,64),
-	OPEN_0040			("open"				,EnumRarity.COMMON,""				,""			,64),
-	NICKEL_SHARD		("nickel_shard"		,EnumRarity.COMMON,"shardNickel"	,""			,64),
-	NICKEL_NUGGET		("nickel_nugget"		,EnumRarity.COMMON,"nuggetNickel"	,""			,64),
-	NICKEL_CLUMP		("nickel_clump"		,EnumRarity.COMMON,"clumpNickel"	,""			,64),
-	NICKEL_INGOT		("nickel_ingot"		,EnumRarity.COMMON,"ingotNickel"	,""			,64),
-	NICKEL_ROD			("nickel_rod"			,EnumRarity.COMMON,"stickNickel"	,"rodNickel"	,64),
-	NICKEL_GEAR			("nickel_gear"		,EnumRarity.COMMON,"gearNickel"	,""			,64),
-	NICKEL_PLATE		("nickel_plate"		,EnumRarity.COMMON,"plateNickel"	,""			,64),
+	NICKEL_CRUSHED_ORE	("nickel_crushed_ore"	,EnumRarity.COMMON,"crushedNickel"		,""			,64),
+	NICKEL_DUST			("nickel_dust"		,EnumRarity.COMMON,"dustNickel"		,""			,64),
+	NICKEL_DUST_DIRTY	("nickel_dust_dirty"	,EnumRarity.COMMON,"dustDirtyNickel"	,""			,64),
+	OPEN_0040			("open"				,EnumRarity.COMMON,""					,""			,64),
+	NICKEL_SHARD		("nickel_shard"		,EnumRarity.COMMON,"shardNickel"		,""			,64),
+	NICKEL_NUGGET		("nickel_nugget"		,EnumRarity.COMMON,"nuggetNickel"		,""			,64),
+	NICKEL_CLUMP		("nickel_clump"		,EnumRarity.COMMON,"clumpNickel"		,""			,64),
+	NICKEL_INGOT		("nickel_ingot"		,EnumRarity.COMMON,"ingotNickel"		,""			,64),
+	NICKEL_ROD			("nickel_rod"			,EnumRarity.COMMON,"stickNickel"		,"rodNickel"	,64),
+	NICKEL_GEAR			("nickel_gear"		,EnumRarity.COMMON,"gearNickel"		,""			,64),
+	NICKEL_PLATE		("nickel_plate"		,EnumRarity.COMMON,"plateNickel"		,""			,64),
 
 	SILVER_CRUSHED_ORE	("silver_crushed_ore"	,EnumRarity.UNCOMMON,"crushedSilver"	,""			,64),
 	SILVER_DUST			("silver_dust"		,EnumRarity.UNCOMMON,"dustSilver"		,""			,64),
@@ -78,29 +80,29 @@ public enum EnumMaterials implements IStringSerializable {
 	SILVER_GEAR			("silver_gear"		,EnumRarity.UNCOMMON,"gearSilver"		,""			,64),
 	SILVER_PLATE		("silver_plate"		,EnumRarity.UNCOMMON,"plateSilver"		,""			,64),
 
-	LEAD_CRUSHED_ORE("lead_crushed_ore"	,EnumRarity.UNCOMMON,"crushedLead"	,""			,64),
-	LEAD_DUST		("lead_dust"			,EnumRarity.UNCOMMON,"dustLead"	,""			,64),
-	LEAD_DUST_DIRTY	("lead_dust_dirty"	,EnumRarity.UNCOMMON,"dustDirtyLead",""			,64),
-	OPEN_0060		("open"				,EnumRarity.UNCOMMON,""			,""			,64),
-	LEAD_SHARD		("lead_shard"			,EnumRarity.UNCOMMON,"shardLead"	,""			,64),
-	LEAD_NUGGET		("lead_nugget"		,EnumRarity.UNCOMMON,"nuggetLead"	,""			,64),
-	LEAD_CLUMP		("lead_clump"			,EnumRarity.UNCOMMON,"clumpLead"	,""			,64),
-	LEAD_INGOT		("lead_ingot"			,EnumRarity.UNCOMMON,"ingotLead"	,""			,64),
-	LEAD_ROD		("lead_rod"			,EnumRarity.UNCOMMON,"stickLead"	,"rodLead"		,64),
-	LEAD_GEAR		("lead_gear"			,EnumRarity.UNCOMMON,"gearLead"	,""			,64),
-	LEAD_PLATE		("lead_plate"			,EnumRarity.UNCOMMON,"plateLead"	,""			,64),
+	LEAD_CRUSHED_ORE("lead_crushed_ore"	,EnumRarity.UNCOMMON,"crushedLead"		,""		,64),
+	LEAD_DUST		("lead_dust"			,EnumRarity.UNCOMMON,"dustLead"		,""		,64),
+	LEAD_DUST_DIRTY	("lead_dust_dirty"	,EnumRarity.UNCOMMON,"dustDirtyLead"	,""		,64),
+	OPEN_0060		("open"				,EnumRarity.UNCOMMON,""				,""		,64),
+	LEAD_SHARD		("lead_shard"			,EnumRarity.UNCOMMON,"shardLead"		,""		,64),
+	LEAD_NUGGET		("lead_nugget"		,EnumRarity.UNCOMMON,"nuggetLead"		,""		,64),
+	LEAD_CLUMP		("lead_clump"			,EnumRarity.UNCOMMON,"clumpLead"		,""		,64),
+	LEAD_INGOT		("lead_ingot"			,EnumRarity.UNCOMMON,"ingotLead"		,""		,64),
+	LEAD_ROD		("lead_rod"			,EnumRarity.UNCOMMON,"stickLead"		,"rodLead"	,64),
+	LEAD_GEAR		("lead_gear"			,EnumRarity.UNCOMMON,"gearLead"		,""		,64),
+	LEAD_PLATE		("lead_plate"			,EnumRarity.UNCOMMON,"plateLead"		,""		,64),
 
-	ALUMINUM_CRUSHED_ORE("aluminum_crushed_ore"	,EnumRarity.UNCOMMON,"crushedAluminum"	,""				,64),
-	ALUMINUM_DUST		("aluminum_dust"			,EnumRarity.UNCOMMON,"dustAluminum"	,""				,64),
-	ALUMINUM_DUST_DIRTY	("aluminum_dust_dirty"	,EnumRarity.UNCOMMON,"dustDirtyAluminum",""				,64),
-	OPEN_0070			("open"					,EnumRarity.UNCOMMON,""				,""				,64),
-	ALUMINUM_SHARD		("aluminum_shard"			,EnumRarity.UNCOMMON,"shardAluminum"	,""				,64),
-	ALUMINUM_NUGGET		("aluminum_nugget"		,EnumRarity.UNCOMMON,"nuggetAluminum"	,""				,64),
-	ALUMINUM_CLUMP		("aluminum_clump"			,EnumRarity.UNCOMMON,"clumpAluminum"	,""				,64),
-	ALUMINUM_INGOT		("aluminum_ingot"			,EnumRarity.UNCOMMON,"ingotAluminum"	,""				,64),
-	ALUMINUM_ROD		("aluminum_rod"			,EnumRarity.UNCOMMON,"stickAluminum"	,"rodAluminum"		,64),
-	ALUMINUM_GEAR		("aluminum_gear"			,EnumRarity.UNCOMMON,"gearAluminum"	,""				,64),
-	ALUMINUM_PLATE		("aluminum_plate"			,EnumRarity.UNCOMMON,"plateAluminum"	,""				,64),
+	ALUMINUM_CRUSHED_ORE("aluminum_crushed_ore"	,EnumRarity.UNCOMMON,"crushedAluminum"		,""			,64),
+	ALUMINUM_DUST		("aluminum_dust"			,EnumRarity.UNCOMMON,"dustAluminum"		,""			,64),
+	ALUMINUM_DUST_DIRTY	("aluminum_dust_dirty"	,EnumRarity.UNCOMMON,"dustDirtyAluminum"	,""			,64),
+	OPEN_0070			("open"					,EnumRarity.UNCOMMON,""					,""			,64),
+	ALUMINUM_SHARD		("aluminum_shard"			,EnumRarity.UNCOMMON,"shardAluminum"		,""			,64),
+	ALUMINUM_NUGGET		("aluminum_nugget"		,EnumRarity.UNCOMMON,"nuggetAluminum"		,""			,64),
+	ALUMINUM_CLUMP		("aluminum_clump"			,EnumRarity.UNCOMMON,"clumpAluminum"		,""			,64),
+	ALUMINUM_INGOT		("aluminum_ingot"			,EnumRarity.UNCOMMON,"ingotAluminum"		,""			,64),
+	ALUMINUM_ROD		("aluminum_rod"			,EnumRarity.UNCOMMON,"stickAluminum"		,"rodAluminum"	,64),
+	ALUMINUM_GEAR		("aluminum_gear"			,EnumRarity.UNCOMMON,"gearAluminum"		,""			,64),
+	ALUMINUM_PLATE		("aluminum_plate"			,EnumRarity.UNCOMMON,"plateAluminum"		,""			,64),
 
 	OSMIUM_CRUSHED_ORE	("osmium_crushed_ore"	,EnumRarity.UNCOMMON,"crushedOsmium"	,""			,64),
 	OSMIUM_DUST			("osmium_dust"		,EnumRarity.UNCOMMON,"dustOsmium"		,""			,64),
@@ -186,46 +188,46 @@ public enum EnumMaterials implements IStringSerializable {
 	OPEN_0146					("open"							,EnumRarity.UNCOMMON,""						,"",64),
 	QUARTZ_ENRICHED_IRON_PLATE	("quartz_enriched_iron_plate"		,EnumRarity.UNCOMMON,"plateQuartzEnrichedIron"	,"",64),
 
-	ARDITE_CRUSHED_ORE	("ardite_crushed_ore"	,EnumRarity.RARE,"crushedArdite",""			,64),
-	ARDITE_DUST			("ardite_dust"		,EnumRarity.RARE,"dustArdite"	,""			,64),
-	OPEN_0151			("open"				,EnumRarity.RARE,""			,""			,64),
-	ARDITE_CRYSTAL		("ardite_crystal"		,EnumRarity.RARE,"crystalArdite",""			,64),
-	ARDITE_SHARD		("ardite_shard"		,EnumRarity.RARE,"shardArdite"	,""			,64),
-	ARDITE_NUGGET		("ardite_nugget"		,EnumRarity.RARE,"nuggetArdite",""				,64),
-	ARDITE_CLUMP		("ardite_clump"		,EnumRarity.RARE,"clumpArdite"	,""			,64),
-	ARDITE_INGOT		("ardite_ingot"		,EnumRarity.RARE,"ingotArdite"	,""			,64),
-	ARDITE_ROD			("ardite_rod"			,EnumRarity.RARE,"stickArdite"	,"rodArdite"	,64),
-	ARDITE_GEAR			("ardite_gear"		,EnumRarity.RARE,"gearArdite"	,""			,64),
-	ARDITE_PLATE		("ardite_plate"		,EnumRarity.RARE,"plateArdite"	,""			,64),
+	ARDITE_CRUSHED_ORE	("ardite_crushed_ore"	,EnumRarity.RARE,"crushedArdite"	,""			,64),
+	ARDITE_DUST			("ardite_dust"		,EnumRarity.RARE,"dustArdite"		,""			,64),
+	OPEN_0151			("open"				,EnumRarity.RARE,""				,""			,64),
+	ARDITE_CRYSTAL		("ardite_crystal"		,EnumRarity.RARE,"crystalArdite"	,""			,64),
+	ARDITE_SHARD		("ardite_shard"		,EnumRarity.RARE,"shardArdite"		,""			,64),
+	ARDITE_NUGGET		("ardite_nugget"		,EnumRarity.RARE,"nuggetArdite"	,""			,64),
+	ARDITE_CLUMP		("ardite_clump"		,EnumRarity.RARE,"clumpArdite"		,""			,64),
+	ARDITE_INGOT		("ardite_ingot"		,EnumRarity.RARE,"ingotArdite"		,""			,64),
+	ARDITE_ROD			("ardite_rod"			,EnumRarity.RARE,"stickArdite"		,"rodArdite"	,64),
+	ARDITE_GEAR			("ardite_gear"		,EnumRarity.RARE,"gearArdite"		,""			,64),
+	ARDITE_PLATE		("ardite_plate"		,EnumRarity.RARE,"plateArdite"		,""			,64),
 
-	COBALT_CRUSHED_ORE	("cobalt_crushed_ore"	,EnumRarity.RARE,"crushedCobalt",""			,64),
-	COBALT_DUST			("cobalt_dust"		,EnumRarity.RARE,"dustCobalt"	,""			,64),
-	OPEN_0161			("open"				,EnumRarity.RARE,""			,""			,64),
-	COBALT_CRYSTAL		("cobalt_crystal"		,EnumRarity.RARE,"crystalCobalt",""			,64),
-	COBALT_SHARD		("cobalt_shard"		,EnumRarity.RARE,"shardCobalt"	,""			,64),
-	COBALT_NUGGET		("cobalt_nugget"		,EnumRarity.RARE,"nuggetCobalt",""				,64),
-	COBALT_CLUMP		("cobalt_clump"		,EnumRarity.RARE,"clumpCobalt"	,""			,64),
-	COBALT_INGOT		("cobalt_ingot"		,EnumRarity.RARE,"ingotCobalt"	,""			,64),
-	COBALT_ROD			("cobalt_rod"			,EnumRarity.RARE,"stickCobalt"	,"rodCobalt"	,64),
-	COBALT_GEAR			("cobalt_gear"		,EnumRarity.RARE,"gearCobalt"	,""			,64),
-	COBALT_PLATE		("cobalt_plate"		,EnumRarity.RARE,"plateCobalt"	,""			,64),
+	COBALT_CRUSHED_ORE	("cobalt_crushed_ore"	,EnumRarity.RARE,"crushedCobalt"	,""			,64),
+	COBALT_DUST			("cobalt_dust"		,EnumRarity.RARE,"dustCobalt"		,""			,64),
+	OPEN_0161			("open"				,EnumRarity.RARE,""				,""			,64),
+	COBALT_CRYSTAL		("cobalt_crystal"		,EnumRarity.RARE,"crystalCobalt"	,""			,64),
+	COBALT_SHARD		("cobalt_shard"		,EnumRarity.RARE,"shardCobalt"		,""			,64),
+	COBALT_NUGGET		("cobalt_nugget"		,EnumRarity.RARE,"nuggetCobalt"	,""			,64),
+	COBALT_CLUMP		("cobalt_clump"		,EnumRarity.RARE,"clumpCobalt"		,""			,64),
+	COBALT_INGOT		("cobalt_ingot"		,EnumRarity.RARE,"ingotCobalt"		,""			,64),
+	COBALT_ROD			("cobalt_rod"			,EnumRarity.RARE,"stickCobalt"		,"rodCobalt"	,64),
+	COBALT_GEAR			("cobalt_gear"		,EnumRarity.RARE,"gearCobalt"		,""			,64),
+	COBALT_PLATE		("cobalt_plate"		,EnumRarity.RARE,"plateCobalt"		,""			,64),
 
-	IRIDIUM_CRUSHED_ORE	("iridium_crushed_ore",EnumRarity.EPIC,"crushedIridium"	,""				,64),
-	IRIDIUM_DUST		("iridium_dust"		,EnumRarity.EPIC,"dustIridium"		,""				,64),
-	OPEN_0171			("open"				,EnumRarity.EPIC,""				,""				,64),
-	IRIDIUM_CRYSTAL		("iridium_crystal"	,EnumRarity.EPIC,"crystalIridium"	,""				,64),
-	IRIDIUM_SHARD		("iridium_shard"		,EnumRarity.EPIC,"shardIridium"	,""				,64),
-	IRIDIUM_NUGGET		("iridium_nugget"		,EnumRarity.EPIC,"nuggetIridium"	,""				,64),
-	IRIDIUM_CLUMP		("iridium_clump"		,EnumRarity.EPIC,"clumpIridium"	,""				,64),
-	IRIDIUM_INGOT		("iridium_ingot"		,EnumRarity.EPIC,"ingotIridium"	,""				,64),
-	IRIDIUM_ROD			("iridium_rod"		,EnumRarity.EPIC,"stickIridium"	,"rodIridium"		,64),
-	IRIDIUM_GEAR		("iridium_gear"		,EnumRarity.EPIC,"gearIridium"		,""				,64),
-	IRIDIUM_PLATE		("iridium_plate"		,EnumRarity.EPIC,"plateIridium"	,""				,64),
+	IRIDIUM_CRUSHED_ORE	("iridium_crushed_ore",EnumRarity.EPIC,"crushedIridium"	,""			,64),
+	IRIDIUM_DUST		("iridium_dust"		,EnumRarity.EPIC,"dustIridium"		,""			,64),
+	OPEN_0171			("open"				,EnumRarity.EPIC,""				,""			,64),
+	IRIDIUM_CRYSTAL		("iridium_crystal"	,EnumRarity.EPIC,"crystalIridium"	,""			,64),
+	IRIDIUM_SHARD		("iridium_shard"		,EnumRarity.EPIC,"shardIridium"	,""			,64),
+	IRIDIUM_NUGGET		("iridium_nugget"		,EnumRarity.EPIC,"nuggetIridium"	,""			,64),
+	IRIDIUM_CLUMP		("iridium_clump"		,EnumRarity.EPIC,"clumpIridium"	,""			,64),
+	IRIDIUM_INGOT		("iridium_ingot"		,EnumRarity.EPIC,"ingotIridium"	,""			,64),
+	IRIDIUM_ROD			("iridium_rod"		,EnumRarity.EPIC,"stickIridium"	,"rodIridium"	,64),
+	IRIDIUM_GEAR		("iridium_gear"		,EnumRarity.EPIC,"gearIridium"		,""			,64),
+	IRIDIUM_PLATE		("iridium_plate"		,EnumRarity.EPIC,"plateIridium"	,""			,64),
 
-	DRACONIUM_CRUSHED_ORE	("draconium_crushed_ore"	,EnumRarity.EPIC,"crushedDraconium",""				,64),
+	DRACONIUM_CRUSHED_ORE	("draconium_crushed_ore"	,EnumRarity.EPIC,"crushedDraconium",""			,64),
 	DRACONIUM_DUST			("draconium_dust"			,EnumRarity.EPIC,"dustDraconium"	,""			,64),
 	OPEN_0181				("open"					,EnumRarity.EPIC,""				,""			,64),
-	DRACONIUM_CRYSTAL		("draconium_crystal"		,EnumRarity.EPIC,"crystalDraconium",""				,64),
+	DRACONIUM_CRYSTAL		("draconium_crystal"		,EnumRarity.EPIC,"crystalDraconium",""			,64),
 	DRACONIUM_SHARD			("draconium_shard"		,EnumRarity.EPIC,"shardDraconium"	,""			,64),
 	DRACONIUM_NUGGET		("draconium_nugget"		,EnumRarity.EPIC,"nuggetDraconium"	,""			,64),
 	DRACONIUM_CLUMP			("draconium_clump"		,EnumRarity.EPIC,"clumpDraconium"	,""			,64),
@@ -643,10 +645,10 @@ public enum EnumMaterials implements IStringSerializable {
 	END_KEY		("end_key"	,EnumRarity.EPIC,"","",1);
 
 	private final String name;
-	private final EnumRarity rarity;
-	private final String recipeOreDict1;
-	private final String recipeOreDict2;
-	private final int maxSize;
+	private EnumRarity rarity;
+	private String recipeOreDict1;
+	private String recipeOreDict2;
+	private int maxSize;
 
 	EnumMaterials(String name,EnumRarity rarity,String recipeOreDict1,String recipeOreDict2,int maxSize) {
 		this.name = name;
@@ -675,4 +677,12 @@ public enum EnumMaterials implements IStringSerializable {
 	public int getMaxSize() {
 		return maxSize;
 	}
+
+	@Override public void setRarity(EnumRarity rarity) { this.rarity = rarity; }
+
+	@Override public void setRecipeOreDict1(String recipeOreDict1) { this.recipeOreDict1 = recipeOreDict1; }
+
+	@Override public void setRecipeOreDict2(String recipeOreDict2) { this.recipeOreDict2 = recipeOreDict2; }
+
+	@Override public void setMaxSize(int maxSize) { this.maxSize = maxSize; }
 }

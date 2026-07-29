@@ -1,11 +1,13 @@
 package mctmods.basemod.blocks.meta;
 
+import mctmods.basemod.library.util.config.IVariantBlock;
+
 import net.minecraft.item.EnumRarity;
 import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public enum EnumOreCracked2 implements IStringSerializable {
+public enum EnumOreCracked2 implements IStringSerializable, IVariantBlock {
 	DESTABALIZED_REDSTONE_CRACKED_ORE	("destabalized_redstone_cracked_ore"	, EnumRarity.RARE, "oreClathrateRedstone"	, "", 0, 2, 3, 15, 64),
 	ENERGIZED_GLOWSTONE_CRACKED_ORE		("energized_glowstone_cracked_ore"	, EnumRarity.RARE, "oreClathrateGlowstone"	, "", 0, 2, 3, 15, 64),
 	QUARTZ_CRACKED_ORE					("quartz_cracked_ore"					, EnumRarity.RARE, "oreQuartz"				, "", 0, 2, 3, 15, 64),
@@ -18,14 +20,14 @@ public enum EnumOreCracked2 implements IStringSerializable {
 	DRACONIUM_CRACKED_ORE				("draconium_cracked_ore"				, EnumRarity.EPIC, "oreDraconium"			, "", 0, 2, 3, 15, 64);
 
 	private final String name;
-	private final EnumRarity rarity;
-	private final String recipeOreDict1;
-	private final String recipeOreDict2;
-	private final int light;
-	private final int harvestLevel;
-	private final float hardness;
-	private final float resistance;
-	private final int maxSize;
+	private EnumRarity rarity;
+	private String recipeOreDict1;
+	private String recipeOreDict2;
+	private int light;
+	private int harvestLevel;
+	private float hardness;
+	private float resistance;
+	private int maxSize;
 
 	EnumOreCracked2(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize) {
 		this.name = name;
@@ -69,7 +71,23 @@ public enum EnumOreCracked2 implements IStringSerializable {
 		return resistance;
 	}
 
- 	public int getMaxSize() {
- 		return maxSize;
- 	}
+	public int getMaxSize() {
+		return maxSize;
+	}
+
+	@Override public void setRarity(EnumRarity rarity) { this.rarity = rarity; }
+
+	@Override public void setRecipeOreDict1(String recipeOreDict1) { this.recipeOreDict1 = recipeOreDict1; }
+
+	@Override public void setRecipeOreDict2(String recipeOreDict2) { this.recipeOreDict2 = recipeOreDict2; }
+
+	@Override public void setMaxSize(int maxSize) { this.maxSize = maxSize; }
+
+	@Override public void setLight(int light) { this.light = light; }
+
+	@Override public void setHarvestLevel(int harvestLevel) { this.harvestLevel = harvestLevel; }
+
+	@Override public void setHardness(float hardness) { this.hardness = hardness; }
+
+	@Override public void setResistance(float resistance) { this.resistance = resistance; }
 }

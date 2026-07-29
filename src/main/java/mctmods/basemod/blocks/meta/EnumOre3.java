@@ -1,5 +1,6 @@
 package mctmods.basemod.blocks.meta;
 
+import mctmods.basemod.library.util.config.IVariantOre;
 import mctmods.basemod.registry.Registry;
 
 import net.minecraft.block.Block;
@@ -8,7 +9,7 @@ import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public enum EnumOre3 implements IStringSerializable {
+public enum EnumOre3 implements IStringSerializable, IVariantOre {
 	BLACKQUARTZ_POOR_ORE	("blackquartz_poor_ore"	, EnumRarity.UNCOMMON, "mctPoorBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
 	BLACKQUARTZ_ORE			("blackquartz_ore"		, EnumRarity.UNCOMMON, "mctBlackQuartz"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
 	BLACKQUARTZ_DENSE_ORE	("blackquartz_dense_ore"	, EnumRarity.UNCOMMON, "mctDenseBlackQuartz"	, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1,  7, null, 1, 0),
@@ -26,20 +27,20 @@ public enum EnumOre3 implements IStringSerializable {
 	OSMIUM_DENSE_ORE		("osmium_dense_ore"		, EnumRarity.UNCOMMON, "mctDenseOsmium"		, "", 0, 3, 3, 15, 64, Registry.ORE_CRACKED1, 1, 14, null, 1, 0);
 
 	private final String name;
-	private final EnumRarity rarity;
-	private final String recipeOreDict1;
-	private final String recipeOreDict2;
-	private final int light;
-	private final int harvestLevel;
-	private final float hardness;
-	private final float resistance;
-	private final int maxSize;
-	private final Block blockDrop1;
-	private final int blockDropAmount1;
-	private final int blockDropMeta1;
-	private final Block blockDrop2;
-	private final int blockDropAmount2;
-	private final int blockDropMeta2;
+	private EnumRarity rarity;
+	private String recipeOreDict1;
+	private String recipeOreDict2;
+	private int light;
+	private int harvestLevel;
+	private float hardness;
+	private float resistance;
+	private int maxSize;
+	private Block blockDrop1;
+	private int blockDropAmount1;
+	private int blockDropMeta1;
+	private Block blockDrop2;
+	private int blockDropAmount2;
+	private int blockDropMeta2;
 
 	EnumOre3(String name, EnumRarity rarity, String recipeOreDict1, String recipeOreDict2, int light, int harvestLevel, float hardness, float resistance, int maxSize, Block blockDrop1, int blockDropAmount1, int blockDropMeta1, Block blockDrop2, int blockDropAmount2, int blockDropMeta2) {
 		this.name = name;
@@ -89,31 +90,59 @@ public enum EnumOre3 implements IStringSerializable {
 		return resistance;
 	}
 
- 	public int getMaxSize() {
- 		return maxSize;
- 	}
- 	
- 	public Block getBlockDrop1() {
- 		return blockDrop1;
- 	}
+	public int getMaxSize() {
+		return maxSize;
+	}
 
- 	public int getBlockDropAmount1() {
- 		return blockDropAmount1;
- 	}
- 
- 	public int getBlockDropMeta1() {
- 		return blockDropMeta1;
- 	}
+	public Block getBlockDrop1() {
+		return blockDrop1;
+	}
 
- 	public Block getBlockDrop2() {
- 		return blockDrop2;
- 	}
+	public int getBlockDropAmount1() {
+		return blockDropAmount1;
+	}
 
- 	public int getBlockDropAmount2() {
- 		return blockDropAmount2;
- 	}
- 
- 	public int getBlockDropMeta2() {
- 		return blockDropMeta2;
- 	}
+	public int getBlockDropMeta1() {
+		return blockDropMeta1;
+	}
+
+	public Block getBlockDrop2() {
+		return blockDrop2;
+	}
+
+	public int getBlockDropAmount2() {
+		return blockDropAmount2;
+	}
+
+	public int getBlockDropMeta2() {
+		return blockDropMeta2;
+	}
+
+	@Override public void setRarity(EnumRarity rarity) { this.rarity = rarity; }
+
+	@Override public void setRecipeOreDict1(String recipeOreDict1) { this.recipeOreDict1 = recipeOreDict1; }
+
+	@Override public void setRecipeOreDict2(String recipeOreDict2) { this.recipeOreDict2 = recipeOreDict2; }
+
+	@Override public void setMaxSize(int maxSize) { this.maxSize = maxSize; }
+
+	@Override public void setLight(int light) { this.light = light; }
+
+	@Override public void setHarvestLevel(int harvestLevel) { this.harvestLevel = harvestLevel; }
+
+	@Override public void setHardness(float hardness) { this.hardness = hardness; }
+
+	@Override public void setResistance(float resistance) { this.resistance = resistance; }
+
+	@Override public void setBlockDrop1(Block blockDrop1) { this.blockDrop1 = blockDrop1; }
+
+	@Override public void setBlockDropAmount1(int blockDropAmount1) { this.blockDropAmount1 = blockDropAmount1; }
+
+	@Override public void setBlockDropMeta1(int blockDropMeta1) { this.blockDropMeta1 = blockDropMeta1; }
+
+	@Override public void setBlockDrop2(Block blockDrop2) { this.blockDrop2 = blockDrop2; }
+
+	@Override public void setBlockDropAmount2(int blockDropAmount2) { this.blockDropAmount2 = blockDropAmount2; }
+
+	@Override public void setBlockDropMeta2(int blockDropMeta2) { this.blockDropMeta2 = blockDropMeta2; }
 }
